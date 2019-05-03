@@ -31,7 +31,12 @@ Prilikom kreiranja novih narudžbi kupac najprije odabire formu za narudžbu. Za
 ### Dijagram aktivnosti „Registracija i prijava u sustav“
 <img src="https://i.ibb.co/svYyyFx/Registracija-i-prijava-u-sustav-AD.jpg" width="700" />
 
-Kako bi se započelo korištenje aplikacije „GeoApp“ potrebno je na početku obaviti registraciju u sustav. Iz dijagrama aktivnosti „Registracija i prijava u sustav“ vidljivo je da se počinje od korisnika aplikacije. Korisnik postavlja zahtjev za registraciju u sustav. Inicijalizira se forma za registraciju. Kod registracije je potrebno unjeti odgovarajuće podatke. Popunjava se baza podataka sa unjetim podacima i vraća korisnika na formu za prijavu. Kod prijave je potrebno unjeti odgovarajuće podatke. Ukoliko je uneseno pogreško korisničko ime ili lozinka prikazuje se poruka o greški prilikom prijave. Ukoliko je sve u redu i korisnik može koristiti aplikaciju može se preći na forme za unos geodetskih uređaja
+Kako bi se započelo korištenje aplikacije „GeoApp“ potrebno je na početku obaviti registraciju u sustav. Iz dijagrama aktivnosti „Registracija i prijava u sustav“ vidljivo je da se počinje od korisnika aplikacije. Korisnik postavlja zahtjev za registraciju u sustav. Inicijalizira se forma za registraciju. Kod registracije je potrebno unjeti odgovarajuće podatke. Popunjava se baza podataka sa unjetim podacima i vraća korisnika na formu za prijavu. Kod prijave je potrebno unjeti odgovarajuće podatke. Ukoliko je uneseno pogreško korisničko ime ili lozinka prikazuje se poruka o greški prilikom prijave. Ukoliko je sve u redu i korisnik može koristiti aplikaciju može se preći na forme za unos geodetskih uređaja.
+
+### Dijagram aktivnosti „Unos i uređivanje zaposlenika“
+<img src="https://i.ibb.co/wR9G6Wg/Unos-i-ure-ivanje-zaposlenika-AD.jpg" width="700" />
+
+U aplikaciji administrator vrši unos zaposlenika. Otvara formu za unos zaposlenika gdje popunjava prazna polja s odgovarajućim podacima. Popunjava se baza podataka te dodaje se zaposlenik pa otvara se forma za uređivanje prava zaposlenika. U toj formi administrator može izmjeniti prava zaposlenika. Nakon izmjene administratoru se prikaže izmjena te je mora potvrditi. Nakon prihvaćene izmjene prava zaposlenika, proces je završen i vraća se na početnu formu.
 
 ### Dijagram aktivnosti „Unos i ažuriranje geodetskih uređaja“
 <img src="https://image.ibb.co/bQVAMx/Unos_i_ure_ivanje_zaposlenika_AD.jpg" width="700" />
