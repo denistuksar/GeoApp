@@ -22,6 +22,11 @@ Korisnik, koji ima prava administratora u aplikaciju se prijavljuje sa svojim ko
 
 Zaposlenik najprije odabire formu za unos, inicijalizira se objekt i prikazuje se forma za unos. Zatim se prikazuju postojeći unosi koji se nalaze u bazi podataka. Zaposlenik tada može odabrati unos novih geodetskih uređaja ili brisanje postojećih. Ako se izvršava novi unos, zaposlenik unosi podatke i aplikacija ih prenosi modulu za unos. Zatim se izvršava SQL upit za unos prosljeđenih podataka u bazu. Kad je unos izvršen, zaposlenik se obavještava o uspješnom unosu. Zahtjev za brisanje unosa izvršava se na sličan način kao i unos novog zapisa, samo što kod brisanja zaposlenik šalje podatke o unosu kojeg želi izbrisati. Odabirom opcije za izlaz, šalje se zahtjev za izlaz, odnosno zatvaranje forme. Na kraju se objekt dealocira.  
 
+### Dijagram slijeda "Naručivanje proizvoda te odobravanje narudžbe"
+<img src="https://image.ibb.co/eWaVoc/Narudzba.png" width="700" />
+
+Prilikom kreiranja novih narudžbi kupac najprije odabire formu za narudžbu. Zatim se prikazuje forma za kreiranje narudžbe i iz baze podataka dohvaća se lista artikla. Nakon toga kupac odabire artikle. Stavke se dodaju na narudžbu i pohranjuju se. Kad su unešeni željeni artikli, narudžba se potvrđuje te se sprema u bazu. Na kraju se forma zatvara i objekt se dealocira.
+
 # Dijagrami aktivnosti
 ### Dijagram aktivnosti „Registracija i prijava u sustav“
 <img src="https://i.ibb.co/svYyyFx/Registracija-i-prijava-u-sustav-AD.jpg" width="700" />
