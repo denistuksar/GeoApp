@@ -32,3 +32,11 @@ U ulozi zaposlenika, u aplikaciji bi bile dostupne sljedeće funkcionalnosti:
 
 # Projektni plan
 Bitan dio i jedna od najvažnijih faza upravljanja projektom je planiranje. Rezultat procesa planiranja projekta je plan projekta i bez plana projekta ne započinju daljnje aktivnosti na projektu. Plan projekta sadži ciljeve projekta, popis aktivnosti, vrijeme koje će se utrošiti na ostvarivanje ciljeva, rokove, troškove i resurse potrebne za realiziranje projekta. Za izradu projetnog plana korišten je alat Microsoft Project 2007. MS Project omugućava prikaz aktivnosti i radnji na projektu i korištenih resursa. Prikazuje se tijek odvijanja projekta, koliko je određena radnja trajala i koji je član tima bio zadužen za istu.
+
+## Projektni tim
+Projektni tim sastoji se od tri člana. Svaki od članova ima svoju ulogu i zadatke za koje je zadužen. Članovi tima su:
+* Nikola Jankaš
+* Denis Tuksar 
+* Neno Mirko Jolić
+
+Potrebno je napomenuti da, iako svaki član tima ima svoju ulogu i zadatke, oni su samo okvirni te je moguće da svaki član tima sudjeluje i u ostalim aktivnositma. U nastavku , u tablici su navedene uloge svakog člana tima te njegova zaduženja.
