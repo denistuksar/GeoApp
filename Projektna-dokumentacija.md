@@ -40,3 +40,9 @@ Projektni tim sastoji se od tri člana. Svaki od članova ima svoju ulogu i zada
 * Neno Mirko Jolić
 
 Potrebno je napomenuti da, iako svaki član tima ima svoju ulogu i zadatke, oni su samo okvirni te je moguće da svaki član tima sudjeluje i u ostalim aktivnositma. U nastavku , u tablici su navedene uloge svakog člana tima te njegova zaduženja.
+
+<img src="https://i.ibb.co/cFh4dRs/Screen-Shot-2018-04-26-at-19-11-34.png" width="650" />
+
+_Slika 2. Tablica sa zaduženjima_
+<br/>
+<br/>
