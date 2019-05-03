@@ -100,3 +100,9 @@ Na slici 7 je gantogram aktivnosti izrađen u alatu Microsoft Project. Gantogram
 <img src="https://i.ibb.co/Hx42mfh/Screenshot-2019-05-03-at-16-45-42.png" width="950" />
 
 _Slika 7. Gantogram aktivnosti_
+
+# Proračun i budžet
+Na slici 8 je proračun projekta i ukupni trošak projekta. Tu su izračunati svi resursi, ljudski i materijalni. Ljudski uključuju članove tima čija satnica je 50 kn/h, a materijalni računala čiji je trošak 10 kn/h. Ukupan trošak projekta iznosi 38.880,00 kn.
+<img src="https://i.ibb.co/yW0zVKq/Screenshot-2019-05-03-at-16-52-33.png" width="950" />
+
+_Slika 8. Proračun i budžet_
