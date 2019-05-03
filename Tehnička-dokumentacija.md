@@ -15,7 +15,12 @@ Da bi se koristila aplikacija svaki korisnik se prvo mora registrirati u sustav.
 ### Dijagram slijeda "Unos zaposlenika i uređivanje njegovih prava"
 <img src="https://i.ibb.co/R2QNm8t/Unos-i-ure-ivanje-zaposlenika.jpg" width="700" />
 
-Korisnik, koji ima prava administratora u aplikaciju se prijavljuje sa svojim korisničkim imenom i lozinkom. Odabire formu za unos zaposlenika te se mu otvora obrazac za registraciju korisnika. Kada je uspješno popunio sva polja zaposlenik se sprema u bazu podataka. Administrator vidi popis svih zaposlenih s pripadnim pravima. Ima mogućnost dodati i promjeniti prava svakog zaposlenik te ukloniti zaposlenika.   
+Korisnik, koji ima prava administratora u aplikaciju se prijavljuje sa svojim korisničkim imenom i lozinkom. Odabire formu za unos zaposlenika te se mu otvora obrazac za registraciju korisnika. Kada je uspješno popunio sva polja zaposlenik se sprema u bazu podataka. Administrator vidi popis svih zaposlenih s pripadnim pravima. Ima mogućnost dodati i promjeniti prava svakog zaposlenik te ukloniti zaposlenika. 
+
+### Dijagram slijeda "Unos i ažuriranje geodetskih uređaja"
+<img src="https://image.ibb.co/nRuwbx/dslijeda_unos.png" width="700" />
+
+Zaposlenik najprije odabire formu za unos, inicijalizira se objekt i prikazuje se forma za unos. Zatim se prikazuju postojeći unosi koji se nalaze u bazi podataka. Zaposlenik tada može odabrati unos novih geodetskih uređaja ili brisanje postojećih. Ako se izvršava novi unos, zaposlenik unosi podatke i aplikacija ih prenosi modulu za unos. Zatim se izvršava SQL upit za unos prosljeđenih podataka u bazu. Kad je unos izvršen, zaposlenik se obavještava o uspješnom unosu. Zahtjev za brisanje unosa izvršava se na sličan način kao i unos novog zapisa, samo što kod brisanja zaposlenik šalje podatke o unosu kojeg želi izbrisati. Odabirom opcije za izlaz, šalje se zahtjev za izlaz, odnosno zatvaranje forme. Na kraju se objekt dealocira.  
 
 # Dijagrami aktivnosti
 ### Dijagram aktivnosti „Registracija i prijava u sustav“
