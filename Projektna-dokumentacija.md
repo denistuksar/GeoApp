@@ -46,3 +46,13 @@ Potrebno je napomenuti da, iako svaki član tima ima svoju ulogu i zadatke, oni 
 _Slika 2. Tablica sa zaduženjima_
 <br/>
 <br/>
+Na slici 3 je izvještaj napravljen u MS Projectu na kojemu se vide zaduženja svakog od članova tima pri izradi projekta.
+
+<img src="https://i.ibb.co/g7mHhpX/Screenshot-2019-05-03-at-16-14-47.png" width="950" />
+<img src="https://i.ibb.co/PjzbhhW/Screenshot-2019-05-03-at-16-18-32.png" width="950" />
+
+
+_Slika 3. i 4. Zaduženja pojedinih članova tima_
+
+<br/>
+<br/>
