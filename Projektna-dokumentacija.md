@@ -67,3 +67,13 @@ _Slika 4. Resursi i članovi tima_
 
 <br/>
 <br/>
+
+## Radno vrijeme
+
+Radno vrijeme je vidljivo na slici 5. Radni dani su od ponedjeljka do petka s vremenom od 8:00 do 12:00, 13:00 do 17:00. Subota i nedjelja su neradni dani. Osim subote i nedjelje, neradni dani su 22.4.2018. i 1.5.2018., odnosno Uskrsni ponedjeljak i Praznik rada.
+
+<img src="https://i.ibb.co/wcGVBgt/Screenshot-2019-05-03-at-16-29-42.png" width="400" />
+
+_Slika 5. Radno vrijeme_
+<br/>
+<br/>
