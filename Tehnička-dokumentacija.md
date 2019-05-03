@@ -33,6 +33,11 @@ Prilikom kreiranja novih narudžbi kupac najprije odabire formu za narudžbu. Za
 
 Kako bi se započelo korištenje aplikacije „GeoApp“ potrebno je na početku obaviti registraciju u sustav. Iz dijagrama aktivnosti „Registracija i prijava u sustav“ vidljivo je da se počinje od korisnika aplikacije. Korisnik postavlja zahtjev za registraciju u sustav. Inicijalizira se forma za registraciju. Kod registracije je potrebno unjeti odgovarajuće podatke. Popunjava se baza podataka sa unjetim podacima i vraća korisnika na formu za prijavu. Kod prijave je potrebno unjeti odgovarajuće podatke. Ukoliko je uneseno pogreško korisničko ime ili lozinka prikazuje se poruka o greški prilikom prijave. Ukoliko je sve u redu i korisnik može koristiti aplikaciju može se preći na forme za unos geodetskih uređaja
 
+### Dijagram aktivnosti „Unos i ažuriranje geodetskih uređaja“
+<img src="https://image.ibb.co/bQVAMx/Unos_i_ure_ivanje_zaposlenika_AD.jpg" width="700" />
+
+Dijagram aktivnosti „Unos zaposlenika i uređivanje njegovih prava“ započinje odabirom forme za unos zaposlenika. Inicijalizira se forma za unos zaposlenika te se prikaže forma gdje se upisuju podaci zaposlenika. Nakon što se unese zaposlenik u bazu podataka odlazi se u formu za dodavanje/mijenjanje prava zaposlenika. Gdje Administrator može mijenjati/dati željeno pravo zaposleniku. S time je proces završen i vraća se na početnu formu.
+
 # ERA model
 ![ERA](https://image.ibb.co/mtHw6x/ERA.png)
 
