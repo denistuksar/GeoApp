@@ -56,3 +56,14 @@ _Slika 3. Zaduženja pojedinih članova tima_
 
 <br/>
 <br/>
+
+## Resursi
+
+Slika 4 prikazuje resurse korištene pri izradi projekta. Resursi uključuju članove tima i materijalne resurse koji su potrebi za uspješno izvršavanje projektnih obaveza. Potrebna sam nam 3 računala, jedno za svakog člana tima. 
+
+<img src="https://i.ibb.co/zrBN7Fh/Screenshot-2019-05-03-at-16-25-41.png" width="950" />
+
+_Slika 4. Resursi i članovi tima_
+
+<br/>
+<br/>
