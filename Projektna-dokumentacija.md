@@ -77,3 +77,20 @@ Radno vrijeme je vidljivo na slici 5. Radni dani su od ponedjeljka do petka s vr
 _Slika 5. Radno vrijeme_
 <br/>
 <br/>
+## Terminski plan
+Na slici 6 je terminski plan koji je izražen u MS Projectu. Projekt smo podijelili u četiri faze: Planiranje projekta, Modeliranje projekta, Implementacija odnosno izrada same aplikacije, Izrada dokumentacije. Te faze i njihove podfaze vidljive su u terminskom planu. 
+
+Prva faza je planiranje projekta i ona započinje sastankom tima, proučavanjem korisničkih zahtjeva i raspodjelom zadataka. Zatim se odabiru alati i tehnologija koji su pogodni za rad na projektu. Nakon toga kreće se u izradu projektnog plana, proračuna, budžeta i ponude narčitelju. Pri kraju prve faze, ponovo se održava sastanak, te se prema dogovoru vrši dorada projekta.
+
+Druga faza projekta je modeliranje. Modeliranje obuhvaća izradu UML dijagrama te modeliranje baze podataka i izradu ERA modela. UML dijagrami uključuju dijagram slučajeva korištenja, dijagrame slijeda, dijagrame aktivnosti, dijagram klasa. Nakon izrade dijagrama i modeliranja baze podataka, održava se sasatnak tima čime završava druga faza.
+
+Treća faza je faza implementacije. Implementacija odnosno izrada aplikacije sastoji se od izrade grafičkog sučelja aplikacije, pisanja programskog koda, testiranja i verifikacije aplikacije, te na kraju dorade aplikacije i sastanka tima.
+
+Četvrta i zadnja faza je izrada dokumentacije. Izrađuje se projekta, tehnička i korisnička dokumentacija. Nakon toga slijedi prezentacija rješenja, javna obrana.
+
+
+<img src="https://i.ibb.co/TRCdmf0/Screenshot-2019-05-03-at-16-34-49.png" width="950" />
+
+_Slika 6. Terminski plan_
+<br/>
+<br/>
