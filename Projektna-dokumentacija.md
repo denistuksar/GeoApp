@@ -94,3 +94,9 @@ Treća faza je faza implementacije. Implementacija odnosno izrada aplikacije sas
 _Slika 6. Terminski plan_
 <br/>
 <br/>
+## Gantogram aktivnosti
+Na slici 7 je gantogram aktivnosti izrađen u alatu Microsoft Project. Gantogram aktivnosti prikazuje redoslijed izvršavanja aktivnosti i vremensko trajanje svake aktivnosti. 
+
+<img src="https://i.ibb.co/Hx42mfh/Screenshot-2019-05-03-at-16-45-42.png" width="950" />
+
+_Slika 7. Gantogram aktivnosti_
