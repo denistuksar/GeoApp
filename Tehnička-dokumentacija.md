@@ -11,3 +11,8 @@ Aplikacija ima već predefiniranog Administratora koji ima mogućnost dodati zap
 <img src="https://i.ibb.co/9HVkV34/Registracija-i-prijava.jpg" width="700" />
 
 Da bi se koristila aplikacija svaki korisnik se prvo mora registrirati u sustav. Korisnik šalje zahtjev za registraciju te mu se prikazuje forma za registraciju u sustav. Kako bi se uspješno registrirao u sustav potrebno je unijeti svoje podatke kao što su ime, prezime, korisničko ime, lozinka... Ukoliko nešto nije popunio javlja se greška i vraća ga opet na formu za registraciju da popuni nedostajaće polje. Kada se korisnik uspješno registrirao vraća se na početnu formu gdje se nalazi forma za prijavu korisnika. Korisnik upiše svoje korisničko ime i lozinku koju je naveo u registraciji. Ako korisnik unese pogrešne podatke javlja se greška i vraća ga na prijavu. Kad je ispravno unio svoje podatke korisnik može koristiti aplikaciju.
+
+### Dijagram slijeda "Unos zaposlenika i uređivanje njegovih prava"
+<img src="https://i.ibb.co/R2QNm8t/Unos-i-ure-ivanje-zaposlenika.jpg" width="700" />
+
+Korisnik, koji ima prava administratora u aplikaciju se prijavljuje sa svojim korisničkim imenom i lozinkom. Odabire formu za unos zaposlenika te se mu otvora obrazac za registraciju korisnika. Kada je uspješno popunio sva polja zaposlenik se sprema u bazu podataka. Administrator vidi popis svih zaposlenih s pripadnim pravima. Ima mogućnost dodati i promjeniti prava svakog zaposlenik te ukloniti zaposlenika.   
