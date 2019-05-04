@@ -1,4 +1,5 @@
-# Uvod
+# Projektna dokumentacija
+## 1.1 O projektu
 GeoCentar kao poduzeće ima različite aktivnosti u radu s geodetskim instrumentima. Aplikacija koju bi
 razvili olakšala bi i poboljšala proces servisiranja geodetskih uređaja. Krajnji korisnici aplikacije su radnici
 GeoCentra i potencijalni kupci geodetskih uređaja i njemu pripadne opreme. U aplikaciji bi na jednom mjestu
@@ -7,11 +8,8 @@ o kvaru, potvrde, certifikati, a moguć bi bio i uvid u naplate, račune i otpre
 sustav u ulozi kupca, administratora ili zaposlenika te bi bila poznata prava pojedine uloge pri korištenju
 aplikacije. 
 
-![logo](https://image.ibb.co/h7Np9H/Picture1.png)
 
-_Slika 1. Logotip poduzeća Geo-Centar d.o.o._
-
-# Specifikacija zahtjeva
+## 1.2. Specifikacija zahtjeva
 U specifikacijama zahtjeva sadržane su funkcionalnosti gotove aplikacije i zahtjevi korisnika iste. Kao što je rečeno ranije, glavna svrha aplikacije bila bi olakšati i poboljšati proces servisiranja geodetskih uređaja. Aplikacija bi omogućavala prijavu u ulozi kupca, administratora i zaposlenika. Svaka uloga imala bi dostupne različite funkcionalnosti aplikacije. 
 
 U ulozi kupca, u aplikaciji bi bile dostupne sljedeće funkcionalnosti: 
@@ -30,10 +28,10 @@ U ulozi zaposlenika, u aplikaciji bi bile dostupne sljedeće funkcionalnosti:
 * Odobravanje narudžbe
 * Pristup bazama podataka
 
-# Projektni plan
+## 1.3. Projektni plan
 Bitan dio i jedna od najvažnijih faza upravljanja projektom je planiranje. Rezultat procesa planiranja projekta je plan projekta i bez plana projekta ne započinju daljnje aktivnosti na projektu. Plan projekta sadži ciljeve projekta, popis aktivnosti, vrijeme koje će se utrošiti na ostvarivanje ciljeva, rokove, troškove i resurse potrebne za realiziranje projekta. Za izradu projetnog plana korišten je alat Microsoft Project 2007. MS Project omugućava prikaz aktivnosti i radnji na projektu i korištenih resursa. Prikazuje se tijek odvijanja projekta, koliko je određena radnja trajala i koji je član tima bio zadužen za istu.
 
-## Projektni tim
+## 1.4. Projektni tim
 Projektni tim sastoji se od tri člana. Svaki od članova ima svoju ulogu i zadatke za koje je zadužen. Članovi tima su:
 * Nikola Jankaš
 * Denis Tuksar 
@@ -57,7 +55,7 @@ _Slika 3. Zaduženja pojedinih članova tima_
 <br/>
 <br/>
 
-## Resursi
+## 1.5. Resursi
 
 Slika 4 prikazuje resurse korištene pri izradi projekta. Resursi uključuju članove tima i materijalne resurse koji su potrebi za uspješno izvršavanje projektnih obaveza. Potrebna sam nam 3 računala, jedno za svakog člana tima. 
 
@@ -68,7 +66,7 @@ _Slika 4. Resursi i članovi tima_
 <br/>
 <br/>
 
-## Radno vrijeme
+## 1.6. Radno vrijeme
 
 Radno vrijeme je vidljivo na slici 5. Radni dani su od ponedjeljka do petka s vremenom od 8:00 do 12:00, 13:00 do 17:00. Subota i nedjelja su neradni dani. Osim subote i nedjelje, neradni dani su 22.4.2018. i 1.5.2018., odnosno Uskrsni ponedjeljak i Praznik rada.
 
@@ -77,7 +75,7 @@ Radno vrijeme je vidljivo na slici 5. Radni dani su od ponedjeljka do petka s vr
 _Slika 5. Radno vrijeme_
 <br/>
 <br/>
-## Terminski plan
+## 1.7. Terminski plan
 Na slici 6 je terminski plan koji je izražen u MS Projectu. Projekt smo podijelili u četiri faze: Planiranje projekta, Modeliranje projekta, Implementacija odnosno izrada same aplikacije, Izrada dokumentacije. Te faze i njihove podfaze vidljive su u terminskom planu. 
 
 Prva faza je planiranje projekta i ona započinje sastankom tima, proučavanjem korisničkih zahtjeva i raspodjelom zadataka. Zatim se odabiru alati i tehnologija koji su pogodni za rad na projektu. Nakon toga kreće se u izradu projektnog plana, proračuna, budžeta i ponude narčitelju. Pri kraju prve faze, ponovo se održava sastanak, te se prema dogovoru vrši dorada projekta.
@@ -94,14 +92,14 @@ Treća faza je faza implementacije. Implementacija odnosno izrada aplikacije sas
 _Slika 6. Terminski plan_
 <br/>
 <br/>
-## Gantogram aktivnosti
+## 1.8. Gantogram aktivnosti
 Na slici 7 je gantogram aktivnosti izrađen u alatu Microsoft Project. Gantogram aktivnosti prikazuje redoslijed izvršavanja aktivnosti i vremensko trajanje svake aktivnosti. 
 
 <img src="https://i.ibb.co/Hx42mfh/Screenshot-2019-05-03-at-16-45-42.png" width="950" />
 
 _Slika 7. Gantogram aktivnosti_
 
-# Proračun i budžet
+# 1.9. Proračun i budžet
 Na slici 8 je proračun projekta i ukupni trošak projekta. Tu su izračunati svi resursi, ljudski i materijalni. Ljudski uključuju članove tima čija satnica je 50 kn/h, a materijalni računala čiji je trošak 10 kn/h. Ukupan trošak projekta iznosi 38.880,00 kn.
 <img src="https://i.ibb.co/yW0zVKq/Screenshot-2019-05-03-at-16-52-33.png" width="950" />
 
