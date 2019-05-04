@@ -1,0 +1,12 @@
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\bin\Debug\Geoapp.exe.config
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\bin\Debug\Geoapp.exe
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\bin\Debug\Geoapp.pdb
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.csprojAssemblyReference.cache
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.Properties.Resources.resources
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.csproj.GenerateResource.cache
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.csproj.CoreCompileInputs.cache
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.exe
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.pdb
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.Pocetna.resources
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.UnosArtikla.resources
+C:\Users\denistuksar\source\repos\Geoapp\Geoapp\obj\Debug\Geoapp.AzuriranjeArtikla.resources
