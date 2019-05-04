@@ -1,5 +1,5 @@
 # Projektna dokumentacija
-## 1.1 O projektu
+## 1.1. O projektu
 GeoCentar kao poduzeće ima različite aktivnosti u radu s geodetskim instrumentima. Aplikacija koju bi
 razvili olakšala bi i poboljšala proces servisiranja geodetskih uređaja. Krajnji korisnici aplikacije su radnici
 GeoCentra i potencijalni kupci geodetskih uređaja i njemu pripadne opreme. U aplikaciji bi na jednom mjestu
