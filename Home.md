@@ -24,4 +24,4 @@ _Slika 1. Logotip poduzeća Geo-Centar d.o.o._
 ## Sadržaj
 1. [Projektna dokumentacija](https://github.com/foivz/r19038/wiki/Projektna-dokumentacija)
 2. [Tehnička dokumentacija](https://github.com/foivz/r19038/wiki/Tehnička-dokumentacija)
-3. Korisnička dokumentacija
+3. [Korisnička dokumentacija](https://github.com/foivz/r19038/wiki/Korisnička-dokumentacija)
