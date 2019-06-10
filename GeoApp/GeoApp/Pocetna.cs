@@ -23,14 +23,16 @@ namespace GeoApp
         {
             this.Hide();
             UnosArtikla unos = new UnosArtikla();
-            unos.Show();
+            unos.ShowDialog();
+            this.Close();
         }
 
         private void azuriranjeUredaja_Click(object sender, EventArgs e)
         {
             this.Hide();
             AzuriranjeArtikla azuriranje = new AzuriranjeArtikla();
-            azuriranje.Show();
+            azuriranje.ShowDialog();
+            this.Close();
         }
 
         private void Pocetna_Load(object sender, EventArgs e)
@@ -59,6 +61,16 @@ namespace GeoApp
             this.Hide();
             Prijava prijava = new Prijava();
             prijava.ShowDialog();
+            this.Close();
         }
+
+        private void btnNarucivanje_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Narucivanje narucivanje = new Narucivanje();
+            narucivanje.ShowDialog();
+            this.Close();
+        }
+
     }
 }

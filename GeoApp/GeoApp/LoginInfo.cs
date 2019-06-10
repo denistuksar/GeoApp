@@ -8,6 +8,7 @@ namespace GeoApp
 {
     public static class LoginInfo
     {
+        public static int IDKorisnika;
         public static string Korime;
         public static string Uloga;
     }

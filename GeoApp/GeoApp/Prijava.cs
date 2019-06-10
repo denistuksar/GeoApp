@@ -29,12 +29,18 @@ namespace GeoApp
                                  where k.Korisnicko_ime == korisnickoIme.Text
                                  select k.Uloga.Naziv;
                     var uloga = query2.FirstOrDefault<string>();
+                    var query3 = from k in db.Korisnik
+                                 where k.Korisnicko_ime == korisnickoIme.Text
+                                 select k.ID_korisnika; ;
+                    var id = query3.FirstOrDefault<int>();
+                    LoginInfo.IDKorisnika = id;
                     LoginInfo.Uloga = uloga.ToString();
                     LoginInfo.Korime = korisnickoIme.Text;
                     
                     this.Hide();
                     Pocetna pocetna = new Pocetna();
-                    pocetna.ShowDialog(); 
+                    pocetna.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
@@ -48,6 +54,7 @@ namespace GeoApp
             this.Hide();
             Registracija registracija = new Registracija();
             registracija.ShowDialog();
+            this.Close();
         }
 
         private void Prijava_Load(object sender, EventArgs e)
@@ -55,8 +62,9 @@ namespace GeoApp
             this.MaximizeBox = false;
         }
 
-        private void Prijava_FormClosed(object sender, FormClosedEventArgs e)
+        private void Prijava_FormClosing(object sender, FormClosingEventArgs e)
         {
+            this.Hide();
             Application.Exit();
         }
     }

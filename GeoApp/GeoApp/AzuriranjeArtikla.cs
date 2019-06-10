@@ -64,6 +64,7 @@ namespace GeoApp
                 artikli = db.Artikl.ToList();
             }
             dgvArtikli.DataSource = artikli;
+            dgvArtikli.Columns[6].Visible = false;
         }
   
         private void AzuriranjeArtikla_Load(object sender, EventArgs e)
@@ -82,7 +83,7 @@ namespace GeoApp
                 Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
                 if (selektiraniArtikl != null)
                 {
-                    if (MessageBox.Show("Da li ste sigurni da žeite izbrisati artikl?", "Upozorenje!",
+                    if (MessageBox.Show("Da li ste sigurni da želite izbrisati artikl?", "Upozorenje!",
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
                     {
@@ -107,6 +108,7 @@ namespace GeoApp
         {
             this.Hide();
             new Pocetna().ShowDialog();
+            this.Close();
         }
     }
 }

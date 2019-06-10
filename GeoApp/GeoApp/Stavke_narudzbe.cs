@@ -14,6 +14,7 @@ namespace GeoApp
     
     public partial class Stavke_narudzbe
     {
+        public int ID_stavke { get; set; }
         public int NarudzbaID_narudzbe { get; set; }
         public Nullable<int> Uredaj_ServisID_uredaj_servis { get; set; }
         public Nullable<int> ArtiklID_artikla { get; set; }

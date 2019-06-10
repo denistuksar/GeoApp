@@ -30,8 +30,10 @@ namespace GeoApp
                 db.SaveChanges();
             }
             Close();
+            this.Hide();
             Pocetna unos = new Pocetna();
             unos.ShowDialog();
+            this.Close();
         }
 
         private void UnosArtikla_Load(object sender, EventArgs e)
@@ -43,7 +45,7 @@ namespace GeoApp
         {
             this.Hide();
             Pocetna unos = new Pocetna();
-            unos.ShowDialog();
+            this.Close();
         }
     }
 }

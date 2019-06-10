@@ -25,7 +25,8 @@ namespace GeoApp
         public Nullable<bool> Azuriranje_artikla { get; set; }
         public Nullable<bool> Brisanje_artikla { get; set; }
         public Nullable<bool> Odobravanje_narudzbe { get; set; }
-    
+        public Nullable<bool> Uredivanje_ovlasti { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Uloga> Uloga { get; set; }
     }

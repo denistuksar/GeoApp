@@ -57,6 +57,7 @@ namespace GeoApp
             this.Hide();
             Prijava prijava = new Prijava();
             prijava.Show();
+            this.Close();
         }
 
         private void Registracija_Load(object sender, EventArgs e)
@@ -69,6 +70,7 @@ namespace GeoApp
             this.Hide();
             Prijava prijava = new Prijava();
             prijava.ShowDialog();
+            this.Close();
         }
     }
 }

@@ -24,7 +24,8 @@ namespace GeoApp
         public Nullable<int> KorisnikID_korisnika { get; set; }
         public Nullable<System.DateTime> Datum { get; set; }
         public Nullable<System.TimeSpan> Vrijeme { get; set; }
-    
+        public Nullable<bool> Status { get; set; }
+
         public virtual Korisnik Korisnik { get; set; }
         public virtual Stavke_narudzbe Stavke_narudzbe { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

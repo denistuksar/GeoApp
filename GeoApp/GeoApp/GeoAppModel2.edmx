@@ -39,16 +39,7 @@
           <Property Name="KorisnikID_korisnika" Type="int" />
           <Property Name="Datum" Type="date" />
           <Property Name="Vrijeme" Type="time" Precision="7" />
-        </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view '19038_DB.dbo.Odobravanje_narudzbe' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-        <EntityType Name="Odobravanje_narudzbe">
-          <Key>
-            <PropertyRef Name="KorisnikID_korisnika" />
-            <PropertyRef Name="NarudzbaID_narudzbe" />
-          </Key>
-          <Property Name="KorisnikID_korisnika" Type="int" Nullable="false" />
-          <Property Name="NarudzbaID_narudzbe" Type="int" Nullable="false" />
+          <Property Name="Status" Type="bit" />
         </EntityType>
         <EntityType Name="Ovlasti">
           <Key>
@@ -59,13 +50,13 @@ warning 6002: The table/view '19038_DB.dbo.Odobravanje_narudzbe' does not have a
           <Property Name="Azuriranje_artikla" Type="bit" />
           <Property Name="Brisanje_artikla" Type="bit" />
           <Property Name="Odobravanje_narudzbe" Type="bit" />
+          <Property Name="Uredivanje_ovlasti" Type="bit" />
         </EntityType>
-        <!--Errors Found During Generation:
-warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Stavke_narudzbe">
           <Key>
-            <PropertyRef Name="NarudzbaID_narudzbe" />
+            <PropertyRef Name="ID_stavke" />
           </Key>
+          <Property Name="ID_stavke" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="NarudzbaID_narudzbe" Type="int" Nullable="false" />
           <Property Name="Uredaj_ServisID_uredaj_servis" Type="int" />
           <Property Name="ArtiklID_artikla" Type="int" />
@@ -117,30 +108,6 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Odobravanje_narudzbe_Korisnik">
-          <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="1" />
-          <End Role="Odobravanje_narudzbe" Type="Self.Odobravanje_narudzbe" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Korisnik">
-              <PropertyRef Name="ID_korisnika" />
-            </Principal>
-            <Dependent Role="Odobravanje_narudzbe">
-              <PropertyRef Name="KorisnikID_korisnika" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Odobravanje_narudzbe_Narudzba">
-          <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="1" />
-          <End Role="Odobravanje_narudzbe" Type="Self.Odobravanje_narudzbe" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Narudzba">
-              <PropertyRef Name="ID_narudzbe" />
-            </Principal>
-            <Dependent Role="Odobravanje_narudzbe">
-              <PropertyRef Name="NarudzbaID_narudzbe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Stavke_narudzbe_Artikl">
           <End Role="Artikl" Type="Self.Artikl" Multiplicity="0..1" />
           <End Role="Stavke_narudzbe" Type="Self.Stavke_narudzbe" Multiplicity="*" />
@@ -155,7 +122,7 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
         </Association>
         <Association Name="FK_Stavke_narudzbe_Narudzba">
           <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="1" />
-          <End Role="Stavke_narudzbe" Type="Self.Stavke_narudzbe" Multiplicity="0..1" />
+          <End Role="Stavke_narudzbe" Type="Self.Stavke_narudzbe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Narudzba">
               <PropertyRef Name="ID_narudzbe" />
@@ -206,22 +173,9 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <EntitySet Name="Korisnik" EntityType="Self.Korisnik" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Narudzba" EntityType="Self.Narudzba" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Ovlasti" EntityType="Self.Ovlasti" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Stavke_narudzbe" EntityType="Self.Stavke_narudzbe" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Uloga" EntityType="Self.Uloga" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Uredaj_Servis" EntityType="Self.Uredaj_Servis" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Odobravanje_narudzbe" EntityType="Self.Odobravanje_narudzbe" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Odobravanje_narudzbe].[KorisnikID_korisnika] AS [KorisnikID_korisnika], 
-    [Odobravanje_narudzbe].[NarudzbaID_narudzbe] AS [NarudzbaID_narudzbe]
-    FROM [dbo].[Odobravanje_narudzbe] AS [Odobravanje_narudzbe]</DefiningQuery>
-          </EntitySet>
-          <EntitySet Name="Stavke_narudzbe" EntityType="Self.Stavke_narudzbe" store:Type="Tables" store:Schema="dbo">
-            <DefiningQuery>SELECT 
-    [Stavke_narudzbe].[NarudzbaID_narudzbe] AS [NarudzbaID_narudzbe], 
-    [Stavke_narudzbe].[Uredaj_ServisID_uredaj_servis] AS [Uredaj_ServisID_uredaj_servis], 
-    [Stavke_narudzbe].[ArtiklID_artikla] AS [ArtiklID_artikla], 
-    [Stavke_narudzbe].[Kolicina] AS [Kolicina]
-    FROM [dbo].[Stavke_narudzbe] AS [Stavke_narudzbe]</DefiningQuery>
-          </EntitySet>
           <AssociationSet Name="FK_Korisnik_Uloga" Association="Self.FK_Korisnik_Uloga">
             <End Role="Uloga" EntitySet="Uloga" />
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -229,14 +183,6 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <AssociationSet Name="FK_Narudzba_Korisnik" Association="Self.FK_Narudzba_Korisnik">
             <End Role="Korisnik" EntitySet="Korisnik" />
             <End Role="Narudzba" EntitySet="Narudzba" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Odobravanje_narudzbe_Korisnik" Association="Self.FK_Odobravanje_narudzbe_Korisnik">
-            <End Role="Korisnik" EntitySet="Korisnik" />
-            <End Role="Odobravanje_narudzbe" EntitySet="Odobravanje_narudzbe" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Odobravanje_narudzbe_Narudzba" Association="Self.FK_Odobravanje_narudzbe_Narudzba">
-            <End Role="Narudzba" EntitySet="Narudzba" />
-            <End Role="Odobravanje_narudzbe" EntitySet="Odobravanje_narudzbe" />
           </AssociationSet>
           <AssociationSet Name="FK_Stavke_narudzbe_Artikl" Association="Self.FK_Stavke_narudzbe_Artikl">
             <End Role="Artikl" EntitySet="Artikl" />
@@ -270,11 +216,6 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <EntitySet Name="Ovlasti" EntityType="DBModel.Ovlasti" />
           <EntitySet Name="Uloga" EntityType="DBModel.Uloga" />
           <EntitySet Name="Uredaj_Servis" EntityType="DBModel.Uredaj_Servis" />
-          <EntitySet Name="Stavke_narudzbe" EntityType="DBModel.Stavke_narudzbe" />
-          <AssociationSet Name="FK_Stavke_narudzbe_Artikl" Association="DBModel.FK_Stavke_narudzbe_Artikl">
-            <End Role="Artikl" EntitySet="Artikl" />
-            <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
-          </AssociationSet>
           <AssociationSet Name="FK_Korisnik_Uloga" Association="DBModel.FK_Korisnik_Uloga">
             <End Role="Uloga" EntitySet="Uloga" />
             <End Role="Korisnik" EntitySet="Korisnik" />
@@ -287,21 +228,22 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
             <End Role="Korisnik" EntitySet="Korisnik" />
             <End Role="Uredaj_Servis" EntitySet="Uredaj_Servis" />
           </AssociationSet>
-          <AssociationSet Name="FK_Stavke_narudzbe_Narudzba" Association="DBModel.FK_Stavke_narudzbe_Narudzba">
-            <End Role="Narudzba" EntitySet="Narudzba" />
-            <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
-          </AssociationSet>
           <AssociationSet Name="FK_Uloga_Ovlasti" Association="DBModel.FK_Uloga_Ovlasti">
             <End Role="Ovlasti" EntitySet="Ovlasti" />
             <End Role="Uloga" EntitySet="Uloga" />
           </AssociationSet>
+          <EntitySet Name="Stavke_narudzbe" EntityType="DBModel.Stavke_narudzbe" />
+          <AssociationSet Name="FK_Stavke_narudzbe_Artikl" Association="DBModel.FK_Stavke_narudzbe_Artikl">
+            <End Role="Artikl" EntitySet="Artikl" />
+            <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Stavke_narudzbe_Narudzba" Association="DBModel.FK_Stavke_narudzbe_Narudzba">
+            <End Role="Narudzba" EntitySet="Narudzba" />
+            <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
+          </AssociationSet>
           <AssociationSet Name="FK_Stavke_narudzbe_Uredaj_Servis" Association="DBModel.FK_Stavke_narudzbe_Uredaj_Servis">
             <End Role="Uredaj_Servis" EntitySet="Uredaj_Servis" />
             <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
-          </AssociationSet>
-          <AssociationSet Name="Odobravanje_narudzbe" Association="DBModel.Odobravanje_narudzbe">
-            <End Role="Korisnik" EntitySet="Korisnik" />
-            <End Role="Narudzba" EntitySet="Narudzba" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="Artikl">
@@ -333,7 +275,6 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <NavigationProperty Name="Uloga" Relationship="DBModel.FK_Korisnik_Uloga" FromRole="Korisnik" ToRole="Uloga" />
           <NavigationProperty Name="Narudzba" Relationship="DBModel.FK_Narudzba_Korisnik" FromRole="Korisnik" ToRole="Narudzba" />
           <NavigationProperty Name="Uredaj_Servis" Relationship="DBModel.FK_Uredaj_Servis_Korisnik" FromRole="Korisnik" ToRole="Uredaj_Servis" />
-          <NavigationProperty Name="Narudzba1" Relationship="DBModel.Odobravanje_narudzbe" FromRole="Korisnik" ToRole="Narudzba" />
         </EntityType>
         <EntityType Name="Narudzba">
           <Key>
@@ -343,9 +284,9 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <Property Name="KorisnikID_korisnika" Type="Int32" />
           <Property Name="Datum" Type="DateTime" Precision="0" />
           <Property Name="Vrijeme" Type="Time" Precision="7" />
+          <Property Name="Status" Type="Boolean" />
           <NavigationProperty Name="Korisnik" Relationship="DBModel.FK_Narudzba_Korisnik" FromRole="Narudzba" ToRole="Korisnik" />
           <NavigationProperty Name="Stavke_narudzbe" Relationship="DBModel.FK_Stavke_narudzbe_Narudzba" FromRole="Narudzba" ToRole="Stavke_narudzbe" />
-          <NavigationProperty Name="Korisnik1" Relationship="DBModel.Odobravanje_narudzbe" FromRole="Narudzba" ToRole="Korisnik" />
         </EntityType>
         <EntityType Name="Ovlasti">
           <Key>
@@ -356,6 +297,7 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <Property Name="Azuriranje_artikla" Type="Boolean" />
           <Property Name="Brisanje_artikla" Type="Boolean" />
           <Property Name="Odobravanje_narudzbe" Type="Boolean" />
+          <Property Name="Uredivanje_ovlasti" Type="Boolean" />
           <NavigationProperty Name="Uloga" Relationship="DBModel.FK_Uloga_Ovlasti" FromRole="Ovlasti" ToRole="Uloga" />
         </EntityType>
         <EntityType Name="Uloga">
@@ -384,30 +326,6 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <NavigationProperty Name="Korisnik" Relationship="DBModel.FK_Uredaj_Servis_Korisnik" FromRole="Uredaj_Servis" ToRole="Korisnik" />
           <NavigationProperty Name="Stavke_narudzbe" Relationship="DBModel.FK_Stavke_narudzbe_Uredaj_Servis" FromRole="Uredaj_Servis" ToRole="Stavke_narudzbe" />
         </EntityType>
-        <EntityType Name="Stavke_narudzbe">
-          <Key>
-            <PropertyRef Name="NarudzbaID_narudzbe" />
-          </Key>
-          <Property Name="NarudzbaID_narudzbe" Type="Int32" Nullable="false" />
-          <Property Name="Uredaj_ServisID_uredaj_servis" Type="Int32" />
-          <Property Name="ArtiklID_artikla" Type="Int32" />
-          <Property Name="Kolicina" Type="Int32" />
-          <NavigationProperty Name="Artikl" Relationship="DBModel.FK_Stavke_narudzbe_Artikl" FromRole="Stavke_narudzbe" ToRole="Artikl" />
-          <NavigationProperty Name="Narudzba" Relationship="DBModel.FK_Stavke_narudzbe_Narudzba" FromRole="Stavke_narudzbe" ToRole="Narudzba" />
-          <NavigationProperty Name="Uredaj_Servis" Relationship="DBModel.FK_Stavke_narudzbe_Uredaj_Servis" FromRole="Stavke_narudzbe" ToRole="Uredaj_Servis" />
-        </EntityType>
-        <Association Name="FK_Stavke_narudzbe_Artikl">
-          <End Type="DBModel.Artikl" Role="Artikl" Multiplicity="0..1" />
-          <End Type="DBModel.Stavke_narudzbe" Role="Stavke_narudzbe" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Artikl">
-              <PropertyRef Name="ID_artikla" />
-            </Principal>
-            <Dependent Role="Stavke_narudzbe">
-              <PropertyRef Name="ArtiklID_artikla" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Korisnik_Uloga">
           <End Type="DBModel.Uloga" Role="Uloga" Multiplicity="0..1" />
           <End Type="DBModel.Korisnik" Role="Korisnik" Multiplicity="*" />
@@ -444,18 +362,6 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Stavke_narudzbe_Narudzba">
-          <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="1" />
-          <End Type="DBModel.Stavke_narudzbe" Role="Stavke_narudzbe" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Narudzba">
-              <PropertyRef Name="ID_narudzbe" />
-            </Principal>
-            <Dependent Role="Stavke_narudzbe">
-              <PropertyRef Name="NarudzbaID_narudzbe" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Uloga_Ovlasti">
           <End Type="DBModel.Ovlasti" Role="Ovlasti" Multiplicity="0..1" />
           <End Type="DBModel.Uloga" Role="Uloga" Multiplicity="*" />
@@ -465,6 +371,43 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
             </Principal>
             <Dependent Role="Uloga">
               <PropertyRef Name="OvlastiID_ovlast" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Stavke_narudzbe">
+          <Key>
+            <PropertyRef Name="ID_stavke" />
+          </Key>
+          <Property Name="ID_stavke" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NarudzbaID_narudzbe" Type="Int32" Nullable="false" />
+          <Property Name="Uredaj_ServisID_uredaj_servis" Type="Int32" />
+          <Property Name="ArtiklID_artikla" Type="Int32" />
+          <Property Name="Kolicina" Type="Int32" />
+          <NavigationProperty Name="Artikl" Relationship="DBModel.FK_Stavke_narudzbe_Artikl" FromRole="Stavke_narudzbe" ToRole="Artikl" />
+          <NavigationProperty Name="Narudzba" Relationship="DBModel.FK_Stavke_narudzbe_Narudzba" FromRole="Stavke_narudzbe" ToRole="Narudzba" />
+          <NavigationProperty Name="Uredaj_Servis" Relationship="DBModel.FK_Stavke_narudzbe_Uredaj_Servis" FromRole="Stavke_narudzbe" ToRole="Uredaj_Servis" />
+        </EntityType>
+        <Association Name="FK_Stavke_narudzbe_Artikl">
+          <End Type="DBModel.Artikl" Role="Artikl" Multiplicity="0..1" />
+          <End Type="DBModel.Stavke_narudzbe" Role="Stavke_narudzbe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Artikl">
+              <PropertyRef Name="ID_artikla" />
+            </Principal>
+            <Dependent Role="Stavke_narudzbe">
+              <PropertyRef Name="ArtiklID_artikla" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Stavke_narudzbe_Narudzba">
+          <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="1" />
+          <End Type="DBModel.Stavke_narudzbe" Role="Stavke_narudzbe" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Narudzba">
+              <PropertyRef Name="ID_narudzbe" />
+            </Principal>
+            <Dependent Role="Stavke_narudzbe">
+              <PropertyRef Name="NarudzbaID_narudzbe" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -480,11 +423,7 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="Odobravanje_narudzbe">
-          <End Type="DBModel.Korisnik" Role="Korisnik" Multiplicity="*" />
-          <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="*" />
-        </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -521,6 +460,7 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <EntitySetMapping Name="Narudzba">
             <EntityTypeMapping TypeName="DBModel.Narudzba">
               <MappingFragment StoreEntitySet="Narudzba">
+                <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="Vrijeme" ColumnName="Vrijeme" />
                 <ScalarProperty Name="Datum" ColumnName="Datum" />
                 <ScalarProperty Name="KorisnikID_korisnika" ColumnName="KorisnikID_korisnika" />
@@ -531,6 +471,7 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
           <EntitySetMapping Name="Ovlasti">
             <EntityTypeMapping TypeName="DBModel.Ovlasti">
               <MappingFragment StoreEntitySet="Ovlasti">
+                <ScalarProperty Name="Uredivanje_ovlasti" ColumnName="Uredivanje_ovlasti" />
                 <ScalarProperty Name="Odobravanje_narudzbe" ColumnName="Odobravanje_narudzbe" />
                 <ScalarProperty Name="Brisanje_artikla" ColumnName="Brisanje_artikla" />
                 <ScalarProperty Name="Azuriranje_artikla" ColumnName="Azuriranje_artikla" />
@@ -570,17 +511,10 @@ warning 6002: The table/view '19038_DB.dbo.Stavke_narudzbe' does not have a prim
                 <ScalarProperty Name="ArtiklID_artikla" ColumnName="ArtiklID_artikla" />
                 <ScalarProperty Name="Uredaj_ServisID_uredaj_servis" ColumnName="Uredaj_ServisID_uredaj_servis" />
                 <ScalarProperty Name="NarudzbaID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
+                <ScalarProperty Name="ID_stavke" ColumnName="ID_stavke" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="Odobravanje_narudzbe" TypeName="DBModel.Odobravanje_narudzbe" StoreEntitySet="Odobravanje_narudzbe">
-            <EndProperty Name="Narudzba">
-              <ScalarProperty Name="ID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
-            </EndProperty>
-            <EndProperty Name="Korisnik">
-              <ScalarProperty Name="ID_korisnika" ColumnName="KorisnikID_korisnika" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

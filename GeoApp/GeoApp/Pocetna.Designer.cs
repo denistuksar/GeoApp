@@ -157,6 +157,7 @@
             this.btnNarucivanje.TabIndex = 9;
             this.btnNarucivanje.Text = "Naručivanje uređaja i opreme";
             this.btnNarucivanje.UseVisualStyleBackColor = false;
+            this.btnNarucivanje.Click += new System.EventHandler(this.btnNarucivanje_Click);
             // 
             // btnOdobravanje
             // 

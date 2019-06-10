@@ -32,6 +32,7 @@
     <EntitySetMapping Name="Narudzba">
       <EntityTypeMapping TypeName="DBModel.Narudzba">
         <MappingFragment StoreEntitySet="Narudzba">
+          <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="Vrijeme" ColumnName="Vrijeme" />
           <ScalarProperty Name="Datum" ColumnName="Datum" />
           <ScalarProperty Name="KorisnikID_korisnika" ColumnName="KorisnikID_korisnika" />
@@ -42,6 +43,7 @@
     <EntitySetMapping Name="Ovlasti">
       <EntityTypeMapping TypeName="DBModel.Ovlasti">
         <MappingFragment StoreEntitySet="Ovlasti">
+          <ScalarProperty Name="Uredivanje_ovlasti" ColumnName="Uredivanje_ovlasti" />
           <ScalarProperty Name="Odobravanje_narudzbe" ColumnName="Odobravanje_narudzbe" />
           <ScalarProperty Name="Brisanje_artikla" ColumnName="Brisanje_artikla" />
           <ScalarProperty Name="Azuriranje_artikla" ColumnName="Azuriranje_artikla" />
@@ -81,16 +83,9 @@
           <ScalarProperty Name="ArtiklID_artikla" ColumnName="ArtiklID_artikla" />
           <ScalarProperty Name="Uredaj_ServisID_uredaj_servis" ColumnName="Uredaj_ServisID_uredaj_servis" />
           <ScalarProperty Name="NarudzbaID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
+          <ScalarProperty Name="ID_stavke" ColumnName="ID_stavke" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="Odobravanje_narudzbe" TypeName="DBModel.Odobravanje_narudzbe" StoreEntitySet="Odobravanje_narudzbe">
-      <EndProperty Name="Narudzba">
-        <ScalarProperty Name="ID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
-      </EndProperty>
-      <EndProperty Name="Korisnik">
-        <ScalarProperty Name="ID_korisnika" ColumnName="KorisnikID_korisnika" />
-      </EndProperty>
-    </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping>
