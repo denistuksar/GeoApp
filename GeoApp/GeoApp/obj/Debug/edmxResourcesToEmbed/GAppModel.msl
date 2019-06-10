@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DBModel2StoreContainer" CdmEntityContainer="Entities2">
+    <EntitySetMapping Name="Artikl">
+      <EntityTypeMapping TypeName="DBModel2.Artikl">
+        <MappingFragment StoreEntitySet="Artikl">
+          <ScalarProperty Name="ID_artikla" ColumnName="ID_artikla" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+          <ScalarProperty Name="Proizvodac" ColumnName="Proizvodac" />
+          <ScalarProperty Name="Cijena" ColumnName="Cijena" />
+          <ScalarProperty Name="Serijski_broj" ColumnName="Serijski_broj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Korisnik">
+      <EntityTypeMapping TypeName="DBModel2.Korisnik">
+        <MappingFragment StoreEntitySet="Korisnik">
+          <ScalarProperty Name="ID_korisnika" ColumnName="ID_korisnika" />
+          <ScalarProperty Name="UlogaID_uloge" ColumnName="UlogaID_uloge" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="OIB" ColumnName="OIB" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Broj_telefona" ColumnName="Broj_telefona" />
+          <ScalarProperty Name="Korisnicko_ime" ColumnName="Korisnicko_ime" />
+          <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Narudzba">
+      <EntityTypeMapping TypeName="DBModel2.Narudzba">
+        <MappingFragment StoreEntitySet="Narudzba">
+          <ScalarProperty Name="ID_narudzbe" ColumnName="ID_narudzbe" />
+          <ScalarProperty Name="KorisnikID_korisnika" ColumnName="KorisnikID_korisnika" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Vrijeme" ColumnName="Vrijeme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ovlasti">
+      <EntityTypeMapping TypeName="DBModel2.Ovlasti">
+        <MappingFragment StoreEntitySet="Ovlasti">
+          <ScalarProperty Name="ID_ovlasti" ColumnName="ID_ovlasti" />
+          <ScalarProperty Name="Unos_artikla" ColumnName="Unos_artikla" />
+          <ScalarProperty Name="Azuriranje_artikla" ColumnName="Azuriranje_artikla" />
+          <ScalarProperty Name="Brisanje_artikla" ColumnName="Brisanje_artikla" />
+          <ScalarProperty Name="Odobravanje_narudzbe" ColumnName="Odobravanje_narudzbe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uloga">
+      <EntityTypeMapping TypeName="DBModel2.Uloga">
+        <MappingFragment StoreEntitySet="Uloga">
+          <ScalarProperty Name="ID_uloge" ColumnName="ID_uloge" />
+          <ScalarProperty Name="OvlastiID_ovlast" ColumnName="OvlastiID_ovlast" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Opis" ColumnName="Opis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uredaj_Servis">
+      <EntityTypeMapping TypeName="DBModel2.Uredaj_Servis">
+        <MappingFragment StoreEntitySet="Uredaj_Servis">
+          <ScalarProperty Name="ID_uredaj_servis" ColumnName="ID_uredaj_servis" />
+          <ScalarProperty Name="KorisnikID_korisnika" ColumnName="KorisnikID_korisnika" />
+          <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Proizvodac" ColumnName="Proizvodac" />
+          <ScalarProperty Name="Serijski_broj" ColumnName="Serijski_broj" />
+          <ScalarProperty Name="Opis_kvara" ColumnName="Opis_kvara" />
+          <ScalarProperty Name="QR_kod" ColumnName="QR_kod" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stavke_narudzbe">
+      <EntityTypeMapping TypeName="DBModel2.Stavke_narudzbe">
+        <MappingFragment StoreEntitySet="Stavke_narudzbe">
+          <ScalarProperty Name="NarudzbaID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
+          <ScalarProperty Name="Uredaj_ServisID_uredaj_servis" ColumnName="Uredaj_ServisID_uredaj_servis" />
+          <ScalarProperty Name="ArtiklID_artikla" ColumnName="ArtiklID_artikla" />
+          <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="Odobravanje_narudzbe" TypeName="DBModel2.Odobravanje_narudzbe" StoreEntitySet="Odobravanje_narudzbe">
+      <EndProperty Name="Korisnik">
+        <ScalarProperty Name="ID_korisnika" ColumnName="KorisnikID_korisnika" />
+      </EndProperty>
+      <EndProperty Name="Narudzba">
+        <ScalarProperty Name="ID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

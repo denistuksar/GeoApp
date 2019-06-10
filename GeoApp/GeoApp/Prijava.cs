@@ -1,19 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 namespace GeoApp
 {
     public partial class Prijava : Form
     {
-        private string con = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19038_DB;Persist Security Info=True;User ID=19038_User;Password=xPTd7irG";
 
         public Prijava()
         {
@@ -23,34 +18,46 @@ namespace GeoApp
 
         private void prijava2_Click(object sender, EventArgs e)
         {
-            SqlConnection konekcija = new SqlConnection(con);
-            konekcija.Open();
-            if (konekcija.State == System.Data.ConnectionState.Open)
+            using (var db = new Entities())
             {
-                string prijava = "Select * from Korisnik Where Korisnicko_ime = '" + korisnickoIme.Text + "'and lozinka='" + lozinka.Text + "'";
-                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(prijava, konekcija);
-                DataSet dataSet = new DataSet();
-
-                sqlDataAdapter.Fill(dataSet);
-
-                DataTable dataTable = dataSet.Tables[0];
-                if (dataTable.Rows.Count == 1)
+                var query = from k in db.Korisnik
+                            where k.Korisnicko_ime == korisnickoIme.Text && k.Lozinka == lozinka.Text
+                            select k;
+                if (query.SingleOrDefault() != null)
                 {
-                    this.Close();
+                    var query2 = from k in db.Korisnik
+                                 where k.Korisnicko_ime == korisnickoIme.Text
+                                 select k.Uloga.Naziv;
+                    var uloga = query2.FirstOrDefault<string>();
+                    LoginInfo.Uloga = uloga.ToString();
+                    LoginInfo.Korime = korisnickoIme.Text;
+                    
+                    this.Hide();
+                    Pocetna pocetna = new Pocetna();
+                    pocetna.ShowDialog(); 
                 }
                 else
                 {
-                    MessageBox.Show("Krivo korisničko ime ili lozinka");
+                    MessageBox.Show("Pogrešno korisničko ime ili lozinka");
                 }
             }
         }
 
         private void registriraj_Click(object sender, EventArgs e)
         {
-            this.Close();
-
+            this.Hide();
             Registracija registracija = new Registracija();
-            registracija.Show();
+            registracija.ShowDialog();
+        }
+
+        private void Prijava_Load(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+        }
+
+        private void Prijava_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

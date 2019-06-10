@@ -10,3 +10,20 @@ D:\Nikola\FAKS\3. Godina\6. Semestar\Programsko Inžinjerstvo\Git\GeoApp\GeoApp\
 D:\Nikola\FAKS\3. Godina\6. Semestar\Programsko Inžinjerstvo\Git\GeoApp\GeoApp\obj\Debug\GeoApp.pdb
 D:\Nikola\FAKS\3. Godina\6. Semestar\Programsko Inžinjerstvo\Git\GeoApp\GeoApp\obj\Debug\GeoApp.Prijava.resources
 D:\Nikola\FAKS\3. Godina\6. Semestar\Programsko Inžinjerstvo\Git\GeoApp\GeoApp\obj\Debug\GeoApp.Registracija.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csprojAssemblyReference.cache
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.AzuriranjeArtikla.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Pocetna.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Prijava.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Properties.Resources.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Registracija.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.UnosArtikla.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csproj.GenerateResource.cache
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.exe
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.pdb
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.exe.config
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.exe
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.pdb
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csproj.CopyComplete

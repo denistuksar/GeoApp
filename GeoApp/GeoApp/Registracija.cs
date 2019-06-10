@@ -13,7 +13,8 @@ namespace GeoApp
 {
     public partial class Registracija : Form
     {
-        private string con = "Data Source=31.147.204.119\\PISERVER,1433;Initial Catalog=19038_DB;Persist Security Info=True;User ID=19038_User;Password=xPTd7irG"; Prijava prijava = new Prijava();
+
+        
 
 
         public Registracija()
@@ -23,28 +24,51 @@ namespace GeoApp
 
         private void registriraj_Click(object sender, EventArgs e)
         {
-            SqlConnection konekcija = new SqlConnection(con);
-            konekcija.Open();
-            if (konekcija.State == System.Data.ConnectionState.Open)
+            using (var db = new Entities())
             {
-             
 
-                string dodajKorisnik = "insert into Korisnik(Ime,Prezime,OIB,Adresa,Email,Broj_telefona,Korisnicko_ime,Lozinka)values('" + ime.Text + "','" + prezime.Text + "','" + oib.Text + "','" + adresa.Text + "','" + email.Text + "','" + brojTelefona.Text + "','" + korisnickoIme.Text + "','" + lozinka.Text + "')";
-                SqlCommand cmd = new SqlCommand(dodajKorisnik, konekcija); 
-                cmd.ExecuteNonQuery();
+                if (txtKorime.Text!="")
+                {
+                    var korisnik = new Korisnik
+                    {
+                        Ime = txtIme.Text,
+                        Prezime = txtPrezime.Text,
+                        OIB = txtOib.Text,
+                        Adresa = txtAdresa.Text,
+                        Email = txtEmail.Text,
+                        Broj_telefona = txtTelefon.Text,
+                        Korisnicko_ime = txtKorime.Text,
+                        Lozinka = txtLozinka.Text,
+                    };
+                    db.Korisnik.Add(korisnik);
+                    db.SaveChanges();
+                    MessageBox.Show("Uspješna registracija");
+                }
 
-                MessageBox.Show("Uspješno ste se registrirali");
-                this.Close();
-                prijava.Show();
+                else
+                {
+                    MessageBox.Show("Neuspješna registracija");
+                }
             }
         }
 
-        private void natrag_Click(object sender, EventArgs e)
+    private void natrag_Click(object sender, EventArgs e)
         {
-            this.Close();
-
-
+            this.Hide();
+            Prijava prijava = new Prijava();
             prijava.Show();
+        }
+
+        private void Registracija_Load(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+        }
+
+        private void Registracija_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Prijava prijava = new Prijava();
+            prijava.ShowDialog();
         }
     }
 }

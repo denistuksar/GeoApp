@@ -1,0 +1,64 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace GeoApp
+{
+    public partial class Pocetna : Form
+    {
+        public Pocetna()
+        {
+            InitializeComponent();
+            txtKorime.Text = LoginInfo.Korime;
+            txtUloga.Text = LoginInfo.Uloga;
+        }
+
+        private void unosUredaja_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            UnosArtikla unos = new UnosArtikla();
+            unos.Show();
+        }
+
+        private void azuriranjeUredaja_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AzuriranjeArtikla azuriranje = new AzuriranjeArtikla();
+            azuriranje.Show();
+        }
+
+        private void Pocetna_Load(object sender, EventArgs e)
+        {
+            this.MaximizeBox = false;
+            if (LoginInfo.Uloga=="Kupac")
+            {
+                unosUredaja.Visible = false;
+                azuriranjeUredaja.Visible = false;
+                this.Size = new Size(384,260);
+            }
+            else if (LoginInfo.Uloga == "Zaposlenik")
+            {
+                btnOvlasti.Visible = false;
+                this.Size = new Size(384, 423); 
+            }
+        }
+
+        private void Pocetna_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnOdjava_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Prijava prijava = new Prijava();
+            prijava.ShowDialog();
+        }
+    }
+}

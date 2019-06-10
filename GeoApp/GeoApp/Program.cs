@@ -16,7 +16,7 @@ namespace GeoApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PocetnaForma());
+            Application.Run(new Prijava());
         }
     }
 }

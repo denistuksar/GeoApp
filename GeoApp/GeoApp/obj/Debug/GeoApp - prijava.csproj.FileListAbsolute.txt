@@ -1,0 +1,19 @@
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp - prijava.csprojAssemblyReference.cache
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Prijava.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Properties.Resources.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Registracija.resources
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp - prijava.csproj.GenerateResource.cache
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp - prijava.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.exe
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.pdb
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.exe.config
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.exe
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.pdb
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\EntityFramework.dll
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\EntityFramework.SqlServer.dll
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\EntityFramework.xml
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\EntityFramework.SqlServer.xml
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp - prijava.csproj.CopyComplete
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\Geoapp2.exe
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\Geoapp2.pdb
+\\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\Geoapp2.exe.config
