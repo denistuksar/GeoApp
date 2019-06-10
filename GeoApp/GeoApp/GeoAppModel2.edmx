@@ -57,7 +57,7 @@
             <PropertyRef Name="ID_stavke" />
           </Key>
           <Property Name="ID_stavke" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="NarudzbaID_narudzbe" Type="int" Nullable="false" />
+          <Property Name="NarudzbaID_narudzbe" Type="int" />
           <Property Name="Uredaj_ServisID_uredaj_servis" Type="int" />
           <Property Name="ArtiklID_artikla" Type="int" />
           <Property Name="Kolicina" Type="int" />
@@ -121,7 +121,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavke_narudzbe_Narudzba">
-          <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="1" />
+          <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="0..1" />
           <End Role="Stavke_narudzbe" Type="Self.Stavke_narudzbe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Narudzba">
@@ -245,7 +245,7 @@
             <End Role="Uredaj_Servis" EntitySet="Uredaj_Servis" />
             <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
           </AssociationSet>
-        </EntityContainer>
+          </EntityContainer>
         <EntityType Name="Artikl">
           <Key>
             <PropertyRef Name="ID_artikla" />
@@ -379,7 +379,7 @@
             <PropertyRef Name="ID_stavke" />
           </Key>
           <Property Name="ID_stavke" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="NarudzbaID_narudzbe" Type="Int32" Nullable="false" />
+          <Property Name="NarudzbaID_narudzbe" Type="Int32" />
           <Property Name="Uredaj_ServisID_uredaj_servis" Type="Int32" />
           <Property Name="ArtiklID_artikla" Type="Int32" />
           <Property Name="Kolicina" Type="Int32" />
@@ -400,7 +400,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Stavke_narudzbe_Narudzba">
-          <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="1" />
+          <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="0..1" />
           <End Type="DBModel.Stavke_narudzbe" Role="Stavke_narudzbe" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Narudzba">

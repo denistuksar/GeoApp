@@ -79,6 +79,13 @@
     <Compile Include="AzuriranjeArtikla.Designer.cs">
       <DependentUpon>AzuriranjeArtikla.cs</DependentUpon>
     </Compile>
+    <Compile Include="NarudzbaInfo.cs" />
+    <Compile Include="DetaljiNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetaljiNarudzbe.Designer.cs">
+      <DependentUpon>DetaljiNarudzbe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GeoAppModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -106,6 +113,12 @@
     </Compile>
     <Compile Include="Narudzba.cs">
       <DependentUpon>GeoAppModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OdobravanjeNarudzbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OdobravanjeNarudzbe.Designer.cs">
+      <DependentUpon>OdobravanjeNarudzbe.cs</DependentUpon>
     </Compile>
     <Compile Include="Ovlasti.cs">
       <DependentUpon>GeoAppModel.tt</DependentUpon>
@@ -153,8 +166,14 @@
     <EmbeddedResource Include="AzuriranjeArtikla.resx">
       <DependentUpon>AzuriranjeArtikla.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DetaljiNarudzbe.resx">
+      <DependentUpon>DetaljiNarudzbe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Narucivanje.resx">
       <DependentUpon>Narucivanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OdobravanjeNarudzbe.resx">
+      <DependentUpon>OdobravanjeNarudzbe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pocetna.resx">
       <DependentUpon>Pocetna.cs</DependentUpon>

@@ -19,7 +19,7 @@
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Artikl" />
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Narudzba" />
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Uredaj_Servis" />
-      </Diagram>
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

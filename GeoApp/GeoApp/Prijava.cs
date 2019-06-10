@@ -65,7 +65,7 @@ namespace GeoApp
         private void Prijava_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Hide();
-            Application.Exit();
+            Environment.Exit(0);
         }
     }
 }

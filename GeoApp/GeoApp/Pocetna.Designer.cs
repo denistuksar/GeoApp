@@ -172,6 +172,7 @@
             this.btnOdobravanje.TabIndex = 10;
             this.btnOdobravanje.Text = "Odobravanje narudžba";
             this.btnOdobravanje.UseVisualStyleBackColor = false;
+            this.btnOdobravanje.Click += new System.EventHandler(this.btnOdobravanje_Click);
             // 
             // btnOvlasti
             // 

@@ -26,3 +26,5 @@ D:\Nikola\FAKS\3. Godina\6. Semestar\Programsko Inžinjerstvo\Git\GeoApp\GeoApp\
 \\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csproj.CopyComplete
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.Narucivanje.resources
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.csprojAssemblyReference.cache
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.OdobravanjeNarudzbe.resources
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.DetaljiNarudzbe.resources

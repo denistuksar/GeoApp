@@ -52,7 +52,7 @@
       <PropertyRef Name="ID_stavke" />
     </Key>
     <Property Name="ID_stavke" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="NarudzbaID_narudzbe" Type="int" Nullable="false" />
+    <Property Name="NarudzbaID_narudzbe" Type="int" />
     <Property Name="Uredaj_ServisID_uredaj_servis" Type="int" />
     <Property Name="ArtiklID_artikla" Type="int" />
     <Property Name="Kolicina" Type="int" />
@@ -116,7 +116,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Stavke_narudzbe_Narudzba">
-    <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="1" />
+    <End Role="Narudzba" Type="Self.Narudzba" Multiplicity="0..1" />
     <End Role="Stavke_narudzbe" Type="Self.Stavke_narudzbe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Narudzba">

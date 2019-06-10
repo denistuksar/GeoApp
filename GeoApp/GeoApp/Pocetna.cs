@@ -72,5 +72,12 @@ namespace GeoApp
             this.Close();
         }
 
+        private void btnOdobravanje_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OdobravanjeNarudzbe odobravanje = new OdobravanjeNarudzbe();
+            odobravanje.ShowDialog();
+            this.Close();
+        }
     }
 }

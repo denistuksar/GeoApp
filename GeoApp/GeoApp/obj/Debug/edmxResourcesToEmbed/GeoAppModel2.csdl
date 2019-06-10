@@ -170,7 +170,7 @@
       <PropertyRef Name="ID_stavke" />
     </Key>
     <Property Name="ID_stavke" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NarudzbaID_narudzbe" Type="Int32" Nullable="false" />
+    <Property Name="NarudzbaID_narudzbe" Type="Int32" />
     <Property Name="Uredaj_ServisID_uredaj_servis" Type="Int32" />
     <Property Name="ArtiklID_artikla" Type="Int32" />
     <Property Name="Kolicina" Type="Int32" />
@@ -191,7 +191,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Stavke_narudzbe_Narudzba">
-    <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="1" />
+    <End Type="DBModel.Narudzba" Role="Narudzba" Multiplicity="0..1" />
     <End Type="DBModel.Stavke_narudzbe" Role="Stavke_narudzbe" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Narudzba">
