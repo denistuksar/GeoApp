@@ -30,8 +30,8 @@
         {
             this.prijava2 = new System.Windows.Forms.Button();
             this.registriraj = new System.Windows.Forms.Button();
-            this.lozinka = new System.Windows.Forms.TextBox();
-            this.korisnickoIme = new System.Windows.Forms.TextBox();
+            this.txtLozinka = new System.Windows.Forms.TextBox();
+            this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -73,24 +73,24 @@
             this.registriraj.UseVisualStyleBackColor = false;
             this.registriraj.Click += new System.EventHandler(this.registriraj_Click);
             // 
-            // lozinka
+            // txtLozinka
             // 
-            this.lozinka.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lozinka.Location = new System.Drawing.Point(173, 112);
-            this.lozinka.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.lozinka.Name = "lozinka";
-            this.lozinka.Size = new System.Drawing.Size(228, 33);
-            this.lozinka.TabIndex = 9;
-            this.lozinka.UseSystemPasswordChar = true;
+            this.txtLozinka.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLozinka.Location = new System.Drawing.Point(173, 112);
+            this.txtLozinka.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txtLozinka.Name = "txtLozinka";
+            this.txtLozinka.Size = new System.Drawing.Size(228, 33);
+            this.txtLozinka.TabIndex = 9;
+            this.txtLozinka.UseSystemPasswordChar = true;
             // 
-            // korisnickoIme
+            // txtKorisnickoIme
             // 
-            this.korisnickoIme.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.korisnickoIme.Location = new System.Drawing.Point(173, 50);
-            this.korisnickoIme.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.korisnickoIme.Name = "korisnickoIme";
-            this.korisnickoIme.Size = new System.Drawing.Size(228, 33);
-            this.korisnickoIme.TabIndex = 8;
+            this.txtKorisnickoIme.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(173, 50);
+            this.txtKorisnickoIme.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.txtKorisnickoIme.Name = "txtKorisnickoIme";
+            this.txtKorisnickoIme.Size = new System.Drawing.Size(228, 33);
+            this.txtKorisnickoIme.TabIndex = 8;
             // 
             // label2
             // 
@@ -123,8 +123,8 @@
             this.ClientSize = new System.Drawing.Size(443, 265);
             this.Controls.Add(this.prijava2);
             this.Controls.Add(this.registriraj);
-            this.Controls.Add(this.lozinka);
-            this.Controls.Add(this.korisnickoIme);
+            this.Controls.Add(this.txtLozinka);
+            this.Controls.Add(this.txtKorisnickoIme);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,8 +148,8 @@
 
         private System.Windows.Forms.Button prijava2;
         private System.Windows.Forms.Button registriraj;
-        private System.Windows.Forms.TextBox lozinka;
-        private System.Windows.Forms.TextBox korisnickoIme;
+        private System.Windows.Forms.TextBox txtLozinka;
+        private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
     }

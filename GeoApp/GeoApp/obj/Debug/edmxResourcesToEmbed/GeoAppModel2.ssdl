@@ -24,7 +24,7 @@
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Broj_telefona" Type="varchar" MaxLength="30" />
     <Property Name="Korisnicko_ime" Type="varchar" MaxLength="30" />
-    <Property Name="Lozinka" Type="varchar" MaxLength="50" />
+    <Property Name="Lozinka" Type="varbinary" MaxLength="30" />
   </EntityType>
   <EntityType Name="Narudzba">
     <Key>

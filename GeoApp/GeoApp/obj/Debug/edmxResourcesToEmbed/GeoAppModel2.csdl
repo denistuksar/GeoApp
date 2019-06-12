@@ -62,7 +62,7 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Broj_telefona" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Korisnicko_ime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Lozinka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Lozinka" Type="Binary" Nullable="true" FixedLength="false" MaxLength="30" />
     <NavigationProperty Name="Uloga" Relationship="DBModel.FK_Korisnik_Uloga" FromRole="Korisnik" ToRole="Uloga" />
     <NavigationProperty Name="Narudzba" Relationship="DBModel.FK_Narudzba_Korisnik" FromRole="Korisnik" ToRole="Narudzba" />
     <NavigationProperty Name="Uredaj_Servis" Relationship="DBModel.FK_Uredaj_Servis_Korisnik" FromRole="Korisnik" ToRole="Uredaj_Servis" />

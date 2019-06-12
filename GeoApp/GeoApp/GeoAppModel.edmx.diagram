@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c1e5cb24b6a3405fb9d848134b31acf6" Name="Diagram1">
+        <EntityTypeShape EntityType="GeoAppModel.Artikl" Width="1.5" PointX="7.5" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.Korisnik" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.Narudzba" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.Ovlasti" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.Stavke_narudzbe" Width="1.5" PointX="9.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.Uloga" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoAppModel.Uredaj_Servis" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="GeoAppModel.FK_Stavke_narudzbe_Artikl" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoAppModel.FK_Korisnik_Uloga" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoAppModel.FK_Narudzba_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoAppModel.FK_Uredaj_Servis_Korisnik" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoAppModel.FK_Stavke_narudzbe_Narudzba" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoAppModel.FK_Uloga_Ovlasti" ManuallyRouted="false" />
+        <AssociationConnector Association="GeoAppModel.FK_Stavke_narudzbe_Uredaj_Servis" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

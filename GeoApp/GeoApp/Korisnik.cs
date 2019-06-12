@@ -31,7 +31,7 @@ namespace GeoApp
         public string Email { get; set; }
         public string Broj_telefona { get; set; }
         public string Korisnicko_ime { get; set; }
-        public string Lozinka { get; set; }
+        public byte[] Lozinka { get; set; }
     
         public virtual Uloga Uloga { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

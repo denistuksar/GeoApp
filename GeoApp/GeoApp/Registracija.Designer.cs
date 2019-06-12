@@ -44,95 +44,98 @@
             this.txtAdresa = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.txtKorime = new System.Windows.Forms.TextBox();
+            this.txtKorIme = new System.Windows.Forms.TextBox();
             this.txtLozinka = new System.Windows.Forms.TextBox();
+            this.lbOIB = new System.Windows.Forms.Label();
+            this.lbKorisnickoIme = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(30, 307);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label8.Location = new System.Drawing.Point(25, 449);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 21);
+            this.label8.Size = new System.Drawing.Size(80, 25);
             this.label8.TabIndex = 32;
             this.label8.Text = "Lozinka:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(30, 269);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label7.Location = new System.Drawing.Point(25, 379);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 21);
+            this.label7.Size = new System.Drawing.Size(139, 25);
             this.label7.TabIndex = 30;
             this.label7.Text = "Korisničko ime:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 231);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label6.Location = new System.Drawing.Point(25, 321);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 21);
+            this.label6.Size = new System.Drawing.Size(124, 25);
             this.label6.TabIndex = 23;
             this.label6.Text = "Broj telefona:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(30, 192);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label5.Location = new System.Drawing.Point(25, 255);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(57, 21);
+            this.label5.Size = new System.Drawing.Size(70, 25);
             this.label5.TabIndex = 22;
             this.label5.Text = "E-mail:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(30, 153);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label4.Location = new System.Drawing.Point(25, 203);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 21);
+            this.label4.Size = new System.Drawing.Size(74, 25);
             this.label4.TabIndex = 21;
             this.label4.Text = "Adresa:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(30, 114);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label3.Location = new System.Drawing.Point(25, 128);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 21);
+            this.label3.Size = new System.Drawing.Size(46, 25);
             this.label3.TabIndex = 20;
             this.label3.Text = "OIB:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(30, 74);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label2.Location = new System.Drawing.Point(25, 71);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 21);
+            this.label2.Size = new System.Drawing.Size(84, 25);
             this.label2.TabIndex = 19;
             this.label2.Text = "Prezime:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(30, 34);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.label1.Location = new System.Drawing.Point(25, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(39, 21);
+            this.label1.Size = new System.Drawing.Size(47, 25);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ime:";
             // 
@@ -142,10 +145,10 @@
             this.natrag.FlatAppearance.BorderSize = 0;
             this.natrag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.natrag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.natrag.Location = new System.Drawing.Point(176, 362);
+            this.natrag.Location = new System.Drawing.Point(260, 518);
             this.natrag.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.natrag.Name = "natrag";
-            this.natrag.Size = new System.Drawing.Size(130, 35);
+            this.natrag.Size = new System.Drawing.Size(175, 43);
             this.natrag.TabIndex = 35;
             this.natrag.Text = "Natrag";
             this.natrag.UseVisualStyleBackColor = false;
@@ -157,10 +160,10 @@
             this.registriraj.FlatAppearance.BorderSize = 0;
             this.registriraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registriraj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registriraj.Location = new System.Drawing.Point(34, 362);
+            this.registriraj.Location = new System.Drawing.Point(26, 518);
             this.registriraj.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.registriraj.Name = "registriraj";
-            this.registriraj.Size = new System.Drawing.Size(130, 35);
+            this.registriraj.Size = new System.Drawing.Size(175, 43);
             this.registriraj.TabIndex = 34;
             this.registriraj.Text = "Registriraj se";
             this.registriraj.UseVisualStyleBackColor = false;
@@ -168,76 +171,109 @@
             // 
             // txtIme
             // 
-            this.txtIme.Location = new System.Drawing.Point(154, 30);
+            this.txtIme.Location = new System.Drawing.Point(207, 20);
             this.txtIme.Multiline = true;
             this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(152, 25);
+            this.txtIme.Size = new System.Drawing.Size(228, 33);
             this.txtIme.TabIndex = 36;
             // 
             // txtPrezime
             // 
-            this.txtPrezime.Location = new System.Drawing.Point(154, 70);
+            this.txtPrezime.Location = new System.Drawing.Point(207, 71);
             this.txtPrezime.Multiline = true;
             this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(152, 25);
+            this.txtPrezime.Size = new System.Drawing.Size(228, 33);
             this.txtPrezime.TabIndex = 37;
             // 
             // txtOib
             // 
-            this.txtOib.Location = new System.Drawing.Point(154, 110);
+            this.txtOib.Location = new System.Drawing.Point(207, 128);
             this.txtOib.Multiline = true;
             this.txtOib.Name = "txtOib";
-            this.txtOib.Size = new System.Drawing.Size(152, 25);
+            this.txtOib.Size = new System.Drawing.Size(228, 33);
             this.txtOib.TabIndex = 38;
+            this.txtOib.TextChanged += new System.EventHandler(this.txtOib_TextChanged);
             // 
             // txtAdresa
             // 
-            this.txtAdresa.Location = new System.Drawing.Point(154, 149);
+            this.txtAdresa.Location = new System.Drawing.Point(207, 203);
             this.txtAdresa.Multiline = true;
             this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(152, 25);
+            this.txtAdresa.Size = new System.Drawing.Size(228, 33);
             this.txtAdresa.TabIndex = 39;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(154, 188);
+            this.txtEmail.Location = new System.Drawing.Point(207, 255);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(152, 25);
+            this.txtEmail.Size = new System.Drawing.Size(228, 33);
             this.txtEmail.TabIndex = 40;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtTelefon
             // 
-            this.txtTelefon.Location = new System.Drawing.Point(154, 227);
+            this.txtTelefon.Location = new System.Drawing.Point(207, 321);
             this.txtTelefon.Multiline = true;
             this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(152, 25);
+            this.txtTelefon.Size = new System.Drawing.Size(228, 33);
             this.txtTelefon.TabIndex = 41;
             // 
-            // txtKorime
+            // txtKorIme
             // 
-            this.txtKorime.Location = new System.Drawing.Point(154, 265);
-            this.txtKorime.Multiline = true;
-            this.txtKorime.Name = "txtKorime";
-            this.txtKorime.Size = new System.Drawing.Size(152, 25);
-            this.txtKorime.TabIndex = 42;
+            this.txtKorIme.Location = new System.Drawing.Point(207, 379);
+            this.txtKorIme.Multiline = true;
+            this.txtKorIme.Name = "txtKorIme";
+            this.txtKorIme.Size = new System.Drawing.Size(228, 33);
+            this.txtKorIme.TabIndex = 42;
+            this.txtKorIme.TextChanged += new System.EventHandler(this.txtKorIme_TextChanged);
             // 
             // txtLozinka
             // 
-            this.txtLozinka.Location = new System.Drawing.Point(154, 303);
+            this.txtLozinka.Location = new System.Drawing.Point(207, 449);
             this.txtLozinka.Multiline = true;
             this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(152, 25);
+            this.txtLozinka.Size = new System.Drawing.Size(228, 33);
             this.txtLozinka.TabIndex = 43;
+            // 
+            // lbOIB
+            // 
+            this.lbOIB.AutoSize = true;
+            this.lbOIB.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lbOIB.Location = new System.Drawing.Point(202, 170);
+            this.lbOIB.Name = "lbOIB";
+            this.lbOIB.Size = new System.Drawing.Size(0, 25);
+            this.lbOIB.TabIndex = 44;
+            // 
+            // lbKorisnickoIme
+            // 
+            this.lbKorisnickoIme.AutoSize = true;
+            this.lbKorisnickoIme.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lbKorisnickoIme.Location = new System.Drawing.Point(202, 421);
+            this.lbKorisnickoIme.Name = "lbKorisnickoIme";
+            this.lbKorisnickoIme.Size = new System.Drawing.Size(0, 25);
+            this.lbKorisnickoIme.TabIndex = 46;
+            // 
+            // lbEmail
+            // 
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lbEmail.Location = new System.Drawing.Point(204, 293);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(0, 25);
+            this.lbEmail.TabIndex = 45;
             // 
             // Registracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(343, 430);
+            this.ClientSize = new System.Drawing.Size(471, 591);
+            this.Controls.Add(this.lbKorisnickoIme);
+            this.Controls.Add(this.lbEmail);
+            this.Controls.Add(this.lbOIB);
             this.Controls.Add(this.txtLozinka);
-            this.Controls.Add(this.txtKorime);
+            this.Controls.Add(this.txtKorIme);
             this.Controls.Add(this.txtTelefon);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtAdresa);
@@ -255,10 +291,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.Window;
+            this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximumSize = new System.Drawing.Size(359, 469);
-            this.MinimumSize = new System.Drawing.Size(359, 469);
             this.Name = "Registracija";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -287,7 +322,10 @@
         private System.Windows.Forms.TextBox txtAdresa;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.TextBox txtKorime;
+        private System.Windows.Forms.TextBox txtKorIme;
         private System.Windows.Forms.TextBox txtLozinka;
+        private System.Windows.Forms.Label lbOIB;
+        private System.Windows.Forms.Label lbKorisnickoIme;
+        private System.Windows.Forms.Label lbEmail;
     }
 }
