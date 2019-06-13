@@ -31,13 +31,13 @@ namespace GeoApp
                              select k.Korisnicko_ime;
 
                 var oib = from k in db.Korisnik
-                             select k.OIB;
+                          select k.OIB;
 
                 var email = from k in db.Korisnik
                             select k.Email;
 
                 if (txtKorIme.Text != "")
-                {                   
+                {
                     if (korIme.ToString() != txtKorIme.Text)
                     {
                         if (oib.ToString() != txtOib.Text && IsValidOIB(txtOib.Text))
@@ -55,6 +55,7 @@ namespace GeoApp
                                     Broj_telefona = txtTelefon.Text,
                                     Korisnicko_ime = txtKorIme.Text,
                                     Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
+                                    UlogaID_uloge = 2
                                 };
                                 db.Korisnik.Add(korisnik);
                                 db.SaveChanges();
@@ -69,12 +70,12 @@ namespace GeoApp
                         {
                             MessageBox.Show("OIB postoji! ");
                         }
-                                            
+
                     }
                     else
                     {
                         MessageBox.Show("Korisničko ime postoji! ");
-                    }                 
+                    }
                 }
 
                 else
@@ -82,10 +83,10 @@ namespace GeoApp
                     MessageBox.Show("Neuspješna registracija");
                 }
             }
-            this.Close();
+            
         }
 
-    private void natrag_Click(object sender, EventArgs e)
+        private void natrag_Click(object sender, EventArgs e)
         {
             this.Hide();
             Prijava prijava = new Prijava();
@@ -93,10 +94,7 @@ namespace GeoApp
             this.Close();
         }
 
-        private void Registracija_Load(object sender, EventArgs e)
-        {
-           
-        }
+
 
         private void Registracija_FormClosed(object sender, FormClosedEventArgs e)
         {
@@ -113,44 +111,43 @@ namespace GeoApp
         }
 
         private void txtOib_TextChanged(object sender, EventArgs e)
-        {                           
+        {
             using (var db = new Entities())
             {
                 var oib = from k in db.Korisnik
                           select k.OIB;
-               popisOIB = oib.ToList();                          
+                popisOIB = oib.ToList();
             }
 
             if (IsValidOIB(txtOib.Text))
             {
-                lbOIB.ForeColor = Color.Green;
+                txtOib.BackColor = Color.FromArgb(82, 193, 119);
+                txtOib.ForeColor = Color.White;
                 foreach (var item in popisOIB)
                 {
                     if (item == txtOib.Text)
                     {
-                        lbOIB.ForeColor = Color.Red;
-                        lbOIB.Text = "OIB već postoji";
+                        txtOib.BackColor = Color.FromArgb(243, 92, 99);
+                        txtOib.ForeColor = Color.White;
                         break;
                     }
                     else if (txtOib.Text == "")
                     {
-                        lbOIB.Text = "";
+                        txtOib.BackColor = Color.FromArgb(243, 92, 99);
+                        txtOib.ForeColor = Color.White;
                     }
-                    else
-                    {
-                        lbOIB.ForeColor = Color.Green;
-                        lbOIB.Text = "OIB ne postoji";
-                    }
+
                 }
             }
             else if (txtOib.Text == "")
             {
-                lbOIB.Text = "";
+                txtOib.BackColor = Color.FromArgb(243, 92, 99);
+                txtOib.ForeColor = Color.White;
             }
             else
             {
-                lbOIB.ForeColor = Color.Red;
-                lbOIB.Text = "OIB nije pravilan";
+                txtOib.BackColor = Color.FromArgb(243, 92, 99);
+                txtOib.ForeColor = Color.White;
             }
         }
 
@@ -159,7 +156,7 @@ namespace GeoApp
             using (var db = new Entities())
             {
                 var korisnickoIme = from k in db.Korisnik
-                          select k.Korisnicko_ime;
+                                    select k.Korisnicko_ime;
 
                 popisKorisnika = korisnickoIme.ToList();
             }
@@ -167,18 +164,19 @@ namespace GeoApp
             {
                 if (item == txtKorIme.Text)
                 {
-                    lbKorisnickoIme.ForeColor = Color.Red;
-                    lbKorisnickoIme.Text = "Korisnik već postoji";
+                    txtKorIme.BackColor = Color.FromArgb(243, 92, 99);
+                    txtKorIme.ForeColor = Color.White;
                     break;
                 }
                 else if (txtKorIme.Text == "")
                 {
-                    lbKorisnickoIme.Text = "";
+                    txtKorIme.BackColor = Color.FromArgb(243, 92, 99);
+                    txtKorIme.ForeColor = Color.White;
                 }
                 else
                 {
-                    lbKorisnickoIme.ForeColor = Color.Green;
-                    lbKorisnickoIme.Text = " Slobodno korisničko ime";
+                    txtKorIme.BackColor = Color.FromArgb(82, 193, 119);
+                    txtKorIme.ForeColor = Color.White;
                 }
             }
         }
@@ -193,38 +191,89 @@ namespace GeoApp
             using (var db = new Entities())
             {
                 var email = from k in db.Korisnik
-                                    select k.Email;
+                            select k.Email;
 
                 popisEmaila = email.ToList();
             }
 
             if (IsValidEmail(txtEmail.Text))
             {
-                lbEmail.ForeColor = Color.Green;
+                txtEmail.BackColor = Color.FromArgb(82, 193, 119);
+                txtEmail.ForeColor = Color.White;
                 foreach (var item in popisEmaila)
                 {
                     if (item == txtEmail.Text)
                     {
-                        lbEmail.ForeColor = Color.Red;
-                        lbEmail.Text ="e-mail već postoji";
+                        txtEmail.BackColor = Color.FromArgb(243, 92, 99);
+                        txtEmail.ForeColor = Color.White;
                         break;
                     }
                     else if (txtEmail.Text == "")
                     {
-                        lbEmail.Text = "";
+                        txtEmail.BackColor = Color.FromArgb(243, 92, 99);
+                        txtEmail.ForeColor = Color.White;
                     }
                     else
                     {
-                        lbEmail.ForeColor = Color.Green;
-                        lbEmail.Text = " Slobodan e-mail";
+                        txtEmail.BackColor = Color.FromArgb(82, 193, 119);
+                        txtEmail.ForeColor = Color.White;
                     }
                 }
             }
+            else if (txtEmail.Text == "")
+            {
+                txtEmail.BackColor = Color.FromArgb(243, 92, 99);
+                txtEmail.ForeColor = Color.White;
+            }
             else
             {
-                lbEmail.ForeColor = Color.Red;
-                lbEmail.Text = " nepravilno napisan mail";
+                txtEmail.BackColor = Color.FromArgb(243, 92, 99);
+                txtEmail.ForeColor = Color.White;
+            }
+        }
+
+        private void txtPonovi_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPonovi.Text == "")
+            {
+                txtPonovi.BackColor = Color.FromArgb(243, 92, 99);
+                txtPonovi.ForeColor = Color.White;
+            }
+
+            else if (txtLozinka.Text == txtPonovi.Text)
+            {
+                txtPonovi.BackColor = Color.FromArgb(82, 193, 119);
+                txtPonovi.ForeColor = Color.White;
+            }
+          
+
+            else
+            {
+                txtPonovi.BackColor = Color.FromArgb(243,92,99);
+                txtPonovi.ForeColor = Color.White;
+            }
+        }
+
+        private void txtLozinka_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPonovi.Text == "")
+            {
+                txtPonovi.BackColor = Color.White;
+            }
+
+            else if (txtLozinka.Text == txtPonovi.Text)
+            {
+                txtPonovi.BackColor = Color.FromArgb(82, 193, 119);
+                txtPonovi.ForeColor = Color.White;
+            }
+
+
+            else
+            {
+                txtPonovi.BackColor = Color.FromArgb(243, 92, 99);
+                txtPonovi.ForeColor = Color.White;
             }
         }
     }
+
 }

@@ -44,6 +44,7 @@ namespace GeoApp
                 artikli = db.Artikl.ToList();
             }
             dgvArtikli.DataSource = artikli;
+            dgvArtikli.Columns[0].HeaderText = "ID artikla";
             dgvArtikli.Columns[6].Visible = false;
         }
 
