@@ -31,7 +31,7 @@ namespace GeoApp
         private void PrikaziNarudzbe()
         {
             List<Narudzba> narudzba;
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var query = from n in db.Narudzba
                             where n.Status == null || n.Status==false
@@ -50,7 +50,7 @@ namespace GeoApp
         private void PrikaziOdobrene()
         {
             List<Narudzba> narudzba;
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var query = from n in db.Narudzba
                             where n.Status == true
@@ -73,7 +73,7 @@ namespace GeoApp
                 Narudzba selektiranaNarudzba = dgvNarudzbe.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
-                    using (var db = new Entities())
+                    using (var db = new GeoEntities())
                     {
                         db.Narudzba.Attach(selektiranaNarudzba); //registriramo prosljeđenu narudžbu 
                         selektiranaNarudzba.Status = true;
@@ -100,7 +100,7 @@ namespace GeoApp
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
                     {
-                        using (var db = new Entities())
+                        using (var db = new GeoEntities())
                         {
                             List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == selektiranaNarudzba.ID_narudzbe).ToList();
                             db.Stavke_narudzbe.RemoveRange(lista);   //Brišemo narudzbu iz kolekcije
@@ -151,7 +151,7 @@ namespace GeoApp
                 Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
-                    using (var db = new Entities())
+                    using (var db = new GeoEntities())
                     {
                         db.Narudzba.Attach(selektiranaNarudzba); //registriramo prosljeđenu narudžbu 
                         selektiranaNarudzba.Status = false;

@@ -21,7 +21,7 @@ namespace GeoApp
 
         public void PopuniBoxeve()
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 db.Korisnik.Attach(odabraniKorisnik);
                 txtIme.Text = odabraniKorisnik.Ime;
@@ -43,7 +43,7 @@ namespace GeoApp
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 db.Korisnik.Attach(odabraniKorisnik);
                 odabraniKorisnik.Ime= txtIme.Text  ;
@@ -66,7 +66,7 @@ namespace GeoApp
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
             {
-                using (var db = new Entities())
+                using (var db = new GeoEntities())
                 {
                   
                     db.Korisnik.Attach(odabraniKorisnik);

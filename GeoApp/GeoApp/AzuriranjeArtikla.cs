@@ -34,7 +34,7 @@ namespace GeoApp
             Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
             if (selektiraniArtikl != null)
             {
-                using (var db = new Entities())
+                using (var db = new GeoEntities())
                 {
                     db.Artikl.Attach(selektiraniArtikl); //registriramo prosljeđeni tim. 
                     selektiraniArtikl.Naziv = nazivArtikla.Text;
@@ -59,7 +59,7 @@ namespace GeoApp
         private void PrikaziArtikle()
         {
             List<Artikl> artikli;
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 artikli = db.Artikl.ToList();
             }
@@ -90,7 +90,7 @@ namespace GeoApp
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
                     {
-                        using (var db = new Entities())
+                        using (var db = new GeoEntities())
                         {
                             //Registriramo artikl.
                             db.Artikl.Attach(selektiraniArtikl);

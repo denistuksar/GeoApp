@@ -21,7 +21,7 @@ namespace GeoApp
 
         public void PrikaziKorisnike()
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var zaposleni = from z in db.Korisnik                               
                                 select z;
@@ -36,6 +36,7 @@ namespace GeoApp
 
             dgvZaposlenici.Columns[0].HeaderText = "ID korisnika";
             dgvZaposlenici.Columns[1].HeaderText = "ID uloge";
+            dgvZaposlenici.Columns[2].HeaderText = "ID ovlasti";
             dgvZaposlenici.Columns[7].HeaderText = "Broj telefona";
             dgvZaposlenici.Columns[8].HeaderText = "Korisničko ime";
     
@@ -44,7 +45,7 @@ namespace GeoApp
 
         public void PrikaziZaposlene()
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var zaposleni = from z in db.Korisnik
                                 where z.UlogaID_uloge == 3

@@ -21,12 +21,10 @@ namespace GeoApp
         }
     
         public int ID_uloge { get; set; }
-        public Nullable<int> OvlastiID_ovlast { get; set; }
         public string Naziv { get; set; }
         public string Opis { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Korisnik> Korisnik { get; set; }
-        public virtual Ovlasti Ovlasti { get; set; }
     }
 }
