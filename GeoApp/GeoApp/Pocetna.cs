@@ -47,7 +47,8 @@ namespace GeoApp
             else if (LoginInfo.Uloga == "Zaposlenik")
             {
                 btnOvlasti.Visible = false;
-                this.Size = new Size(384, 423); 
+                this.Size = new Size(384, 423);
+                
             }
         }
 

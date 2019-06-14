@@ -34,6 +34,11 @@ namespace GeoApp
                 dgvZaposlenici.Columns[14].Visible = false;
             }
 
+            dgvZaposlenici.Columns[0].HeaderText = "ID korisnika";
+            dgvZaposlenici.Columns[1].HeaderText = "ID uloge";
+            dgvZaposlenici.Columns[7].HeaderText = "Broj telefona";
+            dgvZaposlenici.Columns[8].HeaderText = "Korisničko ime";
+    
         }
 
 
@@ -50,7 +55,8 @@ namespace GeoApp
                 dgvZaposlenici.Columns[11].Visible = false;
                 dgvZaposlenici.Columns[12].Visible = false;
                 dgvZaposlenici.Columns[13].Visible = false;
-                dgvZaposlenici.Columns[14].Visible = false;               
+                dgvZaposlenici.Columns[14].Visible = false;
+            
             }
         
         }
@@ -87,6 +93,20 @@ namespace GeoApp
             AzurirajKorisnika azurirajKorisnika = new AzurirajKorisnika(korisnik);
             azurirajKorisnika.ShowDialog();
             PrikaziKorisnike();
+        }
+
+        private void dgvZaposlenici_SelectionChanged(object sender, EventArgs e)
+        {
+            Ovlasti ovlast = dgvZaposlenici.CurrentRow.DataBoundItem as Ovlasti;
+            
+            if(ovlast.ID_ovlasti == OvlastInfo.IDOvlasti)
+            {
+                cbBezOvlasti.Checked= true;
+            }
+            else
+            {
+
+            }
         }
     }
 }

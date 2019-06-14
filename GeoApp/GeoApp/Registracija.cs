@@ -59,8 +59,11 @@ namespace GeoApp
                                         Korisnicko_ime = txtKorIme.Text,
                                         Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
                                         Lozinka = txtLozinka.Text,
-                                        UlogaID_uloge = 3
+                                        UlogaID_uloge = 3,                                        
+                                        
                                     };
+                                    OvlastInfo.IDOvlasti = 2;
+
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
                                     MessageBox.Show("Uspješno dodan zaposlenik");

@@ -129,6 +129,7 @@
     <Compile Include="Ovlasti.cs">
       <DependentUpon>GeoAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OvlastInfo.cs" />
     <Compile Include="OvlastiZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>
