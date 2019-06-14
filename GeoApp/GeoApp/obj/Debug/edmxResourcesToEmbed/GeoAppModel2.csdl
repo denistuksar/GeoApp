@@ -36,6 +36,7 @@
       <End Role="Uredaj_Servis" EntitySet="Uredaj_Servis" />
       <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
     </AssociationSet>
+    <EntitySet Name="sysdiagrams" EntityType="DBModel.sysdiagrams" />
   </EntityContainer>
   <EntityType Name="Artikl">
     <Key>
@@ -62,10 +63,11 @@
     <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Broj_telefona" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Korisnicko_ime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="Lozinka" Type="Binary" Nullable="true" FixedLength="false" MaxLength="30" />
+    <Property Name="Lozinka" Type="String" Nullable="true" MaxLength="30" Unicode="false" FixedLength="false" />
     <NavigationProperty Name="Uloga" Relationship="DBModel.FK_Korisnik_Uloga" FromRole="Korisnik" ToRole="Uloga" />
     <NavigationProperty Name="Narudzba" Relationship="DBModel.FK_Narudzba_Korisnik" FromRole="Korisnik" ToRole="Narudzba" />
     <NavigationProperty Name="Uredaj_Servis" Relationship="DBModel.FK_Uredaj_Servis_Korisnik" FromRole="Korisnik" ToRole="Uredaj_Servis" />
+    <Property Name="Kriptirana_Lozinka" Type="Binary" MaxLength="30" FixedLength="false" />
   </EntityType>
   <EntityType Name="Narudzba">
     <Key>
@@ -214,4 +216,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
 </Schema>

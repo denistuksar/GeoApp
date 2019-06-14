@@ -187,6 +187,7 @@
             this.btnOvlasti.TabIndex = 11;
             this.btnOvlasti.Text = "Uređivanje ovlasti i uloga";
             this.btnOvlasti.UseVisualStyleBackColor = false;
+            this.btnOvlasti.Click += new System.EventHandler(this.btnOvlasti_Click);
             // 
             // Pocetna
             // 

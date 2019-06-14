@@ -54,7 +54,8 @@ namespace GeoApp
                                     Email = txtEmail.Text,
                                     Broj_telefona = txtTelefon.Text,
                                     Korisnicko_ime = txtKorIme.Text,
-                                    Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
+                                    Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
+                                    Lozinka = txtLozinka.Text,
                                     UlogaID_uloge = 2
                                 };
                                 db.Korisnik.Add(korisnik);

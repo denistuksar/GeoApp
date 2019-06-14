@@ -24,7 +24,8 @@
     <Property Name="Email" Type="varchar" MaxLength="50" />
     <Property Name="Broj_telefona" Type="varchar" MaxLength="30" />
     <Property Name="Korisnicko_ime" Type="varchar" MaxLength="30" />
-    <Property Name="Lozinka" Type="varbinary" MaxLength="30" />
+    <Property Name="Kriptirana_Lozinka" Type="varbinary" MaxLength="30" />
+    <Property Name="Lozinka" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="Narudzba">
     <Key>
@@ -56,6 +57,16 @@
     <Property Name="Uredaj_ServisID_uredaj_servis" Type="int" />
     <Property Name="ArtiklID_artikla" Type="int" />
     <Property Name="Kolicina" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
   </EntityType>
   <EntityType Name="Uloga">
     <Key>
@@ -169,6 +180,7 @@
     <EntitySet Name="Narudzba" EntityType="Self.Narudzba" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Ovlasti" EntityType="Self.Ovlasti" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Stavke_narudzbe" EntityType="Self.Stavke_narudzbe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Uloga" EntityType="Self.Uloga" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Uredaj_Servis" EntityType="Self.Uredaj_Servis" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_Korisnik_Uloga" Association="Self.FK_Korisnik_Uloga">

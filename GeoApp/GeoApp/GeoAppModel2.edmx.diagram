@@ -19,6 +19,7 @@
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Artikl" />
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Narudzba" />
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Uredaj_Servis" />
+        <EntityTypeShape EntityType="DBModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="6.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

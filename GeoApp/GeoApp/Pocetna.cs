@@ -79,5 +79,13 @@ namespace GeoApp
             odobravanje.ShowDialog();
             this.Close();
         }
+
+        private void btnOvlasti_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
+            ovlastiZaposlenika.ShowDialog();
+            this.Close();
+        }
     }
 }

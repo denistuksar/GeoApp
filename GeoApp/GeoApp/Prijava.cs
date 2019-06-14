@@ -25,7 +25,7 @@ namespace GeoApp
                 byte[] lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text);
 
                 var query = from k in db.Korisnik
-                            where k.Korisnicko_ime == txtKorisnickoIme.Text && k.Lozinka == lozinka
+                            where k.Korisnicko_ime == txtKorisnickoIme.Text && k.Kriptirana_Lozinka == lozinka
                             select k;
 
                 if (query.SingleOrDefault() != null)
