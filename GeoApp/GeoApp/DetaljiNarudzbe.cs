@@ -12,6 +12,7 @@ namespace GeoApp
 {
     public partial class DetaljiNarudzbe : Form
     {
+        decimal suma;
         public DetaljiNarudzbe(int idNarudzbe)
         {
             InitializeComponent();
@@ -31,7 +32,16 @@ namespace GeoApp
                                  n.Kolicina
                              }).ToList();
                 dgvDetalji.DataSource = query;
+                dgvDetalji.Columns[0].HeaderText = "ID artikla";
+                dgvDetalji.Columns[3].HeaderText = "Proizvođač";
+                dgvDetalji.Columns[4].HeaderText = "Serijski broj";
+                dgvDetalji.Columns[6].HeaderText = "Količina";
 
+                suma = Convert.ToDecimal((from a in db.Stavke_narudzbe
+                                          where a.NarudzbaID_narudzbe == idNarudzbe
+                                          select a).Sum(b => b.Kolicina * b.Artikl.Cijena));
+                lblCijena.Text = suma.ToString();
+                lblCijena.Text += " HRK";
             }
         }
 

@@ -34,11 +34,13 @@ namespace GeoApp
             using (var db = new Entities())
             {
                 var query = from n in db.Narudzba
-                            where n.Status == null
+                            where n.Status == null || n.Status==false
                             select n;
                 narudzba = query.ToList();
             }
             dgvNarudzbe.DataSource = narudzba;
+            dgvNarudzbe.Columns[0].HeaderText = "ID narudžbe";
+            dgvNarudzbe.Columns[1].HeaderText = "ID korisnika";
             dgvNarudzbe.Columns[4].Visible = false;
             dgvNarudzbe.Columns[5].Visible = false;
             dgvNarudzbe.Columns[6].Visible = false;
@@ -56,6 +58,8 @@ namespace GeoApp
                 narudzba = query.ToList();
             }
             dgvOdobrene.DataSource = narudzba;
+            dgvOdobrene.Columns[0].HeaderText = "ID narudžbe";
+            dgvOdobrene.Columns[1].HeaderText = "ID korisnika";
             dgvOdobrene.Columns[4].Visible = false;
             dgvOdobrene.Columns[5].Visible = false;
             dgvOdobrene.Columns[6].Visible = false;
@@ -138,6 +142,29 @@ namespace GeoApp
             Pocetna pocetna = new Pocetna();
             pocetna.ShowDialog();
             this.Close();
+        }
+
+        private void btnPonisti_Click(object sender, EventArgs e)
+        {
+            if (dgvOdobrene.Rows.Count != 0)
+            {
+                Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
+                if (selektiranaNarudzba != null)
+                {
+                    using (var db = new Entities())
+                    {
+                        db.Narudzba.Attach(selektiranaNarudzba); //registriramo prosljeđenu narudžbu 
+                        selektiranaNarudzba.Status = false;
+                        db.SaveChanges();   //Spremamo promjene u bazu.
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Odaberite narudžbu koju želite maknuti iz liste odobrenih.");
+                }
+                PrikaziNarudzbe();
+                PrikaziOdobrene();
+            }
         }
     }
 }

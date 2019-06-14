@@ -43,6 +43,8 @@
             this.btnIzbrisi = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lblCijena = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
             this.SuspendLayout();
@@ -99,7 +101,7 @@
             this.dgvArtikli.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArtikli.RowHeadersVisible = false;
             this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArtikli.Size = new System.Drawing.Size(602, 216);
+            this.dgvArtikli.Size = new System.Drawing.Size(705, 216);
             this.dgvArtikli.TabIndex = 18;
             // 
             // btnDodaj
@@ -169,7 +171,7 @@
             this.dgvKosarica.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvKosarica.RowHeadersVisible = false;
             this.dgvKosarica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKosarica.Size = new System.Drawing.Size(602, 216);
+            this.dgvKosarica.Size = new System.Drawing.Size(705, 216);
             this.dgvKosarica.TabIndex = 21;
             // 
             // btnNaruci
@@ -223,12 +225,35 @@
             this.txtKolicina.Size = new System.Drawing.Size(91, 29);
             this.txtKolicina.TabIndex = 25;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(326, 575);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 21);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Cijena:";
+            // 
+            // lblCijena
+            // 
+            this.lblCijena.AutoSize = true;
+            this.lblCijena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCijena.ForeColor = System.Drawing.Color.White;
+            this.lblCijena.Location = new System.Drawing.Point(381, 575);
+            this.lblCijena.Name = "lblCijena";
+            this.lblCijena.Size = new System.Drawing.Size(0, 21);
+            this.lblCijena.TabIndex = 27;
+            // 
             // Narucivanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(627, 621);
+            this.ClientSize = new System.Drawing.Size(730, 621);
+            this.Controls.Add(this.lblCijena);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtKolicina);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnIzbrisi);
@@ -262,5 +287,7 @@
         private System.Windows.Forms.Button btnIzbrisi;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtKolicina;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCijena;
     }
 }

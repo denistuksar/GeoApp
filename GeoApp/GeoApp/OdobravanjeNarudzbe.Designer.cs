@@ -41,6 +41,7 @@
             this.btnOdbaci = new System.Windows.Forms.Button();
             this.dgvOdobrene = new System.Windows.Forms.DataGridView();
             this.btnDetalji = new System.Windows.Forms.Button();
+            this.btnPonisti = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdobrene)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +119,7 @@
             this.btnOdobri.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdobri.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdobri.ForeColor = System.Drawing.Color.White;
-            this.btnOdobri.Location = new System.Drawing.Point(12, 235);
+            this.btnOdobri.Location = new System.Drawing.Point(12, 236);
             this.btnOdobri.Name = "btnOdobri";
             this.btnOdobri.Size = new System.Drawing.Size(127, 28);
             this.btnOdobri.TabIndex = 21;
@@ -133,7 +134,7 @@
             this.btnOdbaci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdbaci.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdbaci.ForeColor = System.Drawing.Color.White;
-            this.btnOdbaci.Location = new System.Drawing.Point(290, 235);
+            this.btnOdbaci.Location = new System.Drawing.Point(290, 236);
             this.btnOdbaci.Name = "btnOdbaci";
             this.btnOdbaci.Size = new System.Drawing.Size(127, 28);
             this.btnOdbaci.TabIndex = 22;
@@ -192,7 +193,7 @@
             this.btnDetalji.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalji.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDetalji.ForeColor = System.Drawing.Color.White;
-            this.btnDetalji.Location = new System.Drawing.Point(151, 235);
+            this.btnDetalji.Location = new System.Drawing.Point(151, 236);
             this.btnDetalji.Name = "btnDetalji";
             this.btnDetalji.Size = new System.Drawing.Size(127, 28);
             this.btnDetalji.TabIndex = 24;
@@ -200,12 +201,28 @@
             this.btnDetalji.UseVisualStyleBackColor = false;
             this.btnDetalji.Click += new System.EventHandler(this.btnDetalji_Click);
             // 
+            // btnPonisti
+            // 
+            this.btnPonisti.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.btnPonisti.FlatAppearance.BorderSize = 0;
+            this.btnPonisti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPonisti.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPonisti.ForeColor = System.Drawing.Color.White;
+            this.btnPonisti.Location = new System.Drawing.Point(12, 505);
+            this.btnPonisti.Name = "btnPonisti";
+            this.btnPonisti.Size = new System.Drawing.Size(127, 28);
+            this.btnPonisti.TabIndex = 25;
+            this.btnPonisti.Text = "Poništi narudžbu";
+            this.btnPonisti.UseVisualStyleBackColor = false;
+            this.btnPonisti.Click += new System.EventHandler(this.btnPonisti_Click);
+            // 
             // OdobravanjeNarudzbe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(429, 505);
+            this.ClientSize = new System.Drawing.Size(431, 547);
+            this.Controls.Add(this.btnPonisti);
             this.Controls.Add(this.btnDetalji);
             this.Controls.Add(this.dgvOdobrene);
             this.Controls.Add(this.btnOdbaci);
@@ -216,7 +233,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OdobravanjeNarudzbe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Odobravanje narudzba";
+            this.Text = "Odobravanje narudžba";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OdobravanjeNarudzbe_FormClosed);
             this.Load += new System.EventHandler(this.OdobravanjeNarudzbe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbe)).EndInit();
@@ -235,5 +252,6 @@
         private System.Windows.Forms.Button btnOdbaci;
         private System.Windows.Forms.DataGridView dgvOdobrene;
         private System.Windows.Forms.Button btnDetalji;
+        private System.Windows.Forms.Button btnPonisti;
     }
 }

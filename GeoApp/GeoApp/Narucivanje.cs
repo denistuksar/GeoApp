@@ -13,7 +13,7 @@ namespace GeoApp
 {
     public partial class Narucivanje : Form
     {
-
+        decimal suma;
         public Narucivanje()
         {
             InitializeComponent();
@@ -29,7 +29,6 @@ namespace GeoApp
                 db.SaveChanges();
                 NarudzbaInfo.IDNarudzbe = a.ID_narudzbe;
             }
-
         }
 
         /// <summary>
@@ -45,6 +44,9 @@ namespace GeoApp
             }
             dgvArtikli.DataSource = artikli;
             dgvArtikli.Columns[0].HeaderText = "ID artikla";
+            dgvArtikli.Columns[2].Width = 200;
+            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
+            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
             dgvArtikli.Columns[6].Visible = false;
         }
 
@@ -53,13 +55,29 @@ namespace GeoApp
             List<Artikl> narudzba;
             using (var db = new Entities())
             {
-                var query = from a in db.Artikl
-                            join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
-                            where n.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
-                            select a;
-                narudzba = query.ToList();
-                dgvKosarica.DataSource = narudzba;
-                dgvKosarica.Columns[6].Visible = false;
+                var query = (from a in db.Artikl
+                             join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
+                             where n.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
+                             select new
+                             {
+                                 a.ID_artikla,
+                                 a.Naziv,
+                                 a.Opis,
+                                 a.Proizvodac,
+                                 a.Serijski_broj,
+                                 a.Cijena,
+                                 n.Kolicina
+                             }).ToList();
+                dgvKosarica.DataSource = query;
+                var query2 = from a in db.Artikl
+                              join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
+                              where n.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
+                              select a;
+                narudzba = query2.ToList();
+                dgvKosarica.Columns[0].HeaderText = "ID artikla";
+                dgvKosarica.Columns[3].HeaderText = "Proizvođač";
+                dgvKosarica.Columns[4].HeaderText = "Serijski broj";
+                dgvKosarica.Columns[6].HeaderText = "Količina";
             }
         }
 
@@ -97,35 +115,69 @@ namespace GeoApp
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
-            Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
-            using (var db = new Entities())
+            try
             {
-                int kolicina = int.Parse(txtKolicina.Text);
-                var s = new Stavke_narudzbe
+                Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
+                using (var db = new Entities())
                 {
-                    NarudzbaID_narudzbe = NarudzbaInfo.IDNarudzbe,
-                    ArtiklID_artikla = selektiraniArtikl.ID_artikla,
-                    Kolicina = kolicina
-                };
-                db.Stavke_narudzbe.Add(s);
-                db.SaveChanges();
+                    int kolicina = int.Parse(txtKolicina.Text);
+                    var s = new Stavke_narudzbe
+                    {
+                        NarudzbaID_narudzbe = NarudzbaInfo.IDNarudzbe,
+                        ArtiklID_artikla = selektiraniArtikl.ID_artikla,
+                        Kolicina = kolicina
+                    };
+                    db.Stavke_narudzbe.Add(s);
+                    db.SaveChanges();
+                    suma = Convert.ToDecimal((from a in db.Stavke_narudzbe
+                                 where a.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
+                                 select a).Sum(b => b.Kolicina * b.Artikl.Cijena));
+                    lblCijena.Text = suma.ToString();
+                    lblCijena.Text += " HRK";
+                }
+                PrikaziKosaricu();
             }
-            PrikaziKosaricu();
+            catch(FormatException)
+            {
+
+                MessageBox.Show("Neispravan unos količine.");
+            }
+            
         }
 
         private void btnIzbrisi_Click(object sender, EventArgs e)
         {
-            Artikl selektiraniArtikl = dgvKosarica.CurrentRow.DataBoundItem as Artikl;
-            if (dgvKosarica.Rows.Count != 0)
+            try
             {
-                using (var db = new Entities())
+                var selektiraniArtikl = (int)dgvKosarica.CurrentRow.Cells[0].Value;
+                if (dgvKosarica.Rows.Count != 0)
                 {
-                    List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe && x.ArtiklID_artikla==selektiraniArtikl.ID_artikla).ToList();
-                    db.Stavke_narudzbe.RemoveRange(lista);   //Brišemo narudzbu iz kolekcije
-                    db.SaveChanges();
+                    using (var db = new Entities())
+                    {
+                        List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe && x.ArtiklID_artikla == selektiraniArtikl).ToList();
+                        db.Stavke_narudzbe.RemoveRange(lista);   //Brišemo narudzbu iz kolekcije
+                        db.SaveChanges();
+                        suma = Convert.ToDecimal((from a in db.Stavke_narudzbe
+                                                  where a.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
+                                                  select a).Sum(b => b.Kolicina * b.Artikl.Cijena));
+                        lblCijena.Text = suma.ToString();
+                        lblCijena.Text += " HRK";
+                    }
+                    PrikaziKosaricu();
                 }
-                PrikaziKosaricu();
+                else
+                {
+                    lblCijena.Text = "0";
+                    lblCijena.Text += " HRK";
+                    PrikaziKosaricu();
+                }
             }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("Odaberite artikl koji želite izbrisati.");
+            }
+            
+            
         }
 
         private void btnNaruci_Click(object sender, EventArgs e)

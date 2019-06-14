@@ -64,6 +64,9 @@ namespace GeoApp
                 artikli = db.Artikl.ToList();
             }
             dgvArtikli.DataSource = artikli;
+            dgvArtikli.Columns[0].HeaderText = "ID artikla";
+            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
+            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
             dgvArtikli.Columns[6].Visible = false;
         }
   
@@ -107,7 +110,8 @@ namespace GeoApp
         private void AzuriranjeArtikla_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.Hide();
-            new Pocetna().ShowDialog();
+            Pocetna unos = new Pocetna();
+            unos.ShowDialog();
             this.Close();
         }
     }

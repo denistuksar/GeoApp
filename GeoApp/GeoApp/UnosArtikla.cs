@@ -16,33 +16,39 @@ namespace GeoApp
         /// </summary>
         private void btnUnesi_Click(object sender, EventArgs e)
         {
-            if (nazivArtikla.Text != "" && opisArtikla.Text!= "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
+            try
             {
-                using (var db = new Entities())
+                if (nazivArtikla.Text != "" && opisArtikla.Text != "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
                 {
-                    Artikl artikl = new Artikl
+                    using (var db = new Entities())
                     {
-                        Naziv = nazivArtikla.Text,
-                        Opis = opisArtikla.Text,
-                        Proizvodac = proizvodacArtikla.Text,
-                        Cijena = decimal.Parse(cijenaArtikla.Text),
-                        Serijski_broj = serijskiBrojArtikla.Text
-                    };
-                    db.Artikl.Add(artikl);
-                    db.SaveChanges();
+                        Artikl artikl = new Artikl
+                        {
+                            Naziv = nazivArtikla.Text,
+                            Opis = opisArtikla.Text,
+                            Proizvodac = proizvodacArtikla.Text,
+                            Cijena = decimal.Parse(cijenaArtikla.Text),
+                            Serijski_broj = serijskiBrojArtikla.Text
+                        };
+                        db.Artikl.Add(artikl);
+                        db.SaveChanges();
+                    }
+                    MessageBox.Show("Narudžba uspješna");
+                    nazivArtikla.Clear();
+                    opisArtikla.Clear();
+                    proizvodacArtikla.Clear();
+                    cijenaArtikla.Clear();
+                    serijskiBrojArtikla.Clear();
                 }
-                MessageBox.Show("Narudžba uspješna");
-                nazivArtikla.Clear();
-                opisArtikla.Clear();
-                proizvodacArtikla.Clear();
-                cijenaArtikla.Clear();
-                serijskiBrojArtikla.Clear();
+                else
+                {
+                    MessageBox.Show("Ispunite sva polja");
+                }
             }
-            else
+            catch(FormatException)
             {
-                MessageBox.Show("Ispunite sva polja");
+                MessageBox.Show("Neispravan unos.");
             }
-            
         }
 
         private void UnosArtikla_Load(object sender, EventArgs e)
