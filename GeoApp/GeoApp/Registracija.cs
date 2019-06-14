@@ -17,10 +17,12 @@ namespace GeoApp
         List<string> popisOIB;
         List<string> popisKorisnika;
         List<string> popisEmaila;
+        
 
         public Registracija()
         {
             InitializeComponent();
+          
         }
 
         private void registriraj_Click(object sender, EventArgs e)
@@ -42,25 +44,46 @@ namespace GeoApp
                     {
                         if (oib.ToString() != txtOib.Text && IsValidOIB(txtOib.Text))
                         {
-
                             if (email.ToString() != txtEmail.Text && IsValidEmail(txtEmail.Text))
                             {
-                                var korisnik = new Korisnik
+                                if (LoginInfo.Uloga == "Administrator")
                                 {
-                                    Ime = txtIme.Text,
-                                    Prezime = txtPrezime.Text,
-                                    OIB = txtOib.Text,
-                                    Adresa = txtAdresa.Text,
-                                    Email = txtEmail.Text,
-                                    Broj_telefona = txtTelefon.Text,
-                                    Korisnicko_ime = txtKorIme.Text,
-                                    Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
-                                    Lozinka = txtLozinka.Text,
-                                    UlogaID_uloge = 2
-                                };
-                                db.Korisnik.Add(korisnik);
-                                db.SaveChanges();
-                                MessageBox.Show("Uspješna registracija");
+                                    var korisnik = new Korisnik
+                                    {
+                                        Ime = txtIme.Text,
+                                        Prezime = txtPrezime.Text,
+                                        OIB = txtOib.Text,
+                                        Adresa = txtAdresa.Text,
+                                        Email = txtEmail.Text,
+                                        Broj_telefona = txtTelefon.Text,
+                                        Korisnicko_ime = txtKorIme.Text,
+                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
+                                        Lozinka = txtLozinka.Text,
+                                        UlogaID_uloge = 3
+                                    };
+                                    db.Korisnik.Add(korisnik);
+                                    db.SaveChanges();
+                                    MessageBox.Show("Uspješno dodan zaposlenik");
+                                }
+                                else
+                                {
+                                    var korisnik = new Korisnik
+                                    {
+                                        Ime = txtIme.Text,
+                                        Prezime = txtPrezime.Text,
+                                        OIB = txtOib.Text,
+                                        Adresa = txtAdresa.Text,
+                                        Email = txtEmail.Text,
+                                        Broj_telefona = txtTelefon.Text,
+                                        Korisnicko_ime = txtKorIme.Text,
+                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
+                                        Lozinka = txtLozinka.Text,
+                                        UlogaID_uloge = 2
+                                    };
+                                    db.Korisnik.Add(korisnik);
+                                    db.SaveChanges();
+                                    MessageBox.Show("Uspješna registracija");
+                                }                             
                             }
                             else
                             {
@@ -77,8 +100,10 @@ namespace GeoApp
                     {
                         MessageBox.Show("Korisničko ime postoji! ");
                     }
-                }
+                    this.Close();
 
+                }
+             
                 else
                 {
                     MessageBox.Show("Neuspješna registracija");

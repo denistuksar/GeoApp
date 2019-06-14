@@ -73,6 +73,12 @@
     <Compile Include="Artikl.cs">
       <DependentUpon>GeoAppModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="AzurirajKorisnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AzurirajKorisnika.Designer.cs">
+      <DependentUpon>AzurirajKorisnika.cs</DependentUpon>
+    </Compile>
     <Compile Include="AzuriranjeArtikla.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     <Compile Include="Uredaj_Servis.cs">
       <DependentUpon>GeoAppModel.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AzurirajKorisnika.resx">
+      <DependentUpon>AzurirajKorisnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AzuriranjeArtikla.resx">
       <DependentUpon>AzuriranjeArtikla.cs</DependentUpon>
     </EmbeddedResource>
