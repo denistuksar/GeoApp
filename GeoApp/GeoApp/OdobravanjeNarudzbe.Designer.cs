@@ -42,6 +42,7 @@
             this.dgvOdobrene = new System.Windows.Forms.DataGridView();
             this.btnDetalji = new System.Windows.Forms.Button();
             this.btnPonisti = new System.Windows.Forms.Button();
+            this.btnDetalji2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdobrene)).BeginInit();
             this.SuspendLayout();
@@ -216,12 +217,28 @@
             this.btnPonisti.UseVisualStyleBackColor = false;
             this.btnPonisti.Click += new System.EventHandler(this.btnPonisti_Click);
             // 
+            // btnDetalji2
+            // 
+            this.btnDetalji2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.btnDetalji2.FlatAppearance.BorderSize = 0;
+            this.btnDetalji2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalji2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalji2.ForeColor = System.Drawing.Color.White;
+            this.btnDetalji2.Location = new System.Drawing.Point(151, 505);
+            this.btnDetalji2.Name = "btnDetalji2";
+            this.btnDetalji2.Size = new System.Drawing.Size(127, 28);
+            this.btnDetalji2.TabIndex = 26;
+            this.btnDetalji2.Text = "Detalji narudžbe";
+            this.btnDetalji2.UseVisualStyleBackColor = false;
+            this.btnDetalji2.Click += new System.EventHandler(this.btnDetalji2_Click);
+            // 
             // OdobravanjeNarudzbe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(431, 547);
+            this.Controls.Add(this.btnDetalji2);
             this.Controls.Add(this.btnPonisti);
             this.Controls.Add(this.btnDetalji);
             this.Controls.Add(this.dgvOdobrene);
@@ -253,5 +270,6 @@
         private System.Windows.Forms.DataGridView dgvOdobrene;
         private System.Windows.Forms.Button btnDetalji;
         private System.Windows.Forms.Button btnPonisti;
+        private System.Windows.Forms.Button btnDetalji2;
     }
 }

@@ -166,5 +166,22 @@ namespace GeoApp
                 PrikaziOdobrene();
             }
         }
+
+        private void btnDetalji2_Click(object sender, EventArgs e)
+        {
+            if (dgvOdobrene.Rows.Count != 0)
+            {
+                Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
+                if (selektiranaNarudzba != null)
+                {
+                    DetaljiNarudzbe detaljiNarudzbe = new DetaljiNarudzbe(selektiranaNarudzba.ID_narudzbe);
+                    detaljiNarudzbe.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Odaberite narudžbu za koju želite prikazati detalje");
+                }
+            }
+        }
     }
 }
