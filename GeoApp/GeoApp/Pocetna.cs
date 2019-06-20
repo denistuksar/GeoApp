@@ -42,11 +42,15 @@ namespace GeoApp
             {
                 unosUredaja.Visible = false;
                 azuriranjeUredaja.Visible = false;
+                btnOdobravanje.Visible = false;
+                btnOvlasti.Visible = false;
+                btnServis.Location = new Point(73, 146);
                 this.Size = new Size(384,260);
             }
             else if (LoginInfo.Uloga == "Zaposlenik")
             {
                 btnOvlasti.Visible = false;
+                btnServis.Location = new Point(73, 324);
                 this.Size = new Size(384, 423);
                 
             }

@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvArtikli = new System.Windows.Forms.DataGridView();
             this.serijskiBrojArtikla = new System.Windows.Forms.TextBox();
             this.cijenaArtikla = new System.Windows.Forms.TextBox();
@@ -44,6 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gumbAzuriraj = new System.Windows.Forms.Button();
             this.gumbIzbrisi = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,87 +57,91 @@
             this.dgvArtikli.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvArtikli.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvArtikli.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArtikli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArtikli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvArtikli.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvArtikli.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvArtikli.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvArtikli.EnableHeadersVisualStyles = false;
             this.dgvArtikli.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvArtikli.Location = new System.Drawing.Point(12, 277);
+            this.dgvArtikli.Location = new System.Drawing.Point(12, 366);
             this.dgvArtikli.Name = "dgvArtikli";
             this.dgvArtikli.ReadOnly = true;
             this.dgvArtikli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArtikli.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArtikli.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvArtikli.RowHeadersVisible = false;
             this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArtikli.Size = new System.Drawing.Size(609, 195);
+            this.dgvArtikli.Size = new System.Drawing.Size(608, 195);
             this.dgvArtikli.TabIndex = 18;
             this.dgvArtikli.SelectionChanged += new System.EventHandler(this.dgvArtikli_SelectionChanged);
             // 
             // serijskiBrojArtikla
             // 
             this.serijskiBrojArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.serijskiBrojArtikla.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serijskiBrojArtikla.Location = new System.Drawing.Point(330, 88);
+            this.serijskiBrojArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serijskiBrojArtikla.Location = new System.Drawing.Point(326, 112);
+            this.serijskiBrojArtikla.Multiline = true;
             this.serijskiBrojArtikla.Name = "serijskiBrojArtikla";
-            this.serijskiBrojArtikla.Size = new System.Drawing.Size(225, 21);
+            this.serijskiBrojArtikla.Size = new System.Drawing.Size(294, 35);
             this.serijskiBrojArtikla.TabIndex = 36;
             // 
             // cijenaArtikla
             // 
             this.cijenaArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cijenaArtikla.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cijenaArtikla.Location = new System.Drawing.Point(330, 42);
+            this.cijenaArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cijenaArtikla.Location = new System.Drawing.Point(326, 38);
+            this.cijenaArtikla.Multiline = true;
             this.cijenaArtikla.Name = "cijenaArtikla";
-            this.cijenaArtikla.Size = new System.Drawing.Size(225, 21);
+            this.cijenaArtikla.Size = new System.Drawing.Size(294, 35);
             this.cijenaArtikla.TabIndex = 35;
             // 
             // proizvodacArtikla
             // 
             this.proizvodacArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.proizvodacArtikla.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proizvodacArtikla.Location = new System.Drawing.Point(84, 228);
+            this.proizvodacArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proizvodacArtikla.Location = new System.Drawing.Point(12, 318);
+            this.proizvodacArtikla.Multiline = true;
             this.proizvodacArtikla.Name = "proizvodacArtikla";
-            this.proizvodacArtikla.Size = new System.Drawing.Size(225, 21);
+            this.proizvodacArtikla.Size = new System.Drawing.Size(294, 35);
             this.proizvodacArtikla.TabIndex = 34;
             // 
             // opisArtikla
             // 
             this.opisArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.opisArtikla.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opisArtikla.Location = new System.Drawing.Point(84, 84);
+            this.opisArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opisArtikla.Location = new System.Drawing.Point(12, 112);
             this.opisArtikla.Multiline = true;
             this.opisArtikla.Name = "opisArtikla";
-            this.opisArtikla.Size = new System.Drawing.Size(225, 111);
+            this.opisArtikla.Size = new System.Drawing.Size(294, 172);
             this.opisArtikla.TabIndex = 33;
             // 
             // nazivArtikla
             // 
             this.nazivArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nazivArtikla.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazivArtikla.Location = new System.Drawing.Point(84, 42);
+            this.nazivArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nazivArtikla.Location = new System.Drawing.Point(12, 38);
+            this.nazivArtikla.Multiline = true;
             this.nazivArtikla.Name = "nazivArtikla";
-            this.nazivArtikla.Size = new System.Drawing.Size(225, 21);
+            this.nazivArtikla.Size = new System.Drawing.Size(294, 35);
             this.nazivArtikla.TabIndex = 32;
             // 
             // label6
@@ -144,7 +150,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(326, 65);
+            this.label6.Location = new System.Drawing.Point(322, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 20);
             this.label6.TabIndex = 31;
@@ -156,7 +162,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(326, 19);
+            this.label4.Location = new System.Drawing.Point(322, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 20);
             this.label4.TabIndex = 30;
@@ -168,7 +174,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(80, 205);
+            this.label2.Location = new System.Drawing.Point(8, 295);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 29;
@@ -180,7 +186,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(80, 19);
+            this.label5.Location = new System.Drawing.Point(11, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 20);
             this.label5.TabIndex = 28;
@@ -192,7 +198,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(80, 65);
+            this.label1.Location = new System.Drawing.Point(11, 87);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 20);
             this.label1.TabIndex = 27;
@@ -206,9 +212,9 @@
             this.gumbAzuriraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gumbAzuriraj.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gumbAzuriraj.ForeColor = System.Drawing.Color.White;
-            this.gumbAzuriraj.Location = new System.Drawing.Point(330, 126);
+            this.gumbAzuriraj.Location = new System.Drawing.Point(326, 167);
             this.gumbAzuriraj.Name = "gumbAzuriraj";
-            this.gumbAzuriraj.Size = new System.Drawing.Size(225, 27);
+            this.gumbAzuriraj.Size = new System.Drawing.Size(294, 35);
             this.gumbAzuriraj.TabIndex = 37;
             this.gumbAzuriraj.Text = "Ažuriraj";
             this.gumbAzuriraj.UseVisualStyleBackColor = false;
@@ -222,20 +228,45 @@
             this.gumbIzbrisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gumbIzbrisi.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gumbIzbrisi.ForeColor = System.Drawing.Color.White;
-            this.gumbIzbrisi.Location = new System.Drawing.Point(330, 168);
+            this.gumbIzbrisi.Location = new System.Drawing.Point(326, 214);
             this.gumbIzbrisi.Name = "gumbIzbrisi";
-            this.gumbIzbrisi.Size = new System.Drawing.Size(225, 27);
+            this.gumbIzbrisi.Size = new System.Drawing.Size(294, 35);
             this.gumbIzbrisi.TabIndex = 38;
             this.gumbIzbrisi.Text = "Izbriši";
             this.gumbIzbrisi.UseVisualStyleBackColor = false;
             this.gumbIzbrisi.Click += new System.EventHandler(this.gumbIzbrisi_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(322, 295);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.TabIndex = 39;
+            this.label3.Text = "Pretraži:";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(326, 318);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(294, 35);
+            this.txtSearch.TabIndex = 40;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // AzuriranjeArtikla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(633, 486);
+            this.ClientSize = new System.Drawing.Size(633, 577);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.gumbIzbrisi);
             this.Controls.Add(this.gumbAzuriraj);
             this.Controls.Add(this.serijskiBrojArtikla);
@@ -281,5 +312,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn proizvodacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serijskibrojDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }

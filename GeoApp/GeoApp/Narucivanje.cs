@@ -200,5 +200,30 @@ namespace GeoApp
                 MessageBox.Show("Odaberite artikle koje želite naručiti");
             }
          }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (var db = new Entities())
+            {
+                var query = from a in db.Artikl
+                            where a.Naziv.Contains(txtSearch.Text)
+                            select a;
+                dgvArtikli.DataSource = query.ToList();
+            }
+            dgvArtikli.Columns[0].HeaderText = "ID artikla";
+            dgvArtikli.Columns[2].Width = 200;
+            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
+            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
+            dgvArtikli.Columns[6].Visible = false;
+        }
+
+        private void dgvArtikli_SelectionChanged(object sender, EventArgs e)
+        {
+            nazivArtikla.Text = dgvArtikli.CurrentRow.Cells[1].Value.ToString();
+            opisArtikla.Text = dgvArtikli.CurrentRow.Cells[2].Value.ToString();
+            proizvodacArtikla.Text = dgvArtikli.CurrentRow.Cells[3].Value.ToString();
+            cijenaArtikla.Text = dgvArtikli.CurrentRow.Cells[4].Value.ToString();
+            serijskiBrojArtikla.Text = dgvArtikli.CurrentRow.Cells[5].Value.ToString();
+        }
     }
 }

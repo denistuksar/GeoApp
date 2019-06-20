@@ -33,7 +33,7 @@ namespace GeoApp
                         db.Artikl.Add(artikl);
                         db.SaveChanges();
                     }
-                    MessageBox.Show("Narudžba uspješna");
+                    MessageBox.Show("Aktikl unešen.");
                     nazivArtikla.Clear();
                     opisArtikla.Clear();
                     proizvodacArtikla.Clear();

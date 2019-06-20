@@ -213,7 +213,9 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OvlastiZaposlenika";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ovlasti Zaposlenika";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OvlastiZaposlenika_FormClosed);
             this.Load += new System.EventHandler(this.OvlastiZaposlenika_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).EndInit();
             this.ResumeLayout(false);

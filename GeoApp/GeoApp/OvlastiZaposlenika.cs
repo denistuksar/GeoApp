@@ -99,14 +99,15 @@ namespace GeoApp
         {
             Ovlasti ovlast = dgvZaposlenici.CurrentRow.DataBoundItem as Ovlasti;
             
-            if(ovlast.ID_ovlasti == OvlastInfo.IDOvlasti)
-            {
-                cbBezOvlasti.Checked= true;
-            }
-            else
-            {
+           
+        }
 
-            }
+        private void OvlastiZaposlenika_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            Pocetna unos = new Pocetna();
+            unos.ShowDialog();
+            this.Close();
         }
     }
 }

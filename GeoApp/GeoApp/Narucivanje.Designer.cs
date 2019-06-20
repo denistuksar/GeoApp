@@ -45,6 +45,18 @@
             this.txtKolicina = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCijena = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.serijskiBrojArtikla = new System.Windows.Forms.TextBox();
+            this.cijenaArtikla = new System.Windows.Forms.TextBox();
+            this.proizvodacArtikla = new System.Windows.Forms.TextBox();
+            this.opisArtikla = new System.Windows.Forms.TextBox();
+            this.nazivArtikla = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +76,7 @@
             // 
             this.dgvArtikli.AllowUserToAddRows = false;
             this.dgvArtikli.AllowUserToDeleteRows = false;
+            this.dgvArtikli.AllowUserToOrderColumns = true;
             this.dgvArtikli.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.dgvArtikli.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvArtikli.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -101,8 +114,9 @@
             this.dgvArtikli.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvArtikli.RowHeadersVisible = false;
             this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArtikli.Size = new System.Drawing.Size(705, 216);
+            this.dgvArtikli.Size = new System.Drawing.Size(717, 216);
             this.dgvArtikli.TabIndex = 18;
+            this.dgvArtikli.SelectionChanged += new System.EventHandler(this.dgvArtikli_SelectionChanged);
             // 
             // btnDodaj
             // 
@@ -111,7 +125,7 @@
             this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDodaj.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDodaj.ForeColor = System.Drawing.Color.White;
-            this.btnDodaj.Location = new System.Drawing.Point(191, 271);
+            this.btnDodaj.Location = new System.Drawing.Point(603, 271);
             this.btnDodaj.Name = "btnDodaj";
             this.btnDodaj.Size = new System.Drawing.Size(127, 28);
             this.btnDodaj.TabIndex = 19;
@@ -209,7 +223,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(8, 272);
+            this.label3.Location = new System.Drawing.Point(387, 272);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 21);
             this.label3.TabIndex = 24;
@@ -220,9 +234,9 @@
             this.txtKolicina.BackColor = System.Drawing.Color.Gainsboro;
             this.txtKolicina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtKolicina.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKolicina.Location = new System.Drawing.Point(81, 270);
+            this.txtKolicina.Location = new System.Drawing.Point(461, 270);
             this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(91, 29);
+            this.txtKolicina.Size = new System.Drawing.Size(136, 29);
             this.txtKolicina.TabIndex = 25;
             // 
             // label4
@@ -246,12 +260,161 @@
             this.lblCijena.Size = new System.Drawing.Size(0, 21);
             this.lblCijena.TabIndex = 27;
             // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Gainsboro;
+            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(118, 270);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(252, 29);
+            this.txtSearch.TabIndex = 29;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(9, 272);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(103, 21);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Pretraživanje:";
+            // 
+            // serijskiBrojArtikla
+            // 
+            this.serijskiBrojArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.serijskiBrojArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.serijskiBrojArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.serijskiBrojArtikla.Location = new System.Drawing.Point(751, 547);
+            this.serijskiBrojArtikla.Multiline = true;
+            this.serijskiBrojArtikla.Name = "serijskiBrojArtikla";
+            this.serijskiBrojArtikla.Size = new System.Drawing.Size(225, 31);
+            this.serijskiBrojArtikla.TabIndex = 39;
+            // 
+            // cijenaArtikla
+            // 
+            this.cijenaArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cijenaArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.cijenaArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cijenaArtikla.Location = new System.Drawing.Point(751, 481);
+            this.cijenaArtikla.Multiline = true;
+            this.cijenaArtikla.Name = "cijenaArtikla";
+            this.cijenaArtikla.Size = new System.Drawing.Size(225, 31);
+            this.cijenaArtikla.TabIndex = 38;
+            // 
+            // proizvodacArtikla
+            // 
+            this.proizvodacArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.proizvodacArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.proizvodacArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proizvodacArtikla.Location = new System.Drawing.Point(751, 414);
+            this.proizvodacArtikla.Multiline = true;
+            this.proizvodacArtikla.Name = "proizvodacArtikla";
+            this.proizvodacArtikla.Size = new System.Drawing.Size(225, 31);
+            this.proizvodacArtikla.TabIndex = 37;
+            // 
+            // opisArtikla
+            // 
+            this.opisArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.opisArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.opisArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.opisArtikla.Location = new System.Drawing.Point(751, 104);
+            this.opisArtikla.Multiline = true;
+            this.opisArtikla.Name = "opisArtikla";
+            this.opisArtikla.Size = new System.Drawing.Size(225, 272);
+            this.opisArtikla.TabIndex = 36;
+            // 
+            // nazivArtikla
+            // 
+            this.nazivArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.nazivArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.nazivArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nazivArtikla.Location = new System.Drawing.Point(751, 37);
+            this.nazivArtikla.Multiline = true;
+            this.nazivArtikla.Name = "nazivArtikla";
+            this.nazivArtikla.Size = new System.Drawing.Size(225, 31);
+            this.nazivArtikla.TabIndex = 35;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(747, 524);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 20);
+            this.label6.TabIndex = 34;
+            this.label6.Text = "Serijski broj:";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(747, 458);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 20);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "Cijena:";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(747, 391);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(85, 20);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Proizvođač:";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(747, 14);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(49, 20);
+            this.label9.TabIndex = 31;
+            this.label9.Text = "Naziv:";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(747, 81);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 20);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Opis:";
+            // 
             // Narucivanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(730, 621);
+            this.ClientSize = new System.Drawing.Size(987, 621);
+            this.Controls.Add(this.serijskiBrojArtikla);
+            this.Controls.Add(this.cijenaArtikla);
+            this.Controls.Add(this.proizvodacArtikla);
+            this.Controls.Add(this.opisArtikla);
+            this.Controls.Add(this.nazivArtikla);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtKolicina);
@@ -289,5 +452,17 @@
         private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCijena;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox serijskiBrojArtikla;
+        private System.Windows.Forms.TextBox cijenaArtikla;
+        private System.Windows.Forms.TextBox proizvodacArtikla;
+        private System.Windows.Forms.TextBox opisArtikla;
+        private System.Windows.Forms.TextBox nazivArtikla;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
