@@ -147,10 +147,19 @@ namespace GeoApp
 
         private void OdobravanjeNarudzbe_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            Pocetna pocetna = new Pocetna();
-            pocetna.ShowDialog();
-            this.Close();
+            if (odabraniKorisnik == null)
+            {
+                this.Hide();
+                Pocetna pocetna = new Pocetna();
+                pocetna.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+                OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
+                this.Close();
+            }
         }
 
         private void btnPonisti_Click(object sender, EventArgs e)
