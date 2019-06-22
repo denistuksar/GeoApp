@@ -53,7 +53,7 @@ namespace GeoApp
             dgvNarudzbe.Columns[4].Visible = false;
             dgvNarudzbe.Columns[5].Visible = false;
             dgvNarudzbe.Columns[6].Visible = false;
-            dgvNarudzbe.Columns[7].Visible = false;
+         
         }
 
         private void PrikaziOdobrene()
@@ -72,7 +72,7 @@ namespace GeoApp
             dgvOdobrene.Columns[4].Visible = false;
             dgvOdobrene.Columns[5].Visible = false;
             dgvOdobrene.Columns[6].Visible = false;
-            dgvOdobrene.Columns[7].Visible = false;
+       
         }
 
         private void btnOdobri_Click(object sender, EventArgs e)

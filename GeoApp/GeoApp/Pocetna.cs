@@ -40,22 +40,43 @@ namespace GeoApp
 
             helpPocetna.HelpNamespace = Environment.CurrentDirectory + "/help/pocetna.html";
 
+
             this.MaximizeBox = false;
-            if (LoginInfo.Uloga=="Kupac")
+            if (LoginInfo.Uloga == "Kupac")
             {
                 unosUredaja.Visible = false;
                 azuriranjeUredaja.Visible = false;
-                btnOdobravanje.Visible = false;
-                btnOvlasti.Visible = false;
-                btnServis.Location = new Point(73, 146);
-                this.Size = new Size(384,260);
+                this.Size = new Size(384, 260);
             }
-            else if (LoginInfo.Uloga == "Zaposlenik")
+            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 3)
             {
+                txtUloga.Text += " - CRUD nad artiklima";
                 btnOvlasti.Visible = false;
-                btnServis.Location = new Point(73, 324);
-                this.Size = new Size(384, 423);
-                
+                btnServis.Visible = false;
+                this.Size = new Size(384, 400);
+            }
+
+            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 2)
+            {
+                txtUloga.Text += " - narudžba artikala";
+                btnOvlasti.Visible = false;
+                azuriranjeUredaja.Visible = false;
+                unosUredaja.Visible = false;
+                btnOdobravanje.Location = new Point(73, 146);
+                this.Size = new Size(384, 260);
+            }
+            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 4)
+            {
+                txtUloga.Text += " - nema ovlasti";
+                btnOvlasti.Visible = false;
+                azuriranjeUredaja.Visible = false;
+                unosUredaja.Visible = false;
+                btnServis.Visible = false;
+                btnOdobravanje.Visible = false;
+                btnOdobravanje.Location = new Point(73, 143);
+                this.Size = new Size(384, 260);
+
+
             }
         }
 

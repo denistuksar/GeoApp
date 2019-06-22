@@ -38,14 +38,22 @@ namespace GeoApp
 
                     var query3 = from k in db.Korisnik
                                  where k.Korisnicko_ime == txtKorisnickoIme.Text
-                                 select k.ID_korisnika; ;
+                                 select k.ID_korisnika;
 
                     var id = query3.FirstOrDefault<int>();
+
+                    var query4 = from k in db.Korisnik
+                                 where k.Korisnicko_ime == txtKorisnickoIme.Text
+                                 select k.OvlastiID_ovlast.Value;
+
+                    var idOvlasti = query4.FirstOrDefault<int>();
+
 
                     LoginInfo.IDKorisnika = id;
                     LoginInfo.Uloga = uloga.ToString();
                     LoginInfo.Korime = txtKorisnickoIme.Text;
-                    
+                    OvlastInfo.IDOvlasti = idOvlasti;
+
                     this.Hide();
                     Pocetna pocetna = new Pocetna();
                     pocetna.ShowDialog();
