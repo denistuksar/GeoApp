@@ -17,7 +17,7 @@ namespace GeoApp
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Ovlasti()
         {
-            this.Uloga = new HashSet<Uloga>();
+            this.Korisnik = new HashSet<Korisnik>();
         }
     
         public int ID_ovlasti { get; set; }
@@ -26,8 +26,8 @@ namespace GeoApp
         public Nullable<bool> Brisanje_artikla { get; set; }
         public Nullable<bool> Odobravanje_narudzbe { get; set; }
         public Nullable<bool> Uredivanje_ovlasti { get; set; }
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Uloga> Uloga { get; set; }
+        public virtual ICollection<Korisnik> Korisnik { get; set; }
     }
 }

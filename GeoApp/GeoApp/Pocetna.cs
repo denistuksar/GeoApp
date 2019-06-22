@@ -12,6 +12,9 @@ namespace GeoApp
 {
     public partial class Pocetna : Form
     {
+       
+
+
         public Pocetna()
         {
             InitializeComponent();
@@ -42,17 +45,32 @@ namespace GeoApp
             {
                 unosUredaja.Visible = false;
                 azuriranjeUredaja.Visible = false;
-                btnOdobravanje.Visible = false;
-                btnOvlasti.Visible = false;
-                btnServis.Location = new Point(73, 146);
                 this.Size = new Size(384,260);
             }
-            else if (LoginInfo.Uloga == "Zaposlenik")
+            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 3)
             {
                 btnOvlasti.Visible = false;
-                btnServis.Location = new Point(73, 324);
-                this.Size = new Size(384, 423);
-                
+                this.Size = new Size(384, 423);                
+            }
+          
+            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 2)
+            {
+                btnOvlasti.Visible = false;
+                azuriranjeUredaja.Visible = false;
+                unosUredaja.Visible = false;
+                btnOdobravanje.Location = new Point(73, 200);
+                this.Size = new Size(384, 300);
+            }
+            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 4)
+            {
+                btnOvlasti.Visible = false;
+                azuriranjeUredaja.Visible = false;
+                unosUredaja.Visible = false;
+                btnServis.Visible = false;
+                btnOdobravanje.Location = new Point(73, 143);
+                this.Size = new Size(384, 260);
+
+
             }
         }
 

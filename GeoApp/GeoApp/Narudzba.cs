@@ -17,7 +17,7 @@ namespace GeoApp
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Narudzba()
         {
-            this.Korisnik1 = new HashSet<Korisnik>();
+            this.Stavke_narudzbe = new HashSet<Stavke_narudzbe>();
         }
     
         public int ID_narudzbe { get; set; }
@@ -25,10 +25,9 @@ namespace GeoApp
         public Nullable<System.DateTime> Datum { get; set; }
         public Nullable<System.TimeSpan> Vrijeme { get; set; }
         public Nullable<bool> Status { get; set; }
-
+    
         public virtual Korisnik Korisnik { get; set; }
-        public virtual Stavke_narudzbe Stavke_narudzbe { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Korisnik> Korisnik1 { get; set; }
+        public virtual ICollection<Stavke_narudzbe> Stavke_narudzbe { get; set; }
     }
 }

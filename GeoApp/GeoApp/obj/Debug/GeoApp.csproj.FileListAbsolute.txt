@@ -66,5 +66,3 @@ C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.exe
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.pdb
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csprojAssemblyReference.cache
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.AzurirajKorisnika.resources
-\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.AzurirajKorisnika.resources
-\\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.OvlastiZaposlenika.resources

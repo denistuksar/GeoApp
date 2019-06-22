@@ -27,7 +27,7 @@ namespace GeoApp
 
         private void registriraj_Click(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var korIme = from k in db.Korisnik
                              select k.Korisnicko_ime;
@@ -59,14 +59,20 @@ namespace GeoApp
                                         Korisnicko_ime = txtKorIme.Text,
                                         Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
                                         Lozinka = txtLozinka.Text,
-                                        UlogaID_uloge = 3,                                        
-                                        
+                                        UlogaID_uloge = 3,            
+                                        OvlastiID_ovlast = 4                                       
                                     };
-                                    OvlastInfo.IDOvlasti = 2;
+                                    OvlastInfo.IDOvlasti = 4;
 
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
                                     MessageBox.Show("Uspješno dodan zaposlenik");
+
+                                    this.Hide();
+                                    OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
+                                    ovlastiZaposlenika.ShowDialog();
+                                    this.Close();
+
                                 }
                                 else
                                 {
@@ -81,7 +87,8 @@ namespace GeoApp
                                         Korisnicko_ime = txtKorIme.Text,
                                         Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
                                         Lozinka = txtLozinka.Text,
-                                        UlogaID_uloge = 2
+                                        UlogaID_uloge = 2,
+                                        OvlastiID_ovlast = 4
                                     };
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
@@ -117,20 +124,40 @@ namespace GeoApp
 
         private void natrag_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Prijava prijava = new Prijava();
-            prijava.Show();
-            this.Close();
+
+            if (LoginInfo.IDKorisnika == 0)
+            {
+                this.Hide();
+                Prijava prijava = new Prijava();
+                prijava.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+             
+                this.Close();
+            }
         }
 
 
 
         private void Registracija_FormClosed(object sender, FormClosedEventArgs e)
         {
-            this.Hide();
-            Prijava prijava = new Prijava();
-            prijava.ShowDialog();
-            this.Close();
+            if (LoginInfo.IDKorisnika == 0)
+            {
+                this.Hide();
+                Prijava prijava = new Prijava();
+                prijava.ShowDialog();
+                this.Close();
+            }
+            else
+            {
+                this.Hide();
+             
+                this.Close();
+            }
+          
         }
 
 
@@ -141,7 +168,7 @@ namespace GeoApp
 
         private void txtOib_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var oib = from k in db.Korisnik
                           select k.OIB;
@@ -182,7 +209,7 @@ namespace GeoApp
 
         private void txtKorIme_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var korisnickoIme = from k in db.Korisnik
                                     select k.Korisnicko_ime;
@@ -217,7 +244,7 @@ namespace GeoApp
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 var email = from k in db.Korisnik
                             select k.Email;

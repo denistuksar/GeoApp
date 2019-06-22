@@ -20,7 +20,7 @@ namespace GeoApp
             {
                 if (nazivArtikla.Text != "" && opisArtikla.Text != "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
                 {
-                    using (var db = new Entities())
+                    using (var db = new GeoEntities())
                     {
                         Artikl artikl = new Artikl
                         {
@@ -33,7 +33,7 @@ namespace GeoApp
                         db.Artikl.Add(artikl);
                         db.SaveChanges();
                     }
-                    MessageBox.Show("Aktikl unešen.");
+                    MessageBox.Show("Narudžba uspješna");
                     nazivArtikla.Clear();
                     opisArtikla.Clear();
                     proizvodacArtikla.Clear();

@@ -21,7 +21,7 @@ namespace GeoApp
 
         public void PopuniBoxeve()
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 db.Korisnik.Attach(odabraniKorisnik);
                 txtIme.Text = odabraniKorisnik.Ime;
@@ -43,7 +43,7 @@ namespace GeoApp
 
         private void btnSpremi_Click(object sender, EventArgs e)
         {
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 db.Korisnik.Attach(odabraniKorisnik);
                 odabraniKorisnik.Ime= txtIme.Text  ;
@@ -63,19 +63,42 @@ namespace GeoApp
         private void btnIzbrisi_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Da li ste sigurni da želite izbrisati korisnika?", "Upozorenje!",
-       MessageBoxButtons.YesNo) ==
-                        System.Windows.Forms.DialogResult.Yes)
+       MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                using (var db = new Entities())
-                {
-                  
+                using (var db = new GeoEntities())
+                {                 
                     db.Korisnik.Attach(odabraniKorisnik);
-                    db.Korisnik.Remove(odabraniKorisnik);  
-                    db.SaveChanges();    
+
+                    if (odabraniKorisnik.Narudzba.Count == 0)
+                    {
+                        db.Korisnik.Remove(odabraniKorisnik);
+                        db.SaveChanges();
+                    }
+                    else
+                    {
+                        if(MessageBox.Show("Nije moguće obrisati korisnika koji sadrži narudžbe, želite " +
+                            "li vidjeti korisnikove narudžbe","Upozorenje!",MessageBoxButtons.YesNo)
+                            == System.Windows.Forms.DialogResult.Yes)
+                        {
+                            OdobravanjeNarudzbe odobravanjeNarudzbe = new OdobravanjeNarudzbe(odabraniKorisnik);
+                            odobravanjeNarudzbe.ShowDialog();
+                            
+                        }
+
+                        this.Close();
+                    }
+                     
                 }
             }
             
 
+            this.Close();
+        }
+
+        private void AzurirajKorisnika_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            //new OvlastiZaposlenika().ShowDialog();
             this.Close();
         }
     }

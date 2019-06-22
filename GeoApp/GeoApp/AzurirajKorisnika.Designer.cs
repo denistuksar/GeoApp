@@ -273,6 +273,7 @@
             this.Name = "AzurirajKorisnika";
             this.ShowIcon = false;
             this.Text = "Azuriraj Korisnika";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AzurirajKorisnika_FormClosed);
             this.Load += new System.EventHandler(this.AzurirajKorisnika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

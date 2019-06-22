@@ -34,7 +34,7 @@ namespace GeoApp
             Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
             if (selektiraniArtikl != null)
             {
-                using (var db = new Entities())
+                using (var db = new GeoEntities())
                 {
                     db.Artikl.Attach(selektiraniArtikl); //registriramo prosljeđeni tim. 
                     selektiraniArtikl.Naziv = nazivArtikla.Text;
@@ -59,7 +59,7 @@ namespace GeoApp
         private void PrikaziArtikle()
         {
             List<Artikl> artikli;
-            using (var db = new Entities())
+            using (var db = new GeoEntities())
             {
                 artikli = db.Artikl.ToList();
             }
@@ -90,7 +90,7 @@ namespace GeoApp
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
                     {
-                        using (var db = new Entities())
+                        using (var db = new GeoEntities())
                         {
                             //Registriramo artikl.
                             db.Artikl.Attach(selektiraniArtikl);
@@ -113,21 +113,6 @@ namespace GeoApp
             Pocetna unos = new Pocetna();
             unos.ShowDialog();
             this.Close();
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            using (var db = new Entities())
-            {
-                var query = from a in db.Artikl
-                            where a.Naziv.Contains(txtSearch.Text)
-                            select a;
-                dgvArtikli.DataSource = query.ToList();
-            }
-            dgvArtikli.Columns[0].HeaderText = "ID artikla";
-            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
-            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
-            dgvArtikli.Columns[6].Visible = false;
         }
     }
 }

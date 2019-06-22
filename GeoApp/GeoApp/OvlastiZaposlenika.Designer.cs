@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
             this.btnDodajZaposlenika = new System.Windows.Forms.Button();
@@ -40,6 +40,7 @@
             this.cbNarudzba = new System.Windows.Forms.CheckBox();
             this.cbBezOvlasti = new System.Windows.Forms.CheckBox();
             this.cbCRUD = new System.Windows.Forms.CheckBox();
+            this.btnPotvrda = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,37 +63,37 @@
             this.dgvZaposlenici.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvZaposlenici.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvZaposlenici.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZaposlenici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZaposlenici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvZaposlenici.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvZaposlenici.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvZaposlenici.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvZaposlenici.EnableHeadersVisualStyles = false;
             this.dgvZaposlenici.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvZaposlenici.Location = new System.Drawing.Point(16, 84);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.ReadOnly = true;
             this.dgvZaposlenici.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZaposlenici.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZaposlenici.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvZaposlenici.RowHeadersVisible = false;
             this.dgvZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZaposlenici.Size = new System.Drawing.Size(690, 216);
@@ -176,7 +177,7 @@
             this.cbBezOvlasti.AutoSize = true;
             this.cbBezOvlasti.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbBezOvlasti.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbBezOvlasti.Location = new System.Drawing.Point(55, 372);
+            this.cbBezOvlasti.Location = new System.Drawing.Point(298, 372);
             this.cbBezOvlasti.Name = "cbBezOvlasti";
             this.cbBezOvlasti.Size = new System.Drawing.Size(120, 25);
             this.cbBezOvlasti.TabIndex = 44;
@@ -188,19 +189,36 @@
             this.cbCRUD.AutoSize = true;
             this.cbCRUD.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbCRUD.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbCRUD.Location = new System.Drawing.Point(55, 413);
+            this.cbCRUD.Location = new System.Drawing.Point(55, 372);
             this.cbCRUD.Name = "cbCRUD";
             this.cbCRUD.Size = new System.Drawing.Size(166, 25);
             this.cbCRUD.TabIndex = 45;
             this.cbCRUD.Text = "CRUD nad artiklima";
             this.cbCRUD.UseVisualStyleBackColor = true;
             // 
+            // btnPotvrda
+            // 
+            this.btnPotvrda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.btnPotvrda.FlatAppearance.BorderSize = 0;
+            this.btnPotvrda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPotvrda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPotvrda.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnPotvrda.Location = new System.Drawing.Point(474, 365);
+            this.btnPotvrda.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.btnPotvrda.Name = "btnPotvrda";
+            this.btnPotvrda.Size = new System.Drawing.Size(148, 32);
+            this.btnPotvrda.TabIndex = 46;
+            this.btnPotvrda.Text = "Promijeni Ovlast";
+            this.btnPotvrda.UseVisualStyleBackColor = false;
+            this.btnPotvrda.Click += new System.EventHandler(this.btnPotvrda_Click);
+            // 
             // OvlastiZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(731, 478);
+            this.ClientSize = new System.Drawing.Size(732, 431);
+            this.Controls.Add(this.btnPotvrda);
             this.Controls.Add(this.cbCRUD);
             this.Controls.Add(this.cbBezOvlasti);
             this.Controls.Add(this.cbNarudzba);
@@ -213,7 +231,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OvlastiZaposlenika";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ovlasti Zaposlenika";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OvlastiZaposlenika_FormClosed);
             this.Load += new System.EventHandler(this.OvlastiZaposlenika_Load);
@@ -234,5 +251,6 @@
         private System.Windows.Forms.CheckBox cbNarudzba;
         private System.Windows.Forms.CheckBox cbBezOvlasti;
         private System.Windows.Forms.CheckBox cbCRUD;
+        private System.Windows.Forms.Button btnPotvrda;
     }
 }

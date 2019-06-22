@@ -32,13 +32,13 @@
             this.txtUloga = new System.Windows.Forms.Label();
             this.unosUredaja = new System.Windows.Forms.Button();
             this.azuriranjeUredaja = new System.Windows.Forms.Button();
+            this.btnServis = new System.Windows.Forms.Button();
             this.txtKorime = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnOdjava = new System.Windows.Forms.Button();
             this.btnNarucivanje = new System.Windows.Forms.Button();
             this.btnOdobravanje = new System.Windows.Forms.Button();
             this.btnOvlasti = new System.Windows.Forms.Button();
-            this.btnServis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -70,7 +70,7 @@
             this.unosUredaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.unosUredaja.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unosUredaja.ForeColor = System.Drawing.Color.White;
-            this.unosUredaja.Location = new System.Drawing.Point(73, 146);
+            this.unosUredaja.Location = new System.Drawing.Point(73, 200);
             this.unosUredaja.Name = "unosUredaja";
             this.unosUredaja.Size = new System.Drawing.Size(225, 41);
             this.unosUredaja.TabIndex = 3;
@@ -85,13 +85,27 @@
             this.azuriranjeUredaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.azuriranjeUredaja.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.azuriranjeUredaja.ForeColor = System.Drawing.Color.White;
-            this.azuriranjeUredaja.Location = new System.Drawing.Point(73, 204);
+            this.azuriranjeUredaja.Location = new System.Drawing.Point(73, 258);
             this.azuriranjeUredaja.Name = "azuriranjeUredaja";
             this.azuriranjeUredaja.Size = new System.Drawing.Size(225, 41);
             this.azuriranjeUredaja.TabIndex = 4;
             this.azuriranjeUredaja.Text = "Ažuriranje uređaja i opreme";
             this.azuriranjeUredaja.UseVisualStyleBackColor = false;
             this.azuriranjeUredaja.Click += new System.EventHandler(this.azuriranjeUredaja_Click);
+            // 
+            // btnServis
+            // 
+            this.btnServis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.btnServis.FlatAppearance.BorderSize = 0;
+            this.btnServis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnServis.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServis.ForeColor = System.Drawing.Color.White;
+            this.btnServis.Location = new System.Drawing.Point(73, 143);
+            this.btnServis.Name = "btnServis";
+            this.btnServis.Size = new System.Drawing.Size(225, 41);
+            this.btnServis.TabIndex = 5;
+            this.btnServis.Text = "Servis";
+            this.btnServis.UseVisualStyleBackColor = false;
             // 
             // txtKorime
             // 
@@ -152,7 +166,7 @@
             this.btnOdobravanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdobravanje.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdobravanje.ForeColor = System.Drawing.Color.White;
-            this.btnOdobravanje.Location = new System.Drawing.Point(73, 263);
+            this.btnOdobravanje.Location = new System.Drawing.Point(73, 317);
             this.btnOdobravanje.Name = "btnOdobravanje";
             this.btnOdobravanje.Size = new System.Drawing.Size(225, 41);
             this.btnOdobravanje.TabIndex = 10;
@@ -167,27 +181,13 @@
             this.btnOvlasti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOvlasti.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOvlasti.ForeColor = System.Drawing.Color.White;
-            this.btnOvlasti.Location = new System.Drawing.Point(73, 324);
+            this.btnOvlasti.Location = new System.Drawing.Point(73, 375);
             this.btnOvlasti.Name = "btnOvlasti";
             this.btnOvlasti.Size = new System.Drawing.Size(225, 41);
             this.btnOvlasti.TabIndex = 11;
             this.btnOvlasti.Text = "Uređivanje ovlasti i uloga";
             this.btnOvlasti.UseVisualStyleBackColor = false;
             this.btnOvlasti.Click += new System.EventHandler(this.btnOvlasti_Click);
-            // 
-            // btnServis
-            // 
-            this.btnServis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnServis.FlatAppearance.BorderSize = 0;
-            this.btnServis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnServis.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServis.ForeColor = System.Drawing.Color.White;
-            this.btnServis.Location = new System.Drawing.Point(73, 383);
-            this.btnServis.Name = "btnServis";
-            this.btnServis.Size = new System.Drawing.Size(225, 41);
-            this.btnServis.TabIndex = 5;
-            this.btnServis.Text = "Servis";
-            this.btnServis.UseVisualStyleBackColor = false;
             // 
             // Pocetna
             // 
@@ -225,13 +225,13 @@
         private System.Windows.Forms.Label txtUloga;
         private System.Windows.Forms.Button unosUredaja;
         private System.Windows.Forms.Button azuriranjeUredaja;
+        private System.Windows.Forms.Button btnServis;
         private System.Windows.Forms.Label txtKorime;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnOdjava;
         private System.Windows.Forms.Button btnNarucivanje;
         private System.Windows.Forms.Button btnOdobravanje;
         private System.Windows.Forms.Button btnOvlasti;
-        private System.Windows.Forms.Button btnServis;
     }
 }
 
