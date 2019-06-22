@@ -76,6 +76,7 @@ namespace GeoApp
         private void Prijava_Load(object sender, EventArgs e)
         {
             this.MaximizeBox = false;
+            helpPrijava.HelpNamespace = Environment.CurrentDirectory + "/help/prijava.html";
         }
 
         private void Prijava_FormClosing(object sender, FormClosingEventArgs e)

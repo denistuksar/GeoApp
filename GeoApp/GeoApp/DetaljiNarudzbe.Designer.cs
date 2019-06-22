@@ -105,7 +105,7 @@
             // 
             // helpDetaljiNarudzbe
             // 
-            this.helpDetaljiNarudzbe.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\detaljiNarudzbe.html";
+            this.helpDetaljiNarudzbe.HelpNamespace = "";
             // 
             // DetaljiNarudzbe
             // 

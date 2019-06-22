@@ -215,7 +215,7 @@
             // 
             // helpOvlasti
             // 
-            this.helpOvlasti.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\ovlasti.html";
+            this.helpOvlasti.HelpNamespace = "";
             // 
             // OvlastiZaposlenika
             // 

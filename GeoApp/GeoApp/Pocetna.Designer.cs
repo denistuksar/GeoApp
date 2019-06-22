@@ -192,7 +192,7 @@
             // 
             // helpPocetna
             // 
-            this.helpPocetna.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\pocetna.html";
+            this.helpPocetna.HelpNamespace = "";
             // 
             // Pocetna
             // 

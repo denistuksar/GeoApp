@@ -86,6 +86,9 @@ namespace GeoApp
 
         private void Narucivanje_Load(object sender, EventArgs e)
         {
+
+            helpNarucivanje.HelpNamespace = Environment.CurrentDirectory + "/help/narucivanje.html";
+
             PrikaziArtikle();
             this.MaximizeBox = false;
             txtKolicina.Text = "1";       

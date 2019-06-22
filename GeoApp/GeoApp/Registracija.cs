@@ -330,6 +330,12 @@ namespace GeoApp
                 txtPonovi.ForeColor = Color.White;
             }
         }
+
+        private void Registracija_Load(object sender, EventArgs e)
+        {
+            helpRegistracija.HelpNamespace = Environment.CurrentDirectory + "/help/registracija.html";
+
+        }
     }
 
 }

@@ -161,7 +161,7 @@
             // 
             // helpUnosArtikla
             // 
-            this.helpUnosArtikla.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\unosArtikla.html";
+            this.helpUnosArtikla.HelpNamespace = "";
             // 
             // UnosArtikla
             // 

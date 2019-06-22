@@ -47,6 +47,7 @@ namespace GeoApp
 
         private void DetaljiNarudzbe_Load(object sender, EventArgs e)
         {
+            helpDetaljiNarudzbe.HelpNamespace = Environment.CurrentDirectory + "/help/detaljiNarudzbe.html";
             this.MaximizeBox = false;
         }
     }

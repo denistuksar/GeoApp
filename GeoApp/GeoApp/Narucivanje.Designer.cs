@@ -249,7 +249,7 @@
             // 
             // helpNarucivanje
             // 
-            this.helpNarucivanje.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\narucivanje.html";
+            this.helpNarucivanje.HelpNamespace = "";
             // 
             // Narucivanje
             // 

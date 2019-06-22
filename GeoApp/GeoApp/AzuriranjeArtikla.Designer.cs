@@ -233,7 +233,7 @@
             // 
             // helpAzuriranjeArtikla
             // 
-            this.helpAzuriranjeArtikla.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\azuriranjeArtikla.html";
+            this.helpAzuriranjeArtikla.HelpNamespace = "";
             // 
             // AzuriranjeArtikla
             // 

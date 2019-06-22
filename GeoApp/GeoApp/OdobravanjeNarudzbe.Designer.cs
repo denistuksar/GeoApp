@@ -219,7 +219,7 @@
             // 
             // helpOdobravanjeNarudzbe
             // 
-            this.helpOdobravanjeNarudzbe.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\odobravanjeNarudzbe.html";
+            this.helpOdobravanjeNarudzbe.HelpNamespace = "";
             // 
             // OdobravanjeNarudzbe
             // 

@@ -63,6 +63,8 @@ namespace GeoApp
 
         private void OvlastiZaposlenika_Load(object sender, EventArgs e)
         {
+            helpOvlasti.HelpNamespace = Environment.CurrentDirectory + "/help/ovlasti.html";
+
             PrikaziKorisnike();
         }
 

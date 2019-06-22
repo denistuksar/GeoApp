@@ -40,6 +40,9 @@ namespace GeoApp
 
         private void Pocetna_Load(object sender, EventArgs e)
         {
+            helpPocetna.HelpNamespace = Environment.CurrentDirectory + "/help/pocetna.html";
+
+
             this.MaximizeBox = false;
             if (LoginInfo.Uloga=="Kupac")
             {

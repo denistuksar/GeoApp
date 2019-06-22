@@ -249,7 +249,7 @@
             // 
             // helpAzuriranjeKorisnika
             // 
-            this.helpAzuriranjeKorisnika.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\azuriranjeKorisnika.html";
+            this.helpAzuriranjeKorisnika.HelpNamespace = "";
             // 
             // AzurirajKorisnika
             // 

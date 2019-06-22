@@ -72,6 +72,7 @@ namespace GeoApp
   
         private void AzuriranjeArtikla_Load(object sender, EventArgs e)
         {
+            helpAzuriranjeArtikla.HelpNamespace = Environment.CurrentDirectory + "/help/azuriranjeArtikla.html";
             PrikaziArtikle();
             this.MaximizeBox = false;
         }

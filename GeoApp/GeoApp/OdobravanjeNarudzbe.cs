@@ -28,6 +28,8 @@ namespace GeoApp
 
         private void OdobravanjeNarudzbe_Load(object sender, EventArgs e)
         {
+            helpOdobravanjeNarudzbe.HelpNamespace = Environment.CurrentDirectory + "/help/odobravanjeNarudzbe.html";
+
             PrikaziNarudzbe();
             PrikaziOdobrene();
             this.MaximizeBox = false;

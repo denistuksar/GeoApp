@@ -268,7 +268,7 @@
             // 
             // helpRegistracija
             // 
-            this.helpRegistracija.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\registracija.html";
+            this.helpRegistracija.HelpNamespace = "";
             // 
             // Registracija
             // 
@@ -306,6 +306,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registracija";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registracija_FormClosed);
+            this.Load += new System.EventHandler(this.Registracija_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

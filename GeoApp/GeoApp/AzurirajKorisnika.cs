@@ -38,6 +38,8 @@ namespace GeoApp
 
         private void AzurirajKorisnika_Load(object sender, EventArgs e)
         {
+            helpAzuriranjeKorisnika.HelpNamespace = Environment.CurrentDirectory + "/help/azuriranjeKorisnika.html";
+
             PopuniBoxeve();
         }
 

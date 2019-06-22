@@ -117,7 +117,7 @@
             // 
             // helpPrijava
             // 
-            this.helpPrijava.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\prijava.html";
+            this.helpPrijava.HelpNamespace = "";
             // 
             // Prijava
             // 

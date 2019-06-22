@@ -5,14 +5,14 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="13890e0c04484ee99ca2118094d3419d" Name="Diagram1">
-        <EntityTypeShape EntityType="GeoModel.Artikl" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoModel.Artikl" Width="1.5" PointX="9.25" PointY="5" IsExpanded="true" />
         <EntityTypeShape EntityType="GeoModel.Korisnik" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeoModel.Narudzba" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeoModel.Ovlasti" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeoModel.Stavke_narudzbe" Width="1.5" PointX="7.5" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoModel.Narudzba" Width="1.5" PointX="6.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoModel.Ovlasti" Width="1.5" PointX="0.5" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoModel.Stavke_narudzbe" Width="1.5" PointX="9.125" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="GeoModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeoModel.Uloga" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="GeoModel.Uredaj_Servis" Width="1.5" PointX="5.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoModel.Uloga" Width="1.5" PointX="3" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="GeoModel.Uredaj_Servis" Width="1.5" PointX="6.625" PointY="4.625" IsExpanded="true" />
         <AssociationConnector Association="GeoModel.FK_Stavke_narudzbe_Artikl" ManuallyRouted="false" />
         <AssociationConnector Association="GeoModel.FK_Korisnik_Ovlasti" ManuallyRouted="false" />
         <AssociationConnector Association="GeoModel.FK_Korisnik_Uloga" ManuallyRouted="false" />
