@@ -48,6 +48,7 @@
             this.txtLozinka = new System.Windows.Forms.TextBox();
             this.txtPonovi = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.helpRegistracija = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label8
@@ -265,6 +266,10 @@
             this.label10.TabIndex = 47;
             this.label10.Text = "Ponovi lozinku:";
             // 
+            // helpRegistracija
+            // 
+            this.helpRegistracija.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\registracija.html";
+            // 
             // Registracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -296,6 +301,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Registracija";
+            this.helpRegistracija.SetShowHelp(this, true);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registracija";
@@ -326,5 +332,6 @@
         private System.Windows.Forms.TextBox txtLozinka;
         private System.Windows.Forms.TextBox txtPonovi;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.HelpProvider helpRegistracija;
     }
 }

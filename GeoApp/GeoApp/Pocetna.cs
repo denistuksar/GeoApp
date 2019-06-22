@@ -49,12 +49,14 @@ namespace GeoApp
             }
             else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 3)
             {
+                txtUloga.Text += " - CRUD nad artiklima";
                 btnOvlasti.Visible = false;
                 this.Size = new Size(384, 423);                
             }
           
             else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 2)
             {
+                txtUloga.Text += " - ovlast narudžbe";
                 btnOvlasti.Visible = false;
                 azuriranjeUredaja.Visible = false;
                 unosUredaja.Visible = false;
@@ -63,6 +65,7 @@ namespace GeoApp
             }
             else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 4)
             {
+                txtUloga.Text += " - bez ovlasti";
                 btnOvlasti.Visible = false;
                 azuriranjeUredaja.Visible = false;
                 unosUredaja.Visible = false;

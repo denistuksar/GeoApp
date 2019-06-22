@@ -34,6 +34,7 @@
             this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpPrijava = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // prijava2
@@ -114,6 +115,10 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Korisničko Ime:";
             // 
+            // helpPrijava
+            // 
+            this.helpPrijava.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\prijava.html";
+            // 
             // Prijava
             // 
             this.AcceptButton = this.prijava2;
@@ -134,6 +139,7 @@
             this.MaximumSize = new System.Drawing.Size(459, 304);
             this.MinimumSize = new System.Drawing.Size(459, 304);
             this.Name = "Prijava";
+            this.helpPrijava.SetShowHelp(this, true);
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prijava";
@@ -152,5 +158,6 @@
         private System.Windows.Forms.TextBox txtKorisnickoIme;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HelpProvider helpPrijava;
     }
 }

@@ -39,6 +39,7 @@
             this.btnNarucivanje = new System.Windows.Forms.Button();
             this.btnOdobravanje = new System.Windows.Forms.Button();
             this.btnOvlasti = new System.Windows.Forms.Button();
+            this.helpPocetna = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // label1
@@ -189,6 +190,10 @@
             this.btnOvlasti.UseVisualStyleBackColor = false;
             this.btnOvlasti.Click += new System.EventHandler(this.btnOvlasti_Click);
             // 
+            // helpPocetna
+            // 
+            this.helpPocetna.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\pocetna.html";
+            // 
             // Pocetna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,6 +215,7 @@
             this.MaximumSize = new System.Drawing.Size(384, 475);
             this.MinimumSize = new System.Drawing.Size(384, 260);
             this.Name = "Pocetna";
+            this.helpPocetna.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GeoApp";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Pocetna_FormClosed);
@@ -232,6 +238,7 @@
         private System.Windows.Forms.Button btnNarucivanje;
         private System.Windows.Forms.Button btnOdobravanje;
         private System.Windows.Forms.Button btnOvlasti;
+        private System.Windows.Forms.HelpProvider helpPocetna;
     }
 }
 

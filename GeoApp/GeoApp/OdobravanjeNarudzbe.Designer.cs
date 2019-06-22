@@ -42,6 +42,7 @@
             this.dgvOdobrene = new System.Windows.Forms.DataGridView();
             this.btnDetalji = new System.Windows.Forms.Button();
             this.btnPonisti = new System.Windows.Forms.Button();
+            this.helpOdobravanjeNarudzbe = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNarudzbe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOdobrene)).BeginInit();
             this.SuspendLayout();
@@ -216,6 +217,10 @@
             this.btnPonisti.UseVisualStyleBackColor = false;
             this.btnPonisti.Click += new System.EventHandler(this.btnPonisti_Click);
             // 
+            // helpOdobravanjeNarudzbe
+            // 
+            this.helpOdobravanjeNarudzbe.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\odobravanjeNarudzbe.html";
+            // 
             // OdobravanjeNarudzbe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +237,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "OdobravanjeNarudzbe";
+            this.helpOdobravanjeNarudzbe.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Odobravanje narudžba";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OdobravanjeNarudzbe_FormClosed);
@@ -253,5 +259,6 @@
         private System.Windows.Forms.DataGridView dgvOdobrene;
         private System.Windows.Forms.Button btnDetalji;
         private System.Windows.Forms.Button btnPonisti;
+        private System.Windows.Forms.HelpProvider helpOdobravanjeNarudzbe;
     }
 }

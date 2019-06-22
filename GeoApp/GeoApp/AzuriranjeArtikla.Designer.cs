@@ -44,6 +44,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gumbAzuriraj = new System.Windows.Forms.Button();
             this.gumbIzbrisi = new System.Windows.Forms.Button();
+            this.helpAzuriranjeArtikla = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,6 +231,10 @@
             this.gumbIzbrisi.UseVisualStyleBackColor = false;
             this.gumbIzbrisi.Click += new System.EventHandler(this.gumbIzbrisi_Click);
             // 
+            // helpAzuriranjeArtikla
+            // 
+            this.helpAzuriranjeArtikla.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\azuriranjeArtikla.html";
+            // 
             // AzuriranjeArtikla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,6 +256,7 @@
             this.Controls.Add(this.dgvArtikli);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AzuriranjeArtikla";
+            this.helpAzuriranjeArtikla.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ažuriranje artikla";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AzuriranjeArtikla_FormClosed);
@@ -281,5 +287,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn proizvodacDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cijenaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn serijskibrojDataGridViewTextBoxColumn;
+        private System.Windows.Forms.HelpProvider helpAzuriranjeArtikla;
     }
 }

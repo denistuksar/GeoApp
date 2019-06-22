@@ -45,6 +45,7 @@
             this.txtKolicina = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.lblCijena = new System.Windows.Forms.Label();
+            this.helpNarucivanje = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
             this.SuspendLayout();
@@ -246,6 +247,10 @@
             this.lblCijena.Size = new System.Drawing.Size(0, 21);
             this.lblCijena.TabIndex = 27;
             // 
+            // helpNarucivanje
+            // 
+            this.helpNarucivanje.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\narucivanje.html";
+            // 
             // Narucivanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -265,6 +270,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Narucivanje";
+            this.helpNarucivanje.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Naručivanje geodetskih uređaja i dodatnog pribora";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Narucivanje_FormClosed);
@@ -289,5 +295,6 @@
         private System.Windows.Forms.TextBox txtKolicina;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblCijena;
+        private System.Windows.Forms.HelpProvider helpNarucivanje;
     }
 }

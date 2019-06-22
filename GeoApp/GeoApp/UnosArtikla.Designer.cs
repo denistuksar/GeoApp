@@ -39,6 +39,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnUnesi = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.helpUnosArtikla = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // serijskiBrojArtikla
@@ -158,6 +159,10 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Opis:";
             // 
+            // helpUnosArtikla
+            // 
+            this.helpUnosArtikla.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\unosArtikla.html";
+            // 
             // UnosArtikla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +184,7 @@
             this.MaximumSize = new System.Drawing.Size(391, 519);
             this.MinimumSize = new System.Drawing.Size(391, 519);
             this.Name = "UnosArtikla";
+            this.helpUnosArtikla.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Unos artikla";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UnosArtikla_FormClosed);
@@ -201,5 +207,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnUnesi;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.HelpProvider helpUnosArtikla;
     }
 }

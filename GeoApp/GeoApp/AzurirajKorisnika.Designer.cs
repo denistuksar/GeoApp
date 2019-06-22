@@ -46,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnSpremi = new System.Windows.Forms.Button();
             this.btnIzbrisi = new System.Windows.Forms.Button();
+            this.helpAzuriranjeKorisnika = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
             // txtLozinka
@@ -246,6 +247,10 @@
             this.btnIzbrisi.UseVisualStyleBackColor = false;
             this.btnIzbrisi.Click += new System.EventHandler(this.btnIzbrisi_Click);
             // 
+            // helpAzuriranjeKorisnika
+            // 
+            this.helpAzuriranjeKorisnika.HelpNamespace = "C:\\Users\\NiksY\\Documents\\r19038\\GeoApp\\GeoApp\\help\\azuriranjeKorisnika.html";
+            // 
             // AzurirajKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -271,6 +276,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AzurirajKorisnika";
+            this.helpAzuriranjeKorisnika.SetShowHelp(this, true);
             this.ShowIcon = false;
             this.Text = "Azuriraj Korisnika";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AzurirajKorisnika_FormClosed);
@@ -299,5 +305,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSpremi;
         private System.Windows.Forms.Button btnIzbrisi;
+        private System.Windows.Forms.HelpProvider helpAzuriranjeKorisnika;
     }
 }
