@@ -410,7 +410,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="GeoEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="GeoApp" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Artikl" EntityType="Self.Artikl" />
           <EntitySet Name="Korisnik" EntityType="Self.Korisnik" />
           <EntitySet Name="Narudzba" EntityType="Self.Narudzba" />
@@ -453,7 +453,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="GeoModelStoreContainer" CdmEntityContainer="GeoEntities">
+        <EntityContainerMapping StorageEntityContainer="GeoModelStoreContainer" CdmEntityContainer="GeoApp">
           <EntitySetMapping Name="Artikl">
             <EntityTypeMapping TypeName="GeoModel.Artikl">
               <MappingFragment StoreEntitySet="Artikl">

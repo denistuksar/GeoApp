@@ -21,9 +21,9 @@ namespace GeoApp
 
         public void PrikaziKorisnike()
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
-                var zaposleni = from z in db.Korisnik                               
+                var zaposleni = from z in db.Korisnik
                                 select z;
 
                 dgvZaposlenici.DataSource = zaposleni.ToList();
@@ -39,13 +39,13 @@ namespace GeoApp
             dgvZaposlenici.Columns[2].HeaderText = "ID uloge";
             dgvZaposlenici.Columns[7].HeaderText = "Broj telefona";
             dgvZaposlenici.Columns[8].HeaderText = "Korisničko ime";
-    
+
         }
 
 
         public void PrikaziZaposlene()
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var zaposleni = from z in db.Korisnik
                                 where z.UlogaID_uloge == 3
@@ -56,9 +56,9 @@ namespace GeoApp
                 dgvZaposlenici.Columns[12].Visible = false;
                 dgvZaposlenici.Columns[13].Visible = false;
                 dgvZaposlenici.Columns[14].Visible = false;
-                dgvZaposlenici.Columns[15].Visible = false;           
+                dgvZaposlenici.Columns[15].Visible = false;
             }
-        
+
         }
 
         private void OvlastiZaposlenika_Load(object sender, EventArgs e)
@@ -75,11 +75,11 @@ namespace GeoApp
         }
 
         private void btnPrikaziZaposlene_Click(object sender, EventArgs e)
-        {      
-            if (clicked==false)
+        {
+            if (clicked == false)
             {
                 PrikaziZaposlene();
-               
+
                 clicked = true;
             }
             else
@@ -100,7 +100,7 @@ namespace GeoApp
         private void dgvZaposlenici_SelectionChanged(object sender, EventArgs e)
         {
             Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
-       
+
             switch (zaposlenik.OvlastiID_ovlast)
             {
                 case 1:
@@ -127,7 +127,7 @@ namespace GeoApp
                     cbCRUD.Checked = false;
                     cbBezOvlasti.Checked = true;
                     break;
-             
+
                 default:
                     cbAdmin.Checked = false;
                     cbNarudzba.Checked = false;
@@ -135,14 +135,14 @@ namespace GeoApp
                     cbBezOvlasti.Checked = false;
                     break;
             }
-      
+
         }
 
         private void btnPotvrda_Click(object sender, EventArgs e)
         {
             Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
 
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 db.Korisnik.Attach(zaposlenik);
 

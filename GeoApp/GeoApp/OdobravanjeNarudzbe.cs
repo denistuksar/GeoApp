@@ -12,7 +12,6 @@ namespace GeoApp
 {
     public partial class OdobravanjeNarudzbe : Form
     {
-
         Korisnik odabraniKorisnik;
         public OdobravanjeNarudzbe(Korisnik korisnik)
         {
@@ -24,7 +23,6 @@ namespace GeoApp
         {
             InitializeComponent();
         }
-
 
         private void OdobravanjeNarudzbe_Load(object sender, EventArgs e)
         {
@@ -42,7 +40,7 @@ namespace GeoApp
         private void PrikaziNarudzbe()
         {
             List<Narudzba> narudzba;
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var query = from n in db.Narudzba
                             where n.Status == null || n.Status==false
@@ -55,13 +53,13 @@ namespace GeoApp
             dgvNarudzbe.Columns[4].Visible = false;
             dgvNarudzbe.Columns[5].Visible = false;
             dgvNarudzbe.Columns[6].Visible = false;
-            //dgvNarudzbe.Columns[7].Visible = false;
+            dgvNarudzbe.Columns[7].Visible = false;
         }
 
         private void PrikaziOdobrene()
         {
             List<Narudzba> narudzba;
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var query = from n in db.Narudzba
                             where n.Status == true
@@ -74,7 +72,7 @@ namespace GeoApp
             dgvOdobrene.Columns[4].Visible = false;
             dgvOdobrene.Columns[5].Visible = false;
             dgvOdobrene.Columns[6].Visible = false;
-            //dgvOdobrene.Columns[7].Visible = false;
+            dgvOdobrene.Columns[7].Visible = false;
         }
 
         private void btnOdobri_Click(object sender, EventArgs e)
@@ -84,7 +82,7 @@ namespace GeoApp
                 Narudzba selektiranaNarudzba = dgvNarudzbe.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
-                    using (var db = new GeoEntities())
+                    using (var db = new GeoApp())
                     {
                         db.Narudzba.Attach(selektiranaNarudzba); //registriramo prosljeđenu narudžbu 
                         selektiranaNarudzba.Status = true;
@@ -111,7 +109,7 @@ namespace GeoApp
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
                     {
-                        using (var db = new GeoEntities())
+                        using (var db = new GeoApp())
                         {
                             List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == selektiranaNarudzba.ID_narudzbe).ToList();
                             db.Stavke_narudzbe.RemoveRange(lista);   //Brišemo narudzbu iz kolekcije
@@ -149,19 +147,10 @@ namespace GeoApp
 
         private void OdobravanjeNarudzbe_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if (odabraniKorisnik == null)
-            {
-                this.Hide();
-                Pocetna pocetna = new Pocetna();
-                pocetna.ShowDialog();
-                this.Close();
-            }
-            else
-            {
-                this.Hide();
-                OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
-                this.Close();
-            }
+            this.Hide();
+            Pocetna pocetna = new Pocetna();
+            pocetna.ShowDialog();
+            this.Close();
         }
 
         private void btnPonisti_Click(object sender, EventArgs e)
@@ -171,7 +160,7 @@ namespace GeoApp
                 Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
-                    using (var db = new GeoEntities())
+                    using (var db = new GeoApp())
                     {
                         db.Narudzba.Attach(selektiranaNarudzba); //registriramo prosljeđenu narudžbu 
                         selektiranaNarudzba.Status = false;
@@ -184,6 +173,23 @@ namespace GeoApp
                 }
                 PrikaziNarudzbe();
                 PrikaziOdobrene();
+            }
+        }
+
+        private void btnDetalji2_Click(object sender, EventArgs e)
+        {
+            if (dgvOdobrene.Rows.Count != 0)
+            {
+                Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
+                if (selektiranaNarudzba != null)
+                {
+                    DetaljiNarudzbe detaljiNarudzbe = new DetaljiNarudzbe(selektiranaNarudzba.ID_narudzbe);
+                    detaljiNarudzbe.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Odaberite narudžbu za koju želite prikazati detalje");
+                }
             }
         }
     }

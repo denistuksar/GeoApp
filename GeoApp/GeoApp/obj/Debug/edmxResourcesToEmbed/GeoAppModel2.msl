@@ -13,6 +13,23 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Korisnik">
+      <EntityTypeMapping TypeName="DBModel.Korisnik">
+        <MappingFragment StoreEntitySet="Korisnik">
+          <ScalarProperty Name="Kriptirana_Lozinka" ColumnName="Kriptirana_Lozinka" />
+          <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
+          <ScalarProperty Name="Korisnicko_ime" ColumnName="Korisnicko_ime" />
+          <ScalarProperty Name="Broj_telefona" ColumnName="Broj_telefona" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
+          <ScalarProperty Name="OIB" ColumnName="OIB" />
+          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
+          <ScalarProperty Name="Ime" ColumnName="Ime" />
+          <ScalarProperty Name="UlogaID_uloge" ColumnName="UlogaID_uloge" />
+          <ScalarProperty Name="ID_korisnika" ColumnName="ID_korisnika" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Narudzba">
       <EntityTypeMapping TypeName="DBModel.Narudzba">
         <MappingFragment StoreEntitySet="Narudzba">
@@ -24,11 +41,24 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="Ovlasti">
+      <EntityTypeMapping TypeName="DBModel.Ovlasti">
+        <MappingFragment StoreEntitySet="Ovlasti">
+          <ScalarProperty Name="Uredivanje_ovlasti" ColumnName="Uredivanje_ovlasti" />
+          <ScalarProperty Name="Odobravanje_narudzbe" ColumnName="Odobravanje_narudzbe" />
+          <ScalarProperty Name="Brisanje_artikla" ColumnName="Brisanje_artikla" />
+          <ScalarProperty Name="Azuriranje_artikla" ColumnName="Azuriranje_artikla" />
+          <ScalarProperty Name="Unos_artikla" ColumnName="Unos_artikla" />
+          <ScalarProperty Name="ID_ovlasti" ColumnName="ID_ovlasti" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="Uloga">
       <EntityTypeMapping TypeName="DBModel.Uloga">
         <MappingFragment StoreEntitySet="Uloga">
           <ScalarProperty Name="Opis" ColumnName="Opis" />
           <ScalarProperty Name="Naziv" ColumnName="Naziv" />
+          <ScalarProperty Name="OvlastiID_ovlast" ColumnName="OvlastiID_ovlast" />
           <ScalarProperty Name="ID_uloge" ColumnName="ID_uloge" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -66,36 +96,6 @@
           <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
           <ScalarProperty Name="name" ColumnName="name" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Ovlasti">
-      <EntityTypeMapping TypeName="DBModel.Ovlasti">
-        <MappingFragment StoreEntitySet="Ovlasti">
-          <ScalarProperty Name="Uredivanje_ovlasti" ColumnName="Uredivanje_ovlasti" />
-          <ScalarProperty Name="Odobravanje_narudzbe" ColumnName="Odobravanje_narudzbe" />
-          <ScalarProperty Name="Brisanje_artikla" ColumnName="Brisanje_artikla" />
-          <ScalarProperty Name="Azuriranje_artikla" ColumnName="Azuriranje_artikla" />
-          <ScalarProperty Name="Unos_artikla" ColumnName="Unos_artikla" />
-          <ScalarProperty Name="ID_ovlasti" ColumnName="ID_ovlasti" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Korisnik">
-      <EntityTypeMapping TypeName="DBModel.Korisnik">
-        <MappingFragment StoreEntitySet="Korisnik">
-          <ScalarProperty Name="Lozinka" ColumnName="Lozinka" />
-          <ScalarProperty Name="Kriptirana_Lozinka" ColumnName="Kriptirana_Lozinka" />
-          <ScalarProperty Name="Korisnicko_ime" ColumnName="Korisnicko_ime" />
-          <ScalarProperty Name="Broj_telefona" ColumnName="Broj_telefona" />
-          <ScalarProperty Name="Email" ColumnName="Email" />
-          <ScalarProperty Name="Adresa" ColumnName="Adresa" />
-          <ScalarProperty Name="OIB" ColumnName="OIB" />
-          <ScalarProperty Name="Prezime" ColumnName="Prezime" />
-          <ScalarProperty Name="Ime" ColumnName="Ime" />
-          <ScalarProperty Name="UlogaID_uloge" ColumnName="UlogaID_uloge" />
-          <ScalarProperty Name="OvlastiID_ovlast" ColumnName="OvlastiID_ovlast" />
-          <ScalarProperty Name="ID_korisnika" ColumnName="ID_korisnika" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

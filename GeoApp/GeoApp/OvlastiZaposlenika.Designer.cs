@@ -40,7 +40,7 @@
             this.cbNarudzba = new System.Windows.Forms.CheckBox();
             this.cbBezOvlasti = new System.Windows.Forms.CheckBox();
             this.cbCRUD = new System.Windows.Forms.CheckBox();
-            this.btnPotvrda = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.helpOvlasti = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
             this.SuspendLayout();
@@ -197,33 +197,28 @@
             this.cbCRUD.Text = "CRUD nad artiklima";
             this.cbCRUD.UseVisualStyleBackColor = true;
             // 
-            // btnPotvrda
+            // button1
             // 
-            this.btnPotvrda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnPotvrda.FlatAppearance.BorderSize = 0;
-            this.btnPotvrda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPotvrda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPotvrda.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPotvrda.Location = new System.Drawing.Point(474, 365);
-            this.btnPotvrda.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.btnPotvrda.Name = "btnPotvrda";
-            this.btnPotvrda.Size = new System.Drawing.Size(148, 32);
-            this.btnPotvrda.TabIndex = 46;
-            this.btnPotvrda.Text = "Promijeni Ovlast";
-            this.btnPotvrda.UseVisualStyleBackColor = false;
-            this.btnPotvrda.Click += new System.EventHandler(this.btnPotvrda_Click);
-            // 
-            // helpOvlasti
-            // 
-            this.helpOvlasti.HelpNamespace = "";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Location = new System.Drawing.Point(474, 365);
+            this.button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 32);
+            this.button1.TabIndex = 46;
+            this.button1.Text = "Promijeni ovlast";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // OvlastiZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(732, 431);
-            this.Controls.Add(this.btnPotvrda);
+            this.ClientSize = new System.Drawing.Size(731, 478);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbCRUD);
             this.Controls.Add(this.cbBezOvlasti);
             this.Controls.Add(this.cbNarudzba);
@@ -237,6 +232,7 @@
             this.Name = "OvlastiZaposlenika";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.helpOvlasti.SetShowHelp(this, true);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ovlasti Zaposlenika";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OvlastiZaposlenika_FormClosed);
             this.Load += new System.EventHandler(this.OvlastiZaposlenika_Load);
@@ -257,7 +253,7 @@
         private System.Windows.Forms.CheckBox cbNarudzba;
         private System.Windows.Forms.CheckBox cbBezOvlasti;
         private System.Windows.Forms.CheckBox cbCRUD;
-        private System.Windows.Forms.Button btnPotvrda;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.HelpProvider helpOvlasti;
     }
 }

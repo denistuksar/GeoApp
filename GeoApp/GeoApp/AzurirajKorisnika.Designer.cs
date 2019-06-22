@@ -247,10 +247,6 @@
             this.btnIzbrisi.UseVisualStyleBackColor = false;
             this.btnIzbrisi.Click += new System.EventHandler(this.btnIzbrisi_Click);
             // 
-            // helpAzuriranjeKorisnika
-            // 
-            this.helpAzuriranjeKorisnika.HelpNamespace = "";
-            // 
             // AzurirajKorisnika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,7 +275,6 @@
             this.helpAzuriranjeKorisnika.SetShowHelp(this, true);
             this.ShowIcon = false;
             this.Text = "Azuriraj Korisnika";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AzurirajKorisnika_FormClosed);
             this.Load += new System.EventHandler(this.AzurirajKorisnika_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

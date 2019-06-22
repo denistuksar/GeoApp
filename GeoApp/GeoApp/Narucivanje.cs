@@ -14,13 +14,10 @@ namespace GeoApp
     public partial class Narucivanje : Form
     {
         decimal suma;
-
-      
-
-            public Narucivanje()
-            {
+        public Narucivanje()
+        {
             InitializeComponent();
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var a = new Narudzba
                 {
@@ -41,7 +38,7 @@ namespace GeoApp
         private void PrikaziArtikle()
         {
             List<Artikl> artikli;
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 artikli = db.Artikl.ToList();
             }
@@ -56,7 +53,7 @@ namespace GeoApp
         private void PrikaziKosaricu()
         {
             List<Artikl> narudzba;
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var query = (from a in db.Artikl
                              join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
@@ -86,9 +83,7 @@ namespace GeoApp
 
         private void Narucivanje_Load(object sender, EventArgs e)
         {
-
             helpNarucivanje.HelpNamespace = Environment.CurrentDirectory + "/help/narucivanje.html";
-
             PrikaziArtikle();
             this.MaximizeBox = false;
             txtKolicina.Text = "1";       
@@ -96,7 +91,7 @@ namespace GeoApp
 
         private void Narucivanje_FormClosed(object sender, FormClosedEventArgs e)
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe).ToList();
                 if (lista.Count != 0)
@@ -124,7 +119,7 @@ namespace GeoApp
             try
             {
                 Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
-                using (var db = new GeoEntities())
+                using (var db = new GeoApp())
                 {
                     int kolicina = int.Parse(txtKolicina.Text);
                     var s = new Stavke_narudzbe
@@ -158,7 +153,7 @@ namespace GeoApp
                 var selektiraniArtikl = (int)dgvKosarica.CurrentRow.Cells[0].Value;
                 if (dgvKosarica.Rows.Count != 0)
                 {
-                    using (var db = new GeoEntities())
+                    using (var db = new GeoApp())
                     {
                         List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe && x.ArtiklID_artikla == selektiraniArtikl).ToList();
                         db.Stavke_narudzbe.RemoveRange(lista);   //Brišemo narudzbu iz kolekcije
@@ -206,5 +201,30 @@ namespace GeoApp
                 MessageBox.Show("Odaberite artikle koje želite naručiti");
             }
          }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            using (var db = new GeoApp())
+            {
+                var query = from a in db.Artikl
+                            where a.Naziv.Contains(txtSearch.Text)
+                            select a;
+                dgvArtikli.DataSource = query.ToList();
+            }
+            dgvArtikli.Columns[0].HeaderText = "ID artikla";
+            dgvArtikli.Columns[2].Width = 200;
+            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
+            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
+            dgvArtikli.Columns[6].Visible = false;
+        }
+
+        private void dgvArtikli_SelectionChanged(object sender, EventArgs e)
+        {
+            nazivArtikla.Text = dgvArtikli.CurrentRow.Cells[1].Value.ToString();
+            opisArtikla.Text = dgvArtikli.CurrentRow.Cells[2].Value.ToString();
+            proizvodacArtikla.Text = dgvArtikli.CurrentRow.Cells[3].Value.ToString();
+            cijenaArtikla.Text = dgvArtikli.CurrentRow.Cells[4].Value.ToString();
+            serijskiBrojArtikla.Text = dgvArtikli.CurrentRow.Cells[5].Value.ToString();
+        }
     }
 }

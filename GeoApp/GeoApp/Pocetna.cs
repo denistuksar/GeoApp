@@ -12,9 +12,6 @@ namespace GeoApp
 {
     public partial class Pocetna : Form
     {
-       
-
-
         public Pocetna()
         {
             InitializeComponent();
@@ -40,43 +37,25 @@ namespace GeoApp
 
         private void Pocetna_Load(object sender, EventArgs e)
         {
-            helpPocetna.HelpNamespace = Environment.CurrentDirectory + "/help/pocetna.html";
 
+            helpPocetna.HelpNamespace = Environment.CurrentDirectory + "/help/pocetna.html";
 
             this.MaximizeBox = false;
             if (LoginInfo.Uloga=="Kupac")
             {
                 unosUredaja.Visible = false;
                 azuriranjeUredaja.Visible = false;
+                btnOdobravanje.Visible = false;
+                btnOvlasti.Visible = false;
+                btnServis.Location = new Point(73, 146);
                 this.Size = new Size(384,260);
             }
-            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 3)
+            else if (LoginInfo.Uloga == "Zaposlenik")
             {
-                txtUloga.Text += " - CRUD nad artiklima";
                 btnOvlasti.Visible = false;
-                this.Size = new Size(384, 423);                
-            }
-          
-            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 2)
-            {
-                txtUloga.Text += " - ovlast narudžbe";
-                btnOvlasti.Visible = false;
-                azuriranjeUredaja.Visible = false;
-                unosUredaja.Visible = false;
-                btnOdobravanje.Location = new Point(73, 200);
-                this.Size = new Size(384, 300);
-            }
-            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 4)
-            {
-                txtUloga.Text += " - bez ovlasti";
-                btnOvlasti.Visible = false;
-                azuriranjeUredaja.Visible = false;
-                unosUredaja.Visible = false;
-                btnServis.Visible = false;
-                btnOdobravanje.Location = new Point(73, 143);
-                this.Size = new Size(384, 260);
-
-
+                btnServis.Location = new Point(73, 324);
+                this.Size = new Size(384, 423);
+                
             }
         }
 

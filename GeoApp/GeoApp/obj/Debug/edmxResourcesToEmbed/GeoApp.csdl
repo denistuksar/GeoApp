@@ -188,7 +188,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="GeoEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="GeoApp" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Artikl" EntityType="Self.Artikl" />
     <EntitySet Name="Korisnik" EntityType="Self.Korisnik" />
     <EntitySet Name="Narudzba" EntityType="Self.Narudzba" />

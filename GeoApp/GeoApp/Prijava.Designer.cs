@@ -97,7 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 120);
+            this.label2.Location = new System.Drawing.Point(81, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 25);
@@ -108,16 +108,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 58);
+            this.label1.Location = new System.Drawing.Point(22, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Korisničko Ime:";
-            // 
-            // helpPrijava
-            // 
-            this.helpPrijava.HelpNamespace = "";
             // 
             // Prijava
             // 

@@ -17,17 +17,17 @@ namespace GeoApp
         List<string> popisOIB;
         List<string> popisKorisnika;
         List<string> popisEmaila;
-        
+
 
         public Registracija()
         {
             InitializeComponent();
-          
+
         }
 
         private void registriraj_Click(object sender, EventArgs e)
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var korIme = from k in db.Korisnik
                              select k.Korisnicko_ime;
@@ -59,8 +59,8 @@ namespace GeoApp
                                         Korisnicko_ime = txtKorIme.Text,
                                         Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
                                         Lozinka = txtLozinka.Text,
-                                        UlogaID_uloge = 3,            
-                                        OvlastiID_ovlast = 4                                       
+                                        UlogaID_uloge = 3,
+                                        OvlastiID_ovlast = 4
                                     };
                                     OvlastInfo.IDOvlasti = 4;
 
@@ -93,7 +93,7 @@ namespace GeoApp
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
                                     MessageBox.Show("Uspješna registracija");
-                                }                             
+                                }
                             }
                             else
                             {
@@ -113,13 +113,13 @@ namespace GeoApp
                     this.Close();
 
                 }
-             
+
                 else
                 {
                     MessageBox.Show("Neuspješna registracija");
                 }
             }
-            
+
         }
 
         private void natrag_Click(object sender, EventArgs e)
@@ -135,7 +135,7 @@ namespace GeoApp
             else
             {
                 this.Hide();
-             
+
                 this.Close();
             }
         }
@@ -154,10 +154,10 @@ namespace GeoApp
             else
             {
                 this.Hide();
-             
+
                 this.Close();
             }
-          
+
         }
 
 
@@ -168,7 +168,7 @@ namespace GeoApp
 
         private void txtOib_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var oib = from k in db.Korisnik
                           select k.OIB;
@@ -209,7 +209,7 @@ namespace GeoApp
 
         private void txtKorIme_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var korisnickoIme = from k in db.Korisnik
                                     select k.Korisnicko_ime;
@@ -244,7 +244,7 @@ namespace GeoApp
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var email = from k in db.Korisnik
                             select k.Email;
@@ -301,11 +301,11 @@ namespace GeoApp
                 txtPonovi.BackColor = Color.FromArgb(82, 193, 119);
                 txtPonovi.ForeColor = Color.White;
             }
-          
+
 
             else
             {
-                txtPonovi.BackColor = Color.FromArgb(243,92,99);
+                txtPonovi.BackColor = Color.FromArgb(243, 92, 99);
                 txtPonovi.ForeColor = Color.White;
             }
         }
@@ -336,6 +336,8 @@ namespace GeoApp
             helpRegistracija.HelpNamespace = Environment.CurrentDirectory + "/help/registracija.html";
 
         }
+
+       
     }
 
 }

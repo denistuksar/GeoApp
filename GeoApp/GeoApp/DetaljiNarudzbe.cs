@@ -16,7 +16,7 @@ namespace GeoApp
         public DetaljiNarudzbe(int idNarudzbe)
         {
             InitializeComponent();
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 var query = (from a in db.Artikl
                              join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
@@ -48,6 +48,7 @@ namespace GeoApp
         private void DetaljiNarudzbe_Load(object sender, EventArgs e)
         {
             helpDetaljiNarudzbe.HelpNamespace = Environment.CurrentDirectory + "/help/detaljiNarudzbe.html";
+
             this.MaximizeBox = false;
         }
     }

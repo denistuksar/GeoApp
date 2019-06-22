@@ -16,7 +16,6 @@
       <PropertyRef Name="ID_korisnika" />
     </Key>
     <Property Name="ID_korisnika" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="OvlastiID_ovlast" Type="int" />
     <Property Name="UlogaID_uloge" Type="int" />
     <Property Name="Ime" Type="varchar" MaxLength="50" />
     <Property Name="Prezime" Type="varchar" MaxLength="50" />
@@ -74,6 +73,7 @@
       <PropertyRef Name="ID_uloge" />
     </Key>
     <Property Name="ID_uloge" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OvlastiID_ovlast" Type="int" />
     <Property Name="Naziv" Type="varchar" MaxLength="30" />
     <Property Name="Opis" Type="varchar" MaxLength="255" />
   </EntityType>
@@ -90,18 +90,6 @@
     <Property Name="Opis_kvara" Type="varchar" MaxLength="500" />
     <Property Name="QR_kod" Type="image" />
   </EntityType>
-  <Association Name="FK_Korisnik_Ovlasti">
-    <End Role="Ovlasti" Type="Self.Ovlasti" Multiplicity="0..1" />
-    <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Ovlasti">
-        <PropertyRef Name="ID_ovlasti" />
-      </Principal>
-      <Dependent Role="Korisnik">
-        <PropertyRef Name="OvlastiID_ovlast" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Korisnik_Uloga">
     <End Role="Uloga" Type="Self.Uloga" Multiplicity="0..1" />
     <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
@@ -162,6 +150,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_Uloga_Ovlasti">
+    <End Role="Ovlasti" Type="Self.Ovlasti" Multiplicity="0..1" />
+    <End Role="Uloga" Type="Self.Uloga" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ovlasti">
+        <PropertyRef Name="ID_ovlasti" />
+      </Principal>
+      <Dependent Role="Uloga">
+        <PropertyRef Name="OvlastiID_ovlast" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Uredaj_Servis_Korisnik">
     <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
     <End Role="Uredaj_Servis" Type="Self.Uredaj_Servis" Multiplicity="*" />
@@ -183,10 +183,6 @@
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Uloga" EntityType="Self.Uloga" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Uredaj_Servis" EntityType="Self.Uredaj_Servis" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK_Korisnik_Ovlasti" Association="Self.FK_Korisnik_Ovlasti">
-      <End Role="Ovlasti" EntitySet="Ovlasti" />
-      <End Role="Korisnik" EntitySet="Korisnik" />
-    </AssociationSet>
     <AssociationSet Name="FK_Korisnik_Uloga" Association="Self.FK_Korisnik_Uloga">
       <End Role="Uloga" EntitySet="Uloga" />
       <End Role="Korisnik" EntitySet="Korisnik" />
@@ -206,6 +202,10 @@
     <AssociationSet Name="FK_Stavke_narudzbe_Uredaj_Servis" Association="Self.FK_Stavke_narudzbe_Uredaj_Servis">
       <End Role="Uredaj_Servis" EntitySet="Uredaj_Servis" />
       <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Uloga_Ovlasti" Association="Self.FK_Uloga_Ovlasti">
+      <End Role="Ovlasti" EntitySet="Ovlasti" />
+      <End Role="Uloga" EntitySet="Uloga" />
     </AssociationSet>
     <AssociationSet Name="FK_Uredaj_Servis_Korisnik" Association="Self.FK_Uredaj_Servis_Korisnik">
       <End Role="Korisnik" EntitySet="Korisnik" />

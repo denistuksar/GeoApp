@@ -54,88 +54,88 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label8.Location = new System.Drawing.Point(23, 371);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 375);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 25);
+            this.label8.Size = new System.Drawing.Size(71, 23);
             this.label8.TabIndex = 32;
             this.label8.Text = "Lozinka:";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label7.Location = new System.Drawing.Point(23, 321);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 324);
             this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(139, 25);
+            this.label7.Size = new System.Drawing.Size(124, 23);
             this.label7.TabIndex = 30;
             this.label7.Text = "Korisničko ime:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label6.Location = new System.Drawing.Point(23, 271);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(20, 275);
             this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 25);
+            this.label6.Size = new System.Drawing.Size(111, 23);
             this.label6.TabIndex = 23;
             this.label6.Text = "Broj telefona:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label5.Location = new System.Drawing.Point(23, 222);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 226);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(70, 25);
+            this.label5.Size = new System.Drawing.Size(62, 23);
             this.label5.TabIndex = 22;
             this.label5.Text = "E-mail:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label4.Location = new System.Drawing.Point(23, 173);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(20, 177);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 25);
+            this.label4.Size = new System.Drawing.Size(66, 23);
             this.label4.TabIndex = 21;
             this.label4.Text = "Adresa:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label3.Location = new System.Drawing.Point(23, 125);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(20, 129);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 25);
+            this.label3.Size = new System.Drawing.Size(42, 23);
             this.label3.TabIndex = 20;
             this.label3.Text = "OIB:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label2.Location = new System.Drawing.Point(23, 77);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 25);
+            this.label2.Size = new System.Drawing.Size(75, 23);
             this.label2.TabIndex = 19;
             this.label2.Text = "Prezime:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label1.Location = new System.Drawing.Point(23, 29);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(20, 32);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 25);
+            this.label1.Size = new System.Drawing.Size(43, 23);
             this.label1.TabIndex = 18;
             this.label1.Text = "Ime:";
             // 
@@ -145,10 +145,10 @@
             this.natrag.FlatAppearance.BorderSize = 0;
             this.natrag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.natrag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.natrag.Location = new System.Drawing.Point(260, 475);
+            this.natrag.Location = new System.Drawing.Point(24, 526);
             this.natrag.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.natrag.Name = "natrag";
-            this.natrag.Size = new System.Drawing.Size(175, 43);
+            this.natrag.Size = new System.Drawing.Size(375, 33);
             this.natrag.TabIndex = 35;
             this.natrag.Text = "Natrag";
             this.natrag.UseVisualStyleBackColor = false;
@@ -160,10 +160,10 @@
             this.registriraj.FlatAppearance.BorderSize = 0;
             this.registriraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registriraj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registriraj.Location = new System.Drawing.Point(27, 475);
+            this.registriraj.Location = new System.Drawing.Point(24, 476);
             this.registriraj.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.registriraj.Name = "registriraj";
-            this.registriraj.Size = new System.Drawing.Size(175, 43);
+            this.registriraj.Size = new System.Drawing.Size(375, 33);
             this.registriraj.TabIndex = 34;
             this.registriraj.Text = "Registriraj se";
             this.registriraj.UseVisualStyleBackColor = false;
@@ -172,7 +172,7 @@
             // txtIme
             // 
             this.txtIme.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIme.Location = new System.Drawing.Point(189, 29);
+            this.txtIme.Location = new System.Drawing.Point(153, 29);
             this.txtIme.Multiline = true;
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(246, 33);
@@ -181,7 +181,7 @@
             // txtPrezime
             // 
             this.txtPrezime.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrezime.Location = new System.Drawing.Point(189, 77);
+            this.txtPrezime.Location = new System.Drawing.Point(153, 77);
             this.txtPrezime.Multiline = true;
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(246, 33);
@@ -190,7 +190,7 @@
             // txtOib
             // 
             this.txtOib.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOib.Location = new System.Drawing.Point(189, 125);
+            this.txtOib.Location = new System.Drawing.Point(153, 125);
             this.txtOib.Multiline = true;
             this.txtOib.Name = "txtOib";
             this.txtOib.Size = new System.Drawing.Size(246, 33);
@@ -200,7 +200,7 @@
             // txtAdresa
             // 
             this.txtAdresa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdresa.Location = new System.Drawing.Point(189, 173);
+            this.txtAdresa.Location = new System.Drawing.Point(153, 173);
             this.txtAdresa.Multiline = true;
             this.txtAdresa.Name = "txtAdresa";
             this.txtAdresa.Size = new System.Drawing.Size(246, 33);
@@ -209,7 +209,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(189, 222);
+            this.txtEmail.Location = new System.Drawing.Point(153, 222);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(246, 33);
@@ -219,7 +219,7 @@
             // txtTelefon
             // 
             this.txtTelefon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefon.Location = new System.Drawing.Point(189, 271);
+            this.txtTelefon.Location = new System.Drawing.Point(153, 271);
             this.txtTelefon.Multiline = true;
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(246, 33);
@@ -228,7 +228,7 @@
             // txtKorIme
             // 
             this.txtKorIme.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKorIme.Location = new System.Drawing.Point(189, 321);
+            this.txtKorIme.Location = new System.Drawing.Point(153, 321);
             this.txtKorIme.Multiline = true;
             this.txtKorIme.Name = "txtKorIme";
             this.txtKorIme.Size = new System.Drawing.Size(246, 33);
@@ -238,7 +238,7 @@
             // txtLozinka
             // 
             this.txtLozinka.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLozinka.Location = new System.Drawing.Point(189, 371);
+            this.txtLozinka.Location = new System.Drawing.Point(153, 371);
             this.txtLozinka.Multiline = true;
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(246, 33);
@@ -248,7 +248,7 @@
             // txtPonovi
             // 
             this.txtPonovi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPonovi.Location = new System.Drawing.Point(189, 421);
+            this.txtPonovi.Location = new System.Drawing.Point(153, 421);
             this.txtPonovi.Multiline = true;
             this.txtPonovi.Name = "txtPonovi";
             this.txtPonovi.Size = new System.Drawing.Size(246, 33);
@@ -258,24 +258,20 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.label10.Location = new System.Drawing.Point(23, 421);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(20, 424);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(139, 25);
+            this.label10.Size = new System.Drawing.Size(124, 23);
             this.label10.TabIndex = 47;
             this.label10.Text = "Ponovi lozinku:";
-            // 
-            // helpRegistracija
-            // 
-            this.helpRegistracija.HelpNamespace = "";
             // 
             // Registracija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(460, 535);
+            this.ClientSize = new System.Drawing.Size(423, 584);
             this.Controls.Add(this.txtPonovi);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtLozinka);
@@ -306,7 +302,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registracija";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Registracija_FormClosed);
-            this.Load += new System.EventHandler(this.Registracija_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

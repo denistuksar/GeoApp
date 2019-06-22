@@ -103,10 +103,6 @@
             this.label4.TabIndex = 28;
             this.label4.Text = "Cijena:";
             // 
-            // helpDetaljiNarudzbe
-            // 
-            this.helpDetaljiNarudzbe.HelpNamespace = "";
-            // 
             // DetaljiNarudzbe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

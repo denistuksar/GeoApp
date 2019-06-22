@@ -17,9 +17,10 @@ namespace GeoApp
             InitializeComponent();
         }
 
+
         private void prijava2_Click(object sender, EventArgs e)
         {
-            using (var db = new GeoEntities())
+            using (var db = new GeoApp())
             {
                 byte[] lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text);
 
@@ -37,22 +38,14 @@ namespace GeoApp
 
                     var query3 = from k in db.Korisnik
                                  where k.Korisnicko_ime == txtKorisnickoIme.Text
-                                 select k.ID_korisnika; 
+                                 select k.ID_korisnika; ;
 
                     var id = query3.FirstOrDefault<int>();
-
-                    var query4 = from k in db.Korisnik
-                                 where k.Korisnicko_ime == txtKorisnickoIme.Text
-                                 select k.OvlastiID_ovlast.Value;
-
-                    var idOvlasti = query4.FirstOrDefault<int>();
-
 
                     LoginInfo.IDKorisnika = id;
                     LoginInfo.Uloga = uloga.ToString();
                     LoginInfo.Korime = txtKorisnickoIme.Text;
-                    OvlastInfo.IDOvlasti = idOvlasti;
-
+                    
                     this.Hide();
                     Pocetna pocetna = new Pocetna();
                     pocetna.ShowDialog();
@@ -75,8 +68,9 @@ namespace GeoApp
 
         private void Prijava_Load(object sender, EventArgs e)
         {
-            this.MaximizeBox = false;
             helpPrijava.HelpNamespace = Environment.CurrentDirectory + "/help/prijava.html";
+
+            this.MaximizeBox = false;
         }
 
         private void Prijava_FormClosing(object sender, FormClosingEventArgs e)

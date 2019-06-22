@@ -13,10 +13,10 @@ namespace GeoApp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class GeoEntities : DbContext
+    public partial class GeoApp : DbContext
     {
-        public GeoEntities()
-            : base("name=GeoEntities")
+        public GeoApp()
+            : base("name=GeoApp")
         {
         }
     
