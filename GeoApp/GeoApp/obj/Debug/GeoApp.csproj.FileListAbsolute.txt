@@ -168,3 +168,7 @@ C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\ko\Microsoft.ReportViewer.WinForms.resources.dll
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\fr\Microsoft.ReportViewer.WinForms.resources.dll
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\es\Microsoft.ReportViewer.WinForms.resources.dll
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\GeoApp.exe.manifest
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\GeoApp.application
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.exe.manifest
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.application
