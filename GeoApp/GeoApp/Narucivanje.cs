@@ -17,7 +17,7 @@ namespace GeoApp
         public Narucivanje()
         {
             InitializeComponent();
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var a = new Narudzba
                 {
@@ -38,7 +38,7 @@ namespace GeoApp
         private void PrikaziArtikle()
         {
             List<Artikl> artikli;
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 artikli = db.Artikl.ToList();
             }
@@ -53,7 +53,7 @@ namespace GeoApp
         private void PrikaziKosaricu()
         {
             List<Artikl> narudzba;
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var query = (from a in db.Artikl
                              join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
@@ -91,7 +91,7 @@ namespace GeoApp
 
         private void Narucivanje_FormClosed(object sender, FormClosedEventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe).ToList();
                 if (lista.Count != 0)
@@ -119,7 +119,7 @@ namespace GeoApp
             try
             {
                 Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
-                using (var db = new GeoApp())
+                using (var db = new Entities1())
                 {
                     int kolicina = int.Parse(txtKolicina.Text);
                     var s = new Stavke_narudzbe
@@ -153,7 +153,7 @@ namespace GeoApp
                 var selektiraniArtikl = (int)dgvKosarica.CurrentRow.Cells[0].Value;
                 if (dgvKosarica.Rows.Count != 0)
                 {
-                    using (var db = new GeoApp())
+                    using (var db = new Entities1())
                     {
                         List<Stavke_narudzbe> lista = db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe && x.ArtiklID_artikla == selektiraniArtikl).ToList();
                         db.Stavke_narudzbe.RemoveRange(lista);   //Brišemo narudzbu iz kolekcije
@@ -204,7 +204,7 @@ namespace GeoApp
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var query = from a in db.Artikl
                             where a.Naziv.Contains(txtSearch.Text)
@@ -225,6 +225,12 @@ namespace GeoApp
             proizvodacArtikla.Text = dgvArtikli.CurrentRow.Cells[3].Value.ToString();
             cijenaArtikla.Text = dgvArtikli.CurrentRow.Cells[4].Value.ToString();
             serijskiBrojArtikla.Text = dgvArtikli.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FrmReport frmReport = new FrmReport();
+            frmReport.ShowDialog();
         }
     }
 }

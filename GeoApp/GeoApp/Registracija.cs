@@ -27,7 +27,7 @@ namespace GeoApp
 
         private void registriraj_Click(object sender, EventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var korIme = from k in db.Korisnik
                              select k.Korisnicko_ime;
@@ -168,7 +168,7 @@ namespace GeoApp
 
         private void txtOib_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var oib = from k in db.Korisnik
                           select k.OIB;
@@ -209,7 +209,7 @@ namespace GeoApp
 
         private void txtKorIme_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var korisnickoIme = from k in db.Korisnik
                                     select k.Korisnicko_ime;
@@ -244,7 +244,7 @@ namespace GeoApp
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var email = from k in db.Korisnik
                             select k.Email;

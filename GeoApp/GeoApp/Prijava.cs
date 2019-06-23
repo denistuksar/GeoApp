@@ -20,7 +20,7 @@ namespace GeoApp
 
         private void prijava2_Click(object sender, EventArgs e)
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 byte[] lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text);
 

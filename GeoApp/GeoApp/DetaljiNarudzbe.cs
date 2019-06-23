@@ -16,7 +16,7 @@ namespace GeoApp
         public DetaljiNarudzbe(int idNarudzbe)
         {
             InitializeComponent();
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var query = (from a in db.Artikl
                              join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla

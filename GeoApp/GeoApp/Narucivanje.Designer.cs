@@ -58,6 +58,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.helpNarucivanje = new System.Windows.Forms.HelpProvider();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
             this.SuspendLayout();
@@ -245,7 +246,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(326, 575);
+            this.label4.Location = new System.Drawing.Point(457, 575);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 21);
             this.label4.TabIndex = 26;
@@ -256,7 +257,7 @@
             this.lblCijena.AutoSize = true;
             this.lblCijena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCijena.ForeColor = System.Drawing.Color.White;
-            this.lblCijena.Location = new System.Drawing.Point(381, 575);
+            this.lblCijena.Location = new System.Drawing.Point(512, 575);
             this.lblCijena.Name = "lblCijena";
             this.lblCijena.Size = new System.Drawing.Size(0, 21);
             this.lblCijena.TabIndex = 27;
@@ -398,12 +399,28 @@
             this.label10.TabIndex = 30;
             this.label10.Text = "Opis:";
             // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.White;
+            this.btnReport.Location = new System.Drawing.Point(301, 572);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(127, 28);
+            this.btnReport.TabIndex = 40;
+            this.btnReport.Text = "Prikaz svih artikla";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // Narucivanje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(987, 621);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.serijskiBrojArtikla);
             this.Controls.Add(this.cijenaArtikla);
             this.Controls.Add(this.proizvodacArtikla);
@@ -467,5 +484,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.HelpProvider helpNarucivanje;
+        private System.Windows.Forms.Button btnReport;
     }
 }

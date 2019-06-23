@@ -21,7 +21,7 @@ namespace GeoApp
 
         public void PrikaziKorisnike()
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var zaposleni = from z in db.Korisnik
                                 select z;
@@ -45,7 +45,7 @@ namespace GeoApp
 
         public void PrikaziZaposlene()
         {
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 var zaposleni = from z in db.Korisnik
                                 where z.UlogaID_uloge == 3
@@ -142,7 +142,7 @@ namespace GeoApp
         {
             Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
 
-            using (var db = new GeoApp())
+            using (var db = new Entities1())
             {
                 db.Korisnik.Attach(zaposlenik);
 

@@ -20,7 +20,7 @@ namespace GeoApp
             {
                 if (nazivArtikla.Text != "" && opisArtikla.Text != "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
                 {
-                    using (var db = new GeoApp())
+                    using (var db = new Entities1())
                     {
                         Artikl artikl = new Artikl
                         {

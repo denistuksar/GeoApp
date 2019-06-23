@@ -54,6 +54,30 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\..\Geoapp-Unos, Azuriranje\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -72,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Artikl.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="AzurirajKorisnika.cs">
       <SubType>Form</SubType>
@@ -86,26 +110,32 @@
     <Compile Include="AzuriranjeArtikla.Designer.cs">
       <DependentUpon>AzuriranjeArtikla.cs</DependentUpon>
     </Compile>
-    <Compile Include="GeoApp.Context.cs">
+    <Compile Include="Entity.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GeoApp.Context.tt</DependentUpon>
+      <DependentUpon>Entity.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeoApp.cs">
+    <Compile Include="Entity.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
-    <Compile Include="GeoApp.Designer.cs">
+    <Compile Include="Entity.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>GeoApp.edmx</DependentUpon>
+      <DependentUpon>Entity.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReport.Designer.cs">
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Korisnik.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Narudzba.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="NarudzbaInfo.cs" />
     <Compile Include="DetaljiNarudzbe.cs">
@@ -128,7 +158,7 @@
       <DependentUpon>OdobravanjeNarudzbe.cs</DependentUpon>
     </Compile>
     <Compile Include="Ovlasti.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="OvlastInfo.cs" />
     <Compile Include="OvlastiZaposlenika.cs">
@@ -163,13 +193,10 @@
       <DependentUpon>Registracija.cs</DependentUpon>
     </Compile>
     <Compile Include="Stavke_narudzbe.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagrams.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="Uloga.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <Compile Include="UnosArtikla.cs">
       <SubType>Form</SubType>
@@ -178,7 +205,7 @@
       <DependentUpon>UnosArtikla.cs</DependentUpon>
     </Compile>
     <Compile Include="Uredaj_Servis.cs">
-      <DependentUpon>GeoApp.tt</DependentUpon>
+      <DependentUpon>Entity.tt</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AzurirajKorisnika.resx">
       <DependentUpon>AzurirajKorisnika.cs</DependentUpon>
@@ -188,6 +215,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DetaljiNarudzbe.resx">
       <DependentUpon>DetaljiNarudzbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetaljiReport.rdlc" />
+    <EmbeddedResource Include="FrmReport.resx">
+      <DependentUpon>FrmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Narucivanje.resx">
       <DependentUpon>Narucivanje.cs</DependentUpon>
@@ -215,15 +246,18 @@
     <EmbeddedResource Include="UnosArtikla.resx">
       <DependentUpon>UnosArtikla.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="GeoApp.edmx">
+    <EntityDeploy Include="Entity.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>GeoApp.Designer.cs</LastGenOutput>
+      <LastGenOutput>Entity.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="GeoApp.edmx.diagram">
-      <DependentUpon>GeoApp.edmx</DependentUpon>
+    <None Include="Entity.edmx.diagram">
+      <DependentUpon>Entity.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Artikl.datasource" />
+    <None Include="Properties\DataSources\DetaljiNarudzbe.datasource" />
+    <None Include="Properties\DataSources\Narudzba.datasource" />
+    <None Include="Properties\DataSources\Stavke_narudzbe.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -253,15 +287,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="GeoApp.Context.tt">
+    <Content Include="Entity.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GeoApp.edmx</DependentUpon>
-      <LastGenOutput>GeoApp.Context.cs</LastGenOutput>
+      <DependentUpon>Entity.edmx</DependentUpon>
+      <LastGenOutput>Entity.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="GeoApp.tt">
+    <Content Include="Entity.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>GeoApp.edmx</DependentUpon>
-      <LastGenOutput>GeoApp.cs</LastGenOutput>
+      <DependentUpon>Entity.edmx</DependentUpon>
+      <LastGenOutput>Entity.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
