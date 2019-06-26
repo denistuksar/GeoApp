@@ -48,6 +48,7 @@ namespace GeoApp
                 unosUredaja.Visible = false;
                 azuriranjeUredaja.Visible = false;
                 btnOvlasti.Visible = false;
+                btnServis.Location = new Point(73, 146);
                 this.Size = new Size(384, 220);
             }
             else if (LoginInfo.Uloga == "Zaposlenik" )
@@ -59,8 +60,7 @@ namespace GeoApp
                 this.Size = new Size(384, 430);
             }
           
-
-         
+       
         }
 
         private void Pocetna_FormClosed(object sender, FormClosedEventArgs e)
