@@ -28,18 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvZaposlenici = new System.Windows.Forms.DataGridView();
             this.btnDodajZaposlenika = new System.Windows.Forms.Button();
             this.btnAzurirajZaposlenika = new System.Windows.Forms.Button();
             this.btnPrikaziZaposlene = new System.Windows.Forms.Button();
             this.cbAdmin = new System.Windows.Forms.CheckBox();
-            this.cbNarudzba = new System.Windows.Forms.CheckBox();
-            this.cbBezOvlasti = new System.Windows.Forms.CheckBox();
-            this.cbCRUD = new System.Windows.Forms.CheckBox();
+            this.cbZaposlenik = new System.Windows.Forms.CheckBox();
+            this.cbKupac = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.helpOvlasti = new System.Windows.Forms.HelpProvider();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZaposlenici)).BeginInit();
@@ -64,37 +63,37 @@
             this.dgvZaposlenici.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvZaposlenici.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvZaposlenici.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZaposlenici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZaposlenici.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvZaposlenici.ColumnHeadersHeight = 25;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvZaposlenici.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvZaposlenici.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvZaposlenici.EnableHeadersVisualStyles = false;
             this.dgvZaposlenici.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.dgvZaposlenici.Location = new System.Drawing.Point(16, 84);
             this.dgvZaposlenici.Name = "dgvZaposlenici";
             this.dgvZaposlenici.ReadOnly = true;
             this.dgvZaposlenici.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvZaposlenici.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvZaposlenici.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvZaposlenici.RowHeadersVisible = false;
             this.dgvZaposlenici.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvZaposlenici.Size = new System.Drawing.Size(690, 216);
@@ -154,48 +153,36 @@
             this.cbAdmin.AutoSize = true;
             this.cbAdmin.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cbAdmin.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbAdmin.Location = new System.Drawing.Point(55, 330);
+            this.cbAdmin.Location = new System.Drawing.Point(43, 330);
             this.cbAdmin.Name = "cbAdmin";
-            this.cbAdmin.Size = new System.Drawing.Size(183, 25);
+            this.cbAdmin.Size = new System.Drawing.Size(125, 25);
             this.cbAdmin.TabIndex = 42;
-            this.cbAdmin.Text = "Ovlasti administratora";
+            this.cbAdmin.Text = "Administrator";
             this.cbAdmin.UseVisualStyleBackColor = true;
             // 
-            // cbNarudzba
+            // cbZaposlenik
             // 
-            this.cbNarudzba.AutoSize = true;
-            this.cbNarudzba.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cbNarudzba.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbNarudzba.Location = new System.Drawing.Point(298, 330);
-            this.cbNarudzba.Name = "cbNarudzba";
-            this.cbNarudzba.Size = new System.Drawing.Size(233, 25);
-            this.cbNarudzba.TabIndex = 43;
-            this.cbNarudzba.Text = "Ovlast odobravanja narudžbe";
-            this.cbNarudzba.UseVisualStyleBackColor = true;
+            this.cbZaposlenik.AutoSize = true;
+            this.cbZaposlenik.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbZaposlenik.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbZaposlenik.Location = new System.Drawing.Point(219, 330);
+            this.cbZaposlenik.Name = "cbZaposlenik";
+            this.cbZaposlenik.Size = new System.Drawing.Size(104, 25);
+            this.cbZaposlenik.TabIndex = 43;
+            this.cbZaposlenik.Text = "Zaposlenik";
+            this.cbZaposlenik.UseVisualStyleBackColor = true;
             // 
-            // cbBezOvlasti
+            // cbKupac
             // 
-            this.cbBezOvlasti.AutoSize = true;
-            this.cbBezOvlasti.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cbBezOvlasti.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbBezOvlasti.Location = new System.Drawing.Point(298, 372);
-            this.cbBezOvlasti.Name = "cbBezOvlasti";
-            this.cbBezOvlasti.Size = new System.Drawing.Size(120, 25);
-            this.cbBezOvlasti.TabIndex = 44;
-            this.cbBezOvlasti.Text = "Nema ovlasti";
-            this.cbBezOvlasti.UseVisualStyleBackColor = true;
-            // 
-            // cbCRUD
-            // 
-            this.cbCRUD.AutoSize = true;
-            this.cbCRUD.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cbCRUD.ForeColor = System.Drawing.SystemColors.Control;
-            this.cbCRUD.Location = new System.Drawing.Point(55, 372);
-            this.cbCRUD.Name = "cbCRUD";
-            this.cbCRUD.Size = new System.Drawing.Size(166, 25);
-            this.cbCRUD.TabIndex = 45;
-            this.cbCRUD.Text = "CRUD nad artiklima";
-            this.cbCRUD.UseVisualStyleBackColor = true;
+            this.cbKupac.AutoSize = true;
+            this.cbKupac.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.cbKupac.ForeColor = System.Drawing.SystemColors.Control;
+            this.cbKupac.Location = new System.Drawing.Point(372, 330);
+            this.cbKupac.Name = "cbKupac";
+            this.cbKupac.Size = new System.Drawing.Size(71, 25);
+            this.cbKupac.TabIndex = 45;
+            this.cbKupac.Text = "Kupac";
+            this.cbKupac.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -204,24 +191,24 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(474, 365);
+            this.button1.Location = new System.Drawing.Point(491, 325);
             this.button1.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 32);
+            this.button1.Size = new System.Drawing.Size(203, 32);
             this.button1.TabIndex = 46;
-            this.button1.Text = "Promijeni ovlast";
+            this.button1.Text = "Promijeni ulogu";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // OvlastiZaposlenika
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(731, 478);
+            this.ClientSize = new System.Drawing.Size(731, 386);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.cbCRUD);
-            this.Controls.Add(this.cbBezOvlasti);
-            this.Controls.Add(this.cbNarudzba);
+            this.Controls.Add(this.cbKupac);
+            this.Controls.Add(this.cbZaposlenik);
             this.Controls.Add(this.cbAdmin);
             this.Controls.Add(this.btnPrikaziZaposlene);
             this.Controls.Add(this.btnAzurirajZaposlenika);
@@ -250,9 +237,8 @@
         private System.Windows.Forms.Button btnAzurirajZaposlenika;
         private System.Windows.Forms.Button btnPrikaziZaposlene;
         private System.Windows.Forms.CheckBox cbAdmin;
-        private System.Windows.Forms.CheckBox cbNarudzba;
-        private System.Windows.Forms.CheckBox cbBezOvlasti;
-        private System.Windows.Forms.CheckBox cbCRUD;
+        private System.Windows.Forms.CheckBox cbZaposlenik;
+        private System.Windows.Forms.CheckBox cbKupac;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.HelpProvider helpOvlasti;
     }

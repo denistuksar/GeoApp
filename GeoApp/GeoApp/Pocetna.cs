@@ -48,7 +48,7 @@ namespace GeoApp
                 azuriranjeUredaja.Visible = false;
                 this.Size = new Size(384, 260);
             }
-            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 3)
+            else if (LoginInfo.Uloga == "Zaposlenik" )
             {
                 txtUloga.Text += " - CRUD nad artiklima";
                 btnOvlasti.Visible = false;
@@ -56,28 +56,7 @@ namespace GeoApp
                 this.Size = new Size(384, 400);
             }
 
-            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 2)
-            {
-                txtUloga.Text += " - narudžba artikala";
-                btnOvlasti.Visible = false;
-                azuriranjeUredaja.Visible = false;
-                unosUredaja.Visible = false;
-                btnOdobravanje.Location = new Point(73, 146);
-                this.Size = new Size(384, 260);
-            }
-            else if (LoginInfo.Uloga == "Zaposlenik" && OvlastInfo.IDOvlasti == 4)
-            {
-                txtUloga.Text += " - nema ovlasti";
-                btnOvlasti.Visible = false;
-                azuriranjeUredaja.Visible = false;
-                unosUredaja.Visible = false;
-                btnServis.Visible = false;
-                btnOdobravanje.Visible = false;
-                btnOdobravanje.Location = new Point(73, 143);
-                this.Size = new Size(384, 260);
-
-
-            }
+         
         }
 
         private void Pocetna_FormClosed(object sender, FormClosedEventArgs e)

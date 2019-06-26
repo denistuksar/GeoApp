@@ -17,7 +17,6 @@
       <PropertyRef Name="ID_korisnika" />
     </Key>
     <Property Name="ID_korisnika" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="OvlastiID_ovlast" Type="Int32" />
     <Property Name="UlogaID_uloge" Type="Int32" />
     <Property Name="Ime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="Prezime" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -28,7 +27,6 @@
     <Property Name="Korisnicko_ime" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="Kriptirana_Lozinka" Type="Binary" MaxLength="30" FixedLength="false" />
     <Property Name="Lozinka" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Ovlasti" Relationship="Self.FK_Korisnik_Ovlasti" FromRole="Korisnik" ToRole="Ovlasti" />
     <NavigationProperty Name="Uloga" Relationship="Self.FK_Korisnik_Uloga" FromRole="Korisnik" ToRole="Uloga" />
     <NavigationProperty Name="Narudzba" Relationship="Self.FK_Narudzba_Korisnik" FromRole="Korisnik" ToRole="Narudzba" />
     <NavigationProperty Name="Uredaj_Servis" Relationship="Self.FK_Uredaj_Servis_Korisnik" FromRole="Korisnik" ToRole="Uredaj_Servis" />
@@ -44,18 +42,6 @@
     <Property Name="Status" Type="Boolean" />
     <NavigationProperty Name="Korisnik" Relationship="Self.FK_Narudzba_Korisnik" FromRole="Narudzba" ToRole="Korisnik" />
     <NavigationProperty Name="Stavke_narudzbe" Relationship="Self.FK_Stavke_narudzbe_Narudzba" FromRole="Narudzba" ToRole="Stavke_narudzbe" />
-  </EntityType>
-  <EntityType Name="Ovlasti">
-    <Key>
-      <PropertyRef Name="ID_ovlasti" />
-    </Key>
-    <Property Name="ID_ovlasti" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Unos_artikla" Type="Boolean" />
-    <Property Name="Azuriranje_artikla" Type="Boolean" />
-    <Property Name="Brisanje_artikla" Type="Boolean" />
-    <Property Name="Odobravanje_narudzbe" Type="Boolean" />
-    <Property Name="Uredivanje_ovlasti" Type="Boolean" />
-    <NavigationProperty Name="Korisnik" Relationship="Self.FK_Korisnik_Ovlasti" FromRole="Ovlasti" ToRole="Korisnik" />
   </EntityType>
   <EntityType Name="Stavke_narudzbe">
     <Key>
@@ -100,18 +86,6 @@
       </Principal>
       <Dependent Role="Stavke_narudzbe">
         <PropertyRef Name="ArtiklID_artikla" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_Korisnik_Ovlasti">
-    <End Role="Ovlasti" Type="Self.Ovlasti" Multiplicity="0..1" />
-    <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Ovlasti">
-        <PropertyRef Name="ID_ovlasti" />
-      </Principal>
-      <Dependent Role="Korisnik">
-        <PropertyRef Name="OvlastiID_ovlast" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -167,17 +141,12 @@
     <EntitySet Name="Artikl" EntityType="Self.Artikl" />
     <EntitySet Name="Korisnik" EntityType="Self.Korisnik" />
     <EntitySet Name="Narudzba" EntityType="Self.Narudzba" />
-    <EntitySet Name="Ovlasti" EntityType="Self.Ovlasti" />
     <EntitySet Name="Stavke_narudzbe" EntityType="Self.Stavke_narudzbe" />
     <EntitySet Name="Uloga" EntityType="Self.Uloga" />
     <EntitySet Name="Uredaj_Servis" EntityType="Self.Uredaj_Servis" />
     <AssociationSet Name="FK_Stavke_narudzbe_Artikl" Association="Self.FK_Stavke_narudzbe_Artikl">
       <End Role="Artikl" EntitySet="Artikl" />
       <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Korisnik_Ovlasti" Association="Self.FK_Korisnik_Ovlasti">
-      <End Role="Ovlasti" EntitySet="Ovlasti" />
-      <End Role="Korisnik" EntitySet="Korisnik" />
     </AssociationSet>
     <AssociationSet Name="FK_Korisnik_Uloga" Association="Self.FK_Korisnik_Uloga">
       <End Role="Uloga" EntitySet="Uloga" />

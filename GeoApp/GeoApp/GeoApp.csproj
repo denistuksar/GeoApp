@@ -172,10 +172,6 @@
     <Compile Include="OdobravanjeNarudzbe.Designer.cs">
       <DependentUpon>OdobravanjeNarudzbe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Ovlasti.cs">
-      <DependentUpon>Entity.tt</DependentUpon>
-    </Compile>
-    <Compile Include="OvlastInfo.cs" />
     <Compile Include="OvlastiZaposlenika.cs">
       <SubType>Form</SubType>
     </Compile>

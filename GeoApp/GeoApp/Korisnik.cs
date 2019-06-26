@@ -22,7 +22,6 @@ namespace GeoApp
         }
     
         public int ID_korisnika { get; set; }
-        public Nullable<int> OvlastiID_ovlast { get; set; }
         public Nullable<int> UlogaID_uloge { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
@@ -34,7 +33,6 @@ namespace GeoApp
         public byte[] Kriptirana_Lozinka { get; set; }
         public string Lozinka { get; set; }
     
-        public virtual Ovlasti Ovlasti { get; set; }
         public virtual Uloga Uloga { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Narudzba> Narudzba { get; set; }

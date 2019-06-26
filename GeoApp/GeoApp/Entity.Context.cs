@@ -28,7 +28,6 @@ namespace GeoApp
         public virtual DbSet<Artikl> Artikl { get; set; }
         public virtual DbSet<Korisnik> Korisnik { get; set; }
         public virtual DbSet<Narudzba> Narudzba { get; set; }
-        public virtual DbSet<Ovlasti> Ovlasti { get; set; }
         public virtual DbSet<Stavke_narudzbe> Stavke_narudzbe { get; set; }
         public virtual DbSet<Uloga> Uloga { get; set; }
         public virtual DbSet<Uredaj_Servis> Uredaj_Servis { get; set; }

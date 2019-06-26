@@ -27,15 +27,15 @@ namespace GeoApp
                                 select z;
 
                 dgvZaposlenici.DataSource = zaposleni.ToList();
-                dgvZaposlenici.Columns[10].Visible = false;
+                dgvZaposlenici.Columns[9].Visible = false;
+                dgvZaposlenici.Columns[11].Visible = false;
                 dgvZaposlenici.Columns[12].Visible = false;
                 dgvZaposlenici.Columns[13].Visible = false;
-                dgvZaposlenici.Columns[14].Visible = false;
-                dgvZaposlenici.Columns[15].Visible = false;
+            
             }
 
             dgvZaposlenici.Columns[0].HeaderText = "ID korisnika";
-            dgvZaposlenici.Columns[1].HeaderText = "ID ovlasti";
+           
             dgvZaposlenici.Columns[2].HeaderText = "ID uloge";
             dgvZaposlenici.Columns[7].HeaderText = "Broj telefona";
             dgvZaposlenici.Columns[8].HeaderText = "Korisničko ime";
@@ -52,11 +52,10 @@ namespace GeoApp
                                 select z;
 
                 dgvZaposlenici.DataSource = zaposleni.ToList();
-                dgvZaposlenici.Columns[10].Visible = false;
+                dgvZaposlenici.Columns[9].Visible = false;
+                dgvZaposlenici.Columns[11].Visible = false;
                 dgvZaposlenici.Columns[12].Visible = false;
                 dgvZaposlenici.Columns[13].Visible = false;
-                dgvZaposlenici.Columns[14].Visible = false;
-                dgvZaposlenici.Columns[15].Visible = false;
             }
 
         }
@@ -101,44 +100,46 @@ namespace GeoApp
         {
             Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
 
-            switch (zaposlenik.OvlastiID_ovlast)
+            switch (zaposlenik.UlogaID_uloge)
             {
                 case 1:
                     cbAdmin.Checked = true;
-                    cbNarudzba.Checked = false;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = false;
+                    cbZaposlenik.Checked = false;
+                    cbKupac.Checked = false;
+               
                     break;
                 case 2:
                     cbAdmin.Checked = false;
-                    cbNarudzba.Checked = true;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = false;
+                    cbZaposlenik.Checked = true;
+                    cbKupac.Checked = false;
+                 
                     break;
                 case 3:
                     cbAdmin.Checked = false;
-                    cbNarudzba.Checked = true;
-                    cbCRUD.Checked = true;
-                    cbBezOvlasti.Checked = false;
+                    cbZaposlenik.Checked = false;
+                    cbKupac.Checked = true;                
                     break;
-                case 4:
-                    cbAdmin.Checked = false;
-                    cbNarudzba.Checked = false;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = true;
-                    break;
+               
 
                 default:
                     cbAdmin.Checked = false;
-                    cbNarudzba.Checked = false;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = false;
+                    cbZaposlenik.Checked = false;
+                    cbKupac.Checked = false;                   
                     break;
             }
 
         }
 
-        private void btnPotvrda_Click(object sender, EventArgs e)
+     
+
+        private void OvlastiZaposlenika_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            this.Hide();
+            new Pocetna().ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
 
@@ -149,47 +150,29 @@ namespace GeoApp
                 if (cbAdmin.Checked)
                 {
                     cbAdmin.Checked = true;
-                    cbNarudzba.Checked = false;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = false;
-                    zaposlenik.OvlastiID_ovlast = 1;
+                    cbZaposlenik.Checked = false;
+                    cbKupac.Checked = false;
+                    zaposlenik.UlogaID_uloge = 1;
                 }
-                else if (cbNarudzba.Checked)
+                else if (cbZaposlenik.Checked)
                 {
                     cbAdmin.Checked = false;
-                    cbNarudzba.Checked = true;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = false;
-                    zaposlenik.OvlastiID_ovlast = 2;
+                    cbZaposlenik.Checked = true;
+                    cbKupac.Checked = false;
+                    zaposlenik.UlogaID_uloge = 2;
                 }
-                else if (cbCRUD.Checked)
+                else if (cbKupac.Checked)
                 {
                     cbAdmin.Checked = false;
-                    cbNarudzba.Checked = true;
-                    cbCRUD.Checked = true;
-                    cbBezOvlasti.Checked = false;
-                    zaposlenik.OvlastiID_ovlast = 3;
+                    cbZaposlenik.Checked = false;
+                    cbKupac.Checked = true;
+                    zaposlenik.UlogaID_uloge = 3;
                 }
-                else if (cbBezOvlasti.Checked)
-                {
-                    cbAdmin.Checked = false;
-                    cbNarudzba.Checked = false;
-                    cbCRUD.Checked = false;
-                    cbBezOvlasti.Checked = true;
-                    zaposlenik.OvlastiID_ovlast = 4;
-                }
+
                 db.SaveChanges();
 
             }
             PrikaziKorisnike();
-
-        }
-
-        private void OvlastiZaposlenika_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            this.Hide();
-            new Pocetna().ShowDialog();
-            this.Close();
         }
     }
 }

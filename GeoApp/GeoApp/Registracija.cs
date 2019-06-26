@@ -60,9 +60,9 @@ namespace GeoApp
                                         Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
                                         Lozinka = txtLozinka.Text,
                                         UlogaID_uloge = 3,
-                                        OvlastiID_ovlast = 4
+                                     
                                     };
-                                    OvlastInfo.IDOvlasti = 4;
+                                   
 
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
@@ -88,7 +88,7 @@ namespace GeoApp
                                         Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
                                         Lozinka = txtLozinka.Text,
                                         UlogaID_uloge = 2,
-                                        OvlastiID_ovlast = 4
+                                      
                                     };
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
