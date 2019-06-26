@@ -36,7 +36,7 @@ namespace GeoApp
 
             dgvZaposlenici.Columns[0].HeaderText = "ID korisnika";
            
-            dgvZaposlenici.Columns[2].HeaderText = "ID uloge";
+            dgvZaposlenici.Columns[2].HeaderText = "Ime";
             dgvZaposlenici.Columns[7].HeaderText = "Broj telefona";
             dgvZaposlenici.Columns[8].HeaderText = "Korisničko ime";
 
@@ -110,14 +110,14 @@ namespace GeoApp
                     break;
                 case 2:
                     cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = true;
-                    cbKupac.Checked = false;
+                    cbZaposlenik.Checked = false;
+                    cbKupac.Checked = true;
                  
                     break;
                 case 3:
                     cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = false;
-                    cbKupac.Checked = true;                
+                    cbZaposlenik.Checked = true;
+                    cbKupac.Checked = false;                
                     break;
                
 
@@ -159,14 +159,14 @@ namespace GeoApp
                     cbAdmin.Checked = false;
                     cbZaposlenik.Checked = true;
                     cbKupac.Checked = false;
-                    zaposlenik.UlogaID_uloge = 2;
+                    zaposlenik.UlogaID_uloge = 3;
                 }
                 else if (cbKupac.Checked)
                 {
                     cbAdmin.Checked = false;
                     cbZaposlenik.Checked = false;
                     cbKupac.Checked = true;
-                    zaposlenik.UlogaID_uloge = 3;
+                    zaposlenik.UlogaID_uloge = 2;
                 }
 
                 db.SaveChanges();
