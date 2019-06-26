@@ -44,19 +44,23 @@ namespace GeoApp
             this.MaximizeBox = false;
             if (LoginInfo.Uloga == "Kupac")
             {
+             
                 unosUredaja.Visible = false;
                 azuriranjeUredaja.Visible = false;
-                this.Size = new Size(384, 260);
+                btnOvlasti.Visible = false;
+                btnServis.Location = new Point(73, 146);
+                this.Size = new Size(384, 220);
             }
             else if (LoginInfo.Uloga == "Zaposlenik" )
             {
-                txtUloga.Text += " - CRUD nad artiklima";
-                btnOvlasti.Visible = false;
-                btnServis.Visible = false;
-                this.Size = new Size(384, 400);
-            }
 
-         
+                btnServis.Location = new Point(73, 324);
+                btnOvlasti.Visible = false;
+              
+                this.Size = new Size(384, 430);
+            }
+          
+       
         }
 
         private void Pocetna_FormClosed(object sender, FormClosedEventArgs e)
