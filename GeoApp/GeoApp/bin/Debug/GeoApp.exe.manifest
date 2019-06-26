@@ -90,14 +90,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GeoApp.exe" size="148488">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GeoApp.exe" size="147464">
       <assemblyIdentity name="GeoApp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>qODQORbDw1iI7n9Oirf9Mfv2Q96yjB1cxnA+BY7n0x0=</dsig:DigestValue>
+        <dsig:DigestValue>1Itd2dsZ1ExHUZgsw3O178vFRWbzF20IrCv8cgiMFRc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -25,7 +25,6 @@ D:\Nikola\FAKS\3. Godina\6. Semestar\Programsko Inžinjerstvo\Git\GeoApp\GeoApp\
 \\Mac\Home\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.pdb
 \\Mac\Home\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.csproj.CopyComplete
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.Narucivanje.resources
-\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.csprojAssemblyReference.cache
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.OdobravanjeNarudzbe.resources
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.DetaljiNarudzbe.resources
 C:\Users\NiksY\Documents\Desktop\r19038-d1fcfe19d33d24e23c0b59307cf5122409d47995\r19038-d1fcfe19d33d24e23c0b59307cf5122409d47995\GeoApp\GeoApp\bin\Debug\GeoApp.exe.config
@@ -172,3 +171,4 @@ C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\GeoApp.application
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.exe.manifest
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.application
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.csprojAssemblyReference.cache

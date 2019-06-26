@@ -69,11 +69,6 @@ namespace GeoApp
                                  n.Kolicina
                              }).ToList();
                 dgvKosarica.DataSource = query;
-                var query2 = from a in db.Artikl
-                              join n in db.Stavke_narudzbe on a.ID_artikla equals n.ArtiklID_artikla
-                              where n.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
-                              select a;
-                narudzba = query2.ToList();
                 dgvKosarica.Columns[0].HeaderText = "ID artikla";
                 dgvKosarica.Columns[3].HeaderText = "Proizvođač";
                 dgvKosarica.Columns[4].HeaderText = "Serijski broj";

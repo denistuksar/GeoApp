@@ -14,12 +14,6 @@ namespace GeoApp
     
     public partial class Uredaj_Servis
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Uredaj_Servis()
-        {
-            this.Stavke_narudzbe = new HashSet<Stavke_narudzbe>();
-        }
-    
         public int ID_uredaj_servis { get; set; }
         public Nullable<int> KorisnikID_korisnika { get; set; }
         public string Naziv { get; set; }
@@ -30,7 +24,5 @@ namespace GeoApp
         public byte[] QR_kod { get; set; }
     
         public virtual Korisnik Korisnik { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Stavke_narudzbe> Stavke_narudzbe { get; set; }
     }
 }

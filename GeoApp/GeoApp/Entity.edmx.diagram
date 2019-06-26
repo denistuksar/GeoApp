@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b6f4b217c61f441cb955c4bf2428580b" Name="Diagram1">
+      <Diagram DiagramId="b6f4b217c61f441cb955c4bf2428580b" Name="Diagram1" ZoomLevel="75">
         <EntityTypeShape EntityType="DBModel.Artikl" Width="1.5" PointX="5.25" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Korisnik" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DBModel.Narudzba" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
@@ -18,7 +18,6 @@
         <AssociationConnector Association="DBModel.FK_Narudzba_Korisnik" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Uredaj_Servis_Korisnik" ManuallyRouted="false" />
         <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Narudzba" ManuallyRouted="false" />
-        <AssociationConnector Association="DBModel.FK_Stavke_narudzbe_Uredaj_Servis" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -59,7 +59,6 @@
         <MappingFragment StoreEntitySet="Stavke_narudzbe">
           <ScalarProperty Name="ID_stavke" ColumnName="ID_stavke" />
           <ScalarProperty Name="NarudzbaID_narudzbe" ColumnName="NarudzbaID_narudzbe" />
-          <ScalarProperty Name="Uredaj_ServisID_uredaj_servis" ColumnName="Uredaj_ServisID_uredaj_servis" />
           <ScalarProperty Name="ArtiklID_artikla" ColumnName="ArtiklID_artikla" />
           <ScalarProperty Name="Kolicina" ColumnName="Kolicina" />
         </MappingFragment>

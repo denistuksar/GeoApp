@@ -55,7 +55,6 @@
     </Key>
     <Property Name="ID_stavke" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NarudzbaID_narudzbe" Type="int" />
-    <Property Name="Uredaj_ServisID_uredaj_servis" Type="int" />
     <Property Name="ArtiklID_artikla" Type="int" />
     <Property Name="Kolicina" Type="int" />
   </EntityType>
@@ -140,18 +139,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_Stavke_narudzbe_Uredaj_Servis">
-    <End Role="Uredaj_Servis" Type="Self.Uredaj_Servis" Multiplicity="0..1" />
-    <End Role="Stavke_narudzbe" Type="Self.Stavke_narudzbe" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="Uredaj_Servis">
-        <PropertyRef Name="ID_uredaj_servis" />
-      </Principal>
-      <Dependent Role="Stavke_narudzbe">
-        <PropertyRef Name="Uredaj_ServisID_uredaj_servis" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_Uredaj_Servis_Korisnik">
     <End Role="Korisnik" Type="Self.Korisnik" Multiplicity="0..1" />
     <End Role="Uredaj_Servis" Type="Self.Uredaj_Servis" Multiplicity="*" />
@@ -190,10 +177,6 @@
     </AssociationSet>
     <AssociationSet Name="FK_Stavke_narudzbe_Narudzba" Association="Self.FK_Stavke_narudzbe_Narudzba">
       <End Role="Narudzba" EntitySet="Narudzba" />
-      <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Stavke_narudzbe_Uredaj_Servis" Association="Self.FK_Stavke_narudzbe_Uredaj_Servis">
-      <End Role="Uredaj_Servis" EntitySet="Uredaj_Servis" />
       <End Role="Stavke_narudzbe" EntitySet="Stavke_narudzbe" />
     </AssociationSet>
     <AssociationSet Name="FK_Uredaj_Servis_Korisnik" Association="Self.FK_Uredaj_Servis_Korisnik">

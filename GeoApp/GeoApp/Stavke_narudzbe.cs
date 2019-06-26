@@ -16,12 +16,10 @@ namespace GeoApp
     {
         public int ID_stavke { get; set; }
         public Nullable<int> NarudzbaID_narudzbe { get; set; }
-        public Nullable<int> Uredaj_ServisID_uredaj_servis { get; set; }
         public Nullable<int> ArtiklID_artikla { get; set; }
         public Nullable<int> Kolicina { get; set; }
     
         public virtual Artikl Artikl { get; set; }
         public virtual Narudzba Narudzba { get; set; }
-        public virtual Uredaj_Servis Uredaj_Servis { get; set; }
     }
 }

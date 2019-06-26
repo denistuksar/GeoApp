@@ -34,15 +34,30 @@ namespace GeoApp
             Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
             if (selektiraniArtikl != null)
             {
-                using (var db = new Entities1())
+                try
                 {
-                    db.Artikl.Attach(selektiraniArtikl); //registriramo prosljeđeni tim. 
-                    selektiraniArtikl.Naziv = nazivArtikla.Text;
-                    selektiraniArtikl.Opis = opisArtikla.Text;
-                    selektiraniArtikl.Proizvodac = proizvodacArtikla.Text;
-                    selektiraniArtikl.Cijena = decimal.Parse(cijenaArtikla.Text);
-                    selektiraniArtikl.Serijski_broj = serijskiBrojArtikla.Text;
-                    db.SaveChanges();   //Spremamo promjene u bazu.
+                    if (nazivArtikla.Text != "" && opisArtikla.Text != "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
+                    {
+                        using (var db = new Entities1())
+                        {
+                        db.Artikl.Attach(selektiraniArtikl); //registriramo prosljeđeni tim. 
+                        selektiraniArtikl.Naziv = nazivArtikla.Text;
+                        selektiraniArtikl.Opis = opisArtikla.Text;
+                        selektiraniArtikl.Proizvodac = proizvodacArtikla.Text;
+                        selektiraniArtikl.Cijena = decimal.Parse(cijenaArtikla.Text);
+                        selektiraniArtikl.Serijski_broj = serijskiBrojArtikla.Text;
+                        db.SaveChanges();   //Spremamo promjene u bazu.
+                        }
+                        MessageBox.Show("Artikl ažuriran.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ispunite sva polja");
+                    }
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Neispravan unos.");
                 }
             }
             else
@@ -92,13 +107,42 @@ namespace GeoApp
        MessageBoxButtons.YesNo) ==
                         System.Windows.Forms.DialogResult.Yes)
                     {
-                        using (var db = new Entities1())
+                        try
                         {
-                            //Registriramo artikl.
-                            db.Artikl.Attach(selektiraniArtikl);
-                            db.Artikl.Remove(selektiraniArtikl);   //Brišemo artikl iz kolekcije
-                            db.SaveChanges();    //Spremamo promjene u bazu.
+                            using (var db = new Entities1())
+                            {
+                                //Registriramo artikl.
+                                db.Artikl.Attach(selektiraniArtikl);
+                                db.Artikl.Remove(selektiraniArtikl);   //Brišemo artikl iz kolekcije
+                                db.SaveChanges();    //Spremamo promjene u bazu.
+                            }
                         }
+                        catch (Exception)
+                        {
+
+                            if (MessageBox.Show("Artikl se nalazi u nekim narudžbama. Jeste li sigurni da ga želite izbrisati?", "Upozorenje!",
+               MessageBoxButtons.YesNo) ==
+                                System.Windows.Forms.DialogResult.Yes)
+                            {
+                                using (var db = new Entities1())
+                                {
+                                    var query = from n in db.Stavke_narudzbe
+                                                where n.ArtiklID_artikla == selektiraniArtikl.ID_artikla
+                                                select n.NarudzbaID_narudzbe;
+                                    db.Stavke_narudzbe.RemoveRange(db.Stavke_narudzbe.Where(x => x.ArtiklID_artikla == selektiraniArtikl.ID_artikla));
+                                    
+                                    foreach (var item in query)
+                                    {
+                                        db.Stavke_narudzbe.RemoveRange(db.Stavke_narudzbe.Where(x => x.NarudzbaID_narudzbe == item));
+                                        db.Narudzba.RemoveRange(db.Narudzba.Where(x => x.ID_narudzbe == item));
+                                    }
+                                    db.Artikl.Attach(selektiraniArtikl);
+                                    db.Artikl.Remove(selektiraniArtikl);
+                                    db.SaveChanges();
+                                }  
+                            }
+                        }
+                        
                     }
                 }
                 else
