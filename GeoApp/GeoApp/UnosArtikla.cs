@@ -18,27 +18,27 @@ namespace GeoApp
         {
             try
             {
-                if (nazivArtikla.Text != "" && opisArtikla.Text != "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
+                if (uiNazivArtikla.Text != "" && uiOpisArtikla.Text != "" && uiProizvodacArtikla.Text != "" && uiCijenaArtikla.Text != "" && uiSerijskiBrojArtikla.Text != "")
                 {
                     using (var db = new Entities1())
                     {
                         Artikl artikl = new Artikl
                         {
-                            Naziv = nazivArtikla.Text,
-                            Opis = opisArtikla.Text,
-                            Proizvodac = proizvodacArtikla.Text,
-                            Cijena = decimal.Parse(cijenaArtikla.Text),
-                            Serijski_broj = serijskiBrojArtikla.Text
+                            Naziv = uiNazivArtikla.Text,
+                            Opis = uiOpisArtikla.Text,
+                            Proizvodac = uiProizvodacArtikla.Text,
+                            Cijena = decimal.Parse(uiCijenaArtikla.Text),
+                            Serijski_broj = uiSerijskiBrojArtikla.Text
                         };
                         db.Artikl.Add(artikl);
                         db.SaveChanges();
                     }
                     MessageBox.Show("Aktikl unesen");
-                    nazivArtikla.Clear();
-                    opisArtikla.Clear();
-                    proizvodacArtikla.Clear();
-                    cijenaArtikla.Clear();
-                    serijskiBrojArtikla.Clear();
+                    uiNazivArtikla.Clear();
+                    uiOpisArtikla.Clear();
+                    uiProizvodacArtikla.Clear();
+                    uiCijenaArtikla.Clear();
+                    uiSerijskiBrojArtikla.Clear();
                 }
                 else
                 {

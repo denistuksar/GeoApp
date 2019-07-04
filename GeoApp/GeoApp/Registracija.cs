@@ -38,27 +38,27 @@ namespace GeoApp
                 var email = from k in db.Korisnik
                             select k.Email;
 
-                if (txtKorIme.Text != "")
+                if (uiUnosKorisnickogImena.Text != "")
                 {
-                    if (korIme.ToString() != txtKorIme.Text)
+                    if (korIme.ToString() != uiUnosKorisnickogImena.Text)
                     {
-                        if (oib.ToString() != txtOib.Text && IsValidOIB(txtOib.Text))
+                        if (oib.ToString() != uiUnosOIB.Text && IsValidOIB(uiUnosOIB.Text))
                         {
-                            if (email.ToString() != txtEmail.Text && IsValidEmail(txtEmail.Text))
+                            if (email.ToString() != uiUnosEmaila.Text && IsValidEmail(uiUnosEmaila.Text))
                             {
                                 if (LoginInfo.Uloga == "Administrator")
                                 {
                                     var korisnik = new Korisnik
                                     {
-                                        Ime = txtIme.Text,
-                                        Prezime = txtPrezime.Text,
-                                        OIB = txtOib.Text,
-                                        Adresa = txtAdresa.Text,
-                                        Email = txtEmail.Text,
-                                        Broj_telefona = txtTelefon.Text,
-                                        Korisnicko_ime = txtKorIme.Text,
-                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
-                                        Lozinka = txtLozinka.Text,
+                                        Ime = uiUnosImena.Text,
+                                        Prezime = uiUnosPrezimena.Text,
+                                        OIB = uiUnosOIB.Text,
+                                        Adresa = uiUnosAdrese.Text,
+                                        Email = uiUnosEmaila.Text,
+                                        Broj_telefona = uiUnosTelefona.Text,
+                                        Korisnicko_ime = uiUnosKorisnickogImena.Text,
+                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text),
+                                        Lozinka = uiUnosLozinke.Text,
                                         UlogaID_uloge = 3,
                                      
                                     };
@@ -78,15 +78,15 @@ namespace GeoApp
                                 {
                                     var korisnik = new Korisnik
                                     {
-                                        Ime = txtIme.Text,
-                                        Prezime = txtPrezime.Text,
-                                        OIB = txtOib.Text,
-                                        Adresa = txtAdresa.Text,
-                                        Email = txtEmail.Text,
-                                        Broj_telefona = txtTelefon.Text,
-                                        Korisnicko_ime = txtKorIme.Text,
-                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text),
-                                        Lozinka = txtLozinka.Text,
+                                        Ime = uiUnosImena.Text,
+                                        Prezime = uiUnosPrezimena.Text,
+                                        OIB = uiUnosOIB.Text,
+                                        Adresa = uiUnosAdrese.Text,
+                                        Email = uiUnosEmaila.Text,
+                                        Broj_telefona = uiUnosTelefona.Text,
+                                        Korisnicko_ime = uiUnosKorisnickogImena.Text,
+                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text),
+                                        Lozinka = uiUnosLozinke.Text,
                                         UlogaID_uloge = 2,
                                       
                                     };
@@ -175,35 +175,35 @@ namespace GeoApp
                 popisOIB = oib.ToList();
             }
 
-            if (IsValidOIB(txtOib.Text))
+            if (IsValidOIB(uiUnosOIB.Text))
             {
-                txtOib.BackColor = Color.FromArgb(82, 193, 119);
-                txtOib.ForeColor = Color.White;
+                uiUnosOIB.BackColor = Color.FromArgb(82, 193, 119);
+                uiUnosOIB.ForeColor = Color.White;
                 foreach (var item in popisOIB)
                 {
-                    if (item == txtOib.Text)
+                    if (item == uiUnosOIB.Text)
                     {
-                        txtOib.BackColor = Color.FromArgb(243, 92, 99);
-                        txtOib.ForeColor = Color.White;
+                        uiUnosOIB.BackColor = Color.FromArgb(243, 92, 99);
+                        uiUnosOIB.ForeColor = Color.White;
                         break;
                     }
-                    else if (txtOib.Text == "")
+                    else if (uiUnosOIB.Text == "")
                     {
-                        txtOib.BackColor = Color.FromArgb(243, 92, 99);
-                        txtOib.ForeColor = Color.White;
+                        uiUnosOIB.BackColor = Color.FromArgb(243, 92, 99);
+                        uiUnosOIB.ForeColor = Color.White;
                     }
 
                 }
             }
-            else if (txtOib.Text == "")
+            else if (uiUnosOIB.Text == "")
             {
-                txtOib.BackColor = Color.FromArgb(243, 92, 99);
-                txtOib.ForeColor = Color.White;
+                uiUnosOIB.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosOIB.ForeColor = Color.White;
             }
             else
             {
-                txtOib.BackColor = Color.FromArgb(243, 92, 99);
-                txtOib.ForeColor = Color.White;
+                uiUnosOIB.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosOIB.ForeColor = Color.White;
             }
         }
 
@@ -218,21 +218,21 @@ namespace GeoApp
             }
             foreach (var item in popisKorisnika)
             {
-                if (item == txtKorIme.Text)
+                if (item == uiUnosKorisnickogImena.Text)
                 {
-                    txtKorIme.BackColor = Color.FromArgb(243, 92, 99);
-                    txtKorIme.ForeColor = Color.White;
+                    uiUnosKorisnickogImena.BackColor = Color.FromArgb(243, 92, 99);
+                    uiUnosKorisnickogImena.ForeColor = Color.White;
                     break;
                 }
-                else if (txtKorIme.Text == "")
+                else if (uiUnosKorisnickogImena.Text == "")
                 {
-                    txtKorIme.BackColor = Color.FromArgb(243, 92, 99);
-                    txtKorIme.ForeColor = Color.White;
+                    uiUnosKorisnickogImena.BackColor = Color.FromArgb(243, 92, 99);
+                    uiUnosKorisnickogImena.ForeColor = Color.White;
                 }
                 else
                 {
-                    txtKorIme.BackColor = Color.FromArgb(82, 193, 119);
-                    txtKorIme.ForeColor = Color.White;
+                    uiUnosKorisnickogImena.BackColor = Color.FromArgb(82, 193, 119);
+                    uiUnosKorisnickogImena.ForeColor = Color.White;
                 }
             }
         }
@@ -252,82 +252,82 @@ namespace GeoApp
                 popisEmaila = email.ToList();
             }
 
-            if (IsValidEmail(txtEmail.Text))
+            if (IsValidEmail(uiUnosEmaila.Text))
             {
-                txtEmail.BackColor = Color.FromArgb(82, 193, 119);
-                txtEmail.ForeColor = Color.White;
+                uiUnosEmaila.BackColor = Color.FromArgb(82, 193, 119);
+                uiUnosEmaila.ForeColor = Color.White;
                 foreach (var item in popisEmaila)
                 {
-                    if (item == txtEmail.Text)
+                    if (item == uiUnosEmaila.Text)
                     {
-                        txtEmail.BackColor = Color.FromArgb(243, 92, 99);
-                        txtEmail.ForeColor = Color.White;
+                        uiUnosEmaila.BackColor = Color.FromArgb(243, 92, 99);
+                        uiUnosEmaila.ForeColor = Color.White;
                         break;
                     }
-                    else if (txtEmail.Text == "")
+                    else if (uiUnosEmaila.Text == "")
                     {
-                        txtEmail.BackColor = Color.FromArgb(243, 92, 99);
-                        txtEmail.ForeColor = Color.White;
+                        uiUnosEmaila.BackColor = Color.FromArgb(243, 92, 99);
+                        uiUnosEmaila.ForeColor = Color.White;
                     }
                     else
                     {
-                        txtEmail.BackColor = Color.FromArgb(82, 193, 119);
-                        txtEmail.ForeColor = Color.White;
+                        uiUnosEmaila.BackColor = Color.FromArgb(82, 193, 119);
+                        uiUnosEmaila.ForeColor = Color.White;
                     }
                 }
             }
-            else if (txtEmail.Text == "")
+            else if (uiUnosEmaila.Text == "")
             {
-                txtEmail.BackColor = Color.FromArgb(243, 92, 99);
-                txtEmail.ForeColor = Color.White;
+                uiUnosEmaila.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosEmaila.ForeColor = Color.White;
             }
             else
             {
-                txtEmail.BackColor = Color.FromArgb(243, 92, 99);
-                txtEmail.ForeColor = Color.White;
+                uiUnosEmaila.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosEmaila.ForeColor = Color.White;
             }
         }
 
         private void txtPonovi_TextChanged(object sender, EventArgs e)
         {
-            if (txtPonovi.Text == "")
+            if (uiUnosPonovljeneLozinke.Text == "")
             {
-                txtPonovi.BackColor = Color.FromArgb(243, 92, 99);
-                txtPonovi.ForeColor = Color.White;
+                uiUnosPonovljeneLozinke.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosPonovljeneLozinke.ForeColor = Color.White;
             }
 
-            else if (txtLozinka.Text == txtPonovi.Text)
+            else if (uiUnosLozinke.Text == uiUnosPonovljeneLozinke.Text)
             {
-                txtPonovi.BackColor = Color.FromArgb(82, 193, 119);
-                txtPonovi.ForeColor = Color.White;
+                uiUnosPonovljeneLozinke.BackColor = Color.FromArgb(82, 193, 119);
+                uiUnosPonovljeneLozinke.ForeColor = Color.White;
             }
 
 
             else
             {
-                txtPonovi.BackColor = Color.FromArgb(243, 92, 99);
-                txtPonovi.ForeColor = Color.White;
+                uiUnosPonovljeneLozinke.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosPonovljeneLozinke.ForeColor = Color.White;
             }
         }
 
         private void txtLozinka_TextChanged(object sender, EventArgs e)
         {
-            if (txtPonovi.Text == "")
+            if (uiUnosPonovljeneLozinke.Text == "")
             {
-                txtPonovi.BackColor = Color.White;
+                uiUnosPonovljeneLozinke.BackColor = Color.White;
             }
 
-            else if (txtLozinka.Text == txtPonovi.Text)
+            else if (uiUnosLozinke.Text == uiUnosPonovljeneLozinke.Text)
             {
-                txtPonovi.BackColor = Color.FromArgb(82, 193, 119);
-                txtPonovi.ForeColor = Color.White;
+                uiUnosPonovljeneLozinke.BackColor = Color.FromArgb(82, 193, 119);
+                uiUnosPonovljeneLozinke.ForeColor = Color.White;
             }
 
 
             else
             {
-                txtPonovi.BackColor = Color.FromArgb(243, 92, 99);
-                txtPonovi.ForeColor = Color.White;
+                uiUnosPonovljeneLozinke.BackColor = Color.FromArgb(243, 92, 99);
+                uiUnosPonovljeneLozinke.ForeColor = Color.White;
             }
         }
 

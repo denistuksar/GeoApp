@@ -36,17 +36,17 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.natrag = new System.Windows.Forms.Button();
-            this.registriraj = new System.Windows.Forms.Button();
-            this.txtIme = new System.Windows.Forms.TextBox();
-            this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.txtOib = new System.Windows.Forms.TextBox();
-            this.txtAdresa = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.txtKorIme = new System.Windows.Forms.TextBox();
-            this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.txtPonovi = new System.Windows.Forms.TextBox();
+            this.uiNatrag = new System.Windows.Forms.Button();
+            this.uiRegistrirajKorisnika = new System.Windows.Forms.Button();
+            this.uiUnosImena = new System.Windows.Forms.TextBox();
+            this.uiUnosPrezimena = new System.Windows.Forms.TextBox();
+            this.uiUnosOIB = new System.Windows.Forms.TextBox();
+            this.uiUnosAdrese = new System.Windows.Forms.TextBox();
+            this.uiUnosEmaila = new System.Windows.Forms.TextBox();
+            this.uiUnosTelefona = new System.Windows.Forms.TextBox();
+            this.uiUnosKorisnickogImena = new System.Windows.Forms.TextBox();
+            this.uiUnosLozinke = new System.Windows.Forms.TextBox();
+            this.uiUnosPonovljeneLozinke = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.helpRegistracija = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
@@ -139,121 +139,121 @@
             this.label1.TabIndex = 18;
             this.label1.Text = "Ime:";
             // 
-            // natrag
+            // uiNatrag
             // 
-            this.natrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.natrag.FlatAppearance.BorderSize = 0;
-            this.natrag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.natrag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.natrag.Location = new System.Drawing.Point(24, 526);
-            this.natrag.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.natrag.Name = "natrag";
-            this.natrag.Size = new System.Drawing.Size(375, 33);
-            this.natrag.TabIndex = 35;
-            this.natrag.Text = "Natrag";
-            this.natrag.UseVisualStyleBackColor = false;
-            this.natrag.Click += new System.EventHandler(this.natrag_Click);
+            this.uiNatrag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiNatrag.FlatAppearance.BorderSize = 0;
+            this.uiNatrag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiNatrag.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiNatrag.Location = new System.Drawing.Point(24, 526);
+            this.uiNatrag.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.uiNatrag.Name = "uiNatrag";
+            this.uiNatrag.Size = new System.Drawing.Size(375, 33);
+            this.uiNatrag.TabIndex = 35;
+            this.uiNatrag.Text = "Natrag";
+            this.uiNatrag.UseVisualStyleBackColor = false;
+            this.uiNatrag.Click += new System.EventHandler(this.natrag_Click);
             // 
-            // registriraj
+            // uiRegistrirajKorisnika
             // 
-            this.registriraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.registriraj.FlatAppearance.BorderSize = 0;
-            this.registriraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registriraj.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registriraj.Location = new System.Drawing.Point(24, 476);
-            this.registriraj.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.registriraj.Name = "registriraj";
-            this.registriraj.Size = new System.Drawing.Size(375, 33);
-            this.registriraj.TabIndex = 34;
-            this.registriraj.Text = "Registriraj se";
-            this.registriraj.UseVisualStyleBackColor = false;
-            this.registriraj.Click += new System.EventHandler(this.registriraj_Click);
+            this.uiRegistrirajKorisnika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiRegistrirajKorisnika.FlatAppearance.BorderSize = 0;
+            this.uiRegistrirajKorisnika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiRegistrirajKorisnika.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRegistrirajKorisnika.Location = new System.Drawing.Point(24, 476);
+            this.uiRegistrirajKorisnika.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.uiRegistrirajKorisnika.Name = "uiRegistrirajKorisnika";
+            this.uiRegistrirajKorisnika.Size = new System.Drawing.Size(375, 33);
+            this.uiRegistrirajKorisnika.TabIndex = 34;
+            this.uiRegistrirajKorisnika.Text = "Registriraj se";
+            this.uiRegistrirajKorisnika.UseVisualStyleBackColor = false;
+            this.uiRegistrirajKorisnika.Click += new System.EventHandler(this.registriraj_Click);
             // 
-            // txtIme
+            // uiUnosImena
             // 
-            this.txtIme.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIme.Location = new System.Drawing.Point(153, 29);
-            this.txtIme.Multiline = true;
-            this.txtIme.Name = "txtIme";
-            this.txtIme.Size = new System.Drawing.Size(246, 33);
-            this.txtIme.TabIndex = 36;
+            this.uiUnosImena.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosImena.Location = new System.Drawing.Point(153, 29);
+            this.uiUnosImena.Multiline = true;
+            this.uiUnosImena.Name = "uiUnosImena";
+            this.uiUnosImena.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosImena.TabIndex = 36;
             // 
-            // txtPrezime
+            // uiUnosPrezimena
             // 
-            this.txtPrezime.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrezime.Location = new System.Drawing.Point(153, 77);
-            this.txtPrezime.Multiline = true;
-            this.txtPrezime.Name = "txtPrezime";
-            this.txtPrezime.Size = new System.Drawing.Size(246, 33);
-            this.txtPrezime.TabIndex = 37;
+            this.uiUnosPrezimena.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosPrezimena.Location = new System.Drawing.Point(153, 77);
+            this.uiUnosPrezimena.Multiline = true;
+            this.uiUnosPrezimena.Name = "uiUnosPrezimena";
+            this.uiUnosPrezimena.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosPrezimena.TabIndex = 37;
             // 
-            // txtOib
+            // uiUnosOIB
             // 
-            this.txtOib.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOib.Location = new System.Drawing.Point(153, 125);
-            this.txtOib.Multiline = true;
-            this.txtOib.Name = "txtOib";
-            this.txtOib.Size = new System.Drawing.Size(246, 33);
-            this.txtOib.TabIndex = 38;
-            this.txtOib.TextChanged += new System.EventHandler(this.txtOib_TextChanged);
+            this.uiUnosOIB.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosOIB.Location = new System.Drawing.Point(153, 125);
+            this.uiUnosOIB.Multiline = true;
+            this.uiUnosOIB.Name = "uiUnosOIB";
+            this.uiUnosOIB.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosOIB.TabIndex = 38;
+            this.uiUnosOIB.TextChanged += new System.EventHandler(this.txtOib_TextChanged);
             // 
-            // txtAdresa
+            // uiUnosAdrese
             // 
-            this.txtAdresa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAdresa.Location = new System.Drawing.Point(153, 173);
-            this.txtAdresa.Multiline = true;
-            this.txtAdresa.Name = "txtAdresa";
-            this.txtAdresa.Size = new System.Drawing.Size(246, 33);
-            this.txtAdresa.TabIndex = 39;
+            this.uiUnosAdrese.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosAdrese.Location = new System.Drawing.Point(153, 173);
+            this.uiUnosAdrese.Multiline = true;
+            this.uiUnosAdrese.Name = "uiUnosAdrese";
+            this.uiUnosAdrese.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosAdrese.TabIndex = 39;
             // 
-            // txtEmail
+            // uiUnosEmaila
             // 
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(153, 222);
-            this.txtEmail.Multiline = true;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(246, 33);
-            this.txtEmail.TabIndex = 40;
-            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
+            this.uiUnosEmaila.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosEmaila.Location = new System.Drawing.Point(153, 222);
+            this.uiUnosEmaila.Multiline = true;
+            this.uiUnosEmaila.Name = "uiUnosEmaila";
+            this.uiUnosEmaila.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosEmaila.TabIndex = 40;
+            this.uiUnosEmaila.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
-            // txtTelefon
+            // uiUnosTelefona
             // 
-            this.txtTelefon.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefon.Location = new System.Drawing.Point(153, 271);
-            this.txtTelefon.Multiline = true;
-            this.txtTelefon.Name = "txtTelefon";
-            this.txtTelefon.Size = new System.Drawing.Size(246, 33);
-            this.txtTelefon.TabIndex = 41;
+            this.uiUnosTelefona.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosTelefona.Location = new System.Drawing.Point(153, 271);
+            this.uiUnosTelefona.Multiline = true;
+            this.uiUnosTelefona.Name = "uiUnosTelefona";
+            this.uiUnosTelefona.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosTelefona.TabIndex = 41;
             // 
-            // txtKorIme
+            // uiUnosKorisnickogImena
             // 
-            this.txtKorIme.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKorIme.Location = new System.Drawing.Point(153, 321);
-            this.txtKorIme.Multiline = true;
-            this.txtKorIme.Name = "txtKorIme";
-            this.txtKorIme.Size = new System.Drawing.Size(246, 33);
-            this.txtKorIme.TabIndex = 42;
-            this.txtKorIme.TextChanged += new System.EventHandler(this.txtKorIme_TextChanged);
+            this.uiUnosKorisnickogImena.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosKorisnickogImena.Location = new System.Drawing.Point(153, 321);
+            this.uiUnosKorisnickogImena.Multiline = true;
+            this.uiUnosKorisnickogImena.Name = "uiUnosKorisnickogImena";
+            this.uiUnosKorisnickogImena.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosKorisnickogImena.TabIndex = 42;
+            this.uiUnosKorisnickogImena.TextChanged += new System.EventHandler(this.txtKorIme_TextChanged);
             // 
-            // txtLozinka
+            // uiUnosLozinke
             // 
-            this.txtLozinka.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLozinka.Location = new System.Drawing.Point(153, 371);
-            this.txtLozinka.Multiline = true;
-            this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(246, 33);
-            this.txtLozinka.TabIndex = 43;
-            this.txtLozinka.TextChanged += new System.EventHandler(this.txtLozinka_TextChanged);
+            this.uiUnosLozinke.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosLozinke.Location = new System.Drawing.Point(153, 371);
+            this.uiUnosLozinke.Multiline = true;
+            this.uiUnosLozinke.Name = "uiUnosLozinke";
+            this.uiUnosLozinke.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosLozinke.TabIndex = 43;
+            this.uiUnosLozinke.TextChanged += new System.EventHandler(this.txtLozinka_TextChanged);
             // 
-            // txtPonovi
+            // uiUnosPonovljeneLozinke
             // 
-            this.txtPonovi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPonovi.Location = new System.Drawing.Point(153, 421);
-            this.txtPonovi.Multiline = true;
-            this.txtPonovi.Name = "txtPonovi";
-            this.txtPonovi.Size = new System.Drawing.Size(246, 33);
-            this.txtPonovi.TabIndex = 48;
-            this.txtPonovi.TextChanged += new System.EventHandler(this.txtPonovi_TextChanged);
+            this.uiUnosPonovljeneLozinke.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosPonovljeneLozinke.Location = new System.Drawing.Point(153, 421);
+            this.uiUnosPonovljeneLozinke.Multiline = true;
+            this.uiUnosPonovljeneLozinke.Name = "uiUnosPonovljeneLozinke";
+            this.uiUnosPonovljeneLozinke.Size = new System.Drawing.Size(246, 33);
+            this.uiUnosPonovljeneLozinke.TabIndex = 48;
+            this.uiUnosPonovljeneLozinke.TextChanged += new System.EventHandler(this.txtPonovi_TextChanged);
             // 
             // label10
             // 
@@ -272,18 +272,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(423, 584);
-            this.Controls.Add(this.txtPonovi);
+            this.Controls.Add(this.uiUnosPonovljeneLozinke);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtLozinka);
-            this.Controls.Add(this.txtKorIme);
-            this.Controls.Add(this.txtTelefon);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtAdresa);
-            this.Controls.Add(this.txtOib);
-            this.Controls.Add(this.txtPrezime);
-            this.Controls.Add(this.txtIme);
-            this.Controls.Add(this.natrag);
-            this.Controls.Add(this.registriraj);
+            this.Controls.Add(this.uiUnosLozinke);
+            this.Controls.Add(this.uiUnosKorisnickogImena);
+            this.Controls.Add(this.uiUnosTelefona);
+            this.Controls.Add(this.uiUnosEmaila);
+            this.Controls.Add(this.uiUnosAdrese);
+            this.Controls.Add(this.uiUnosOIB);
+            this.Controls.Add(this.uiUnosPrezimena);
+            this.Controls.Add(this.uiUnosImena);
+            this.Controls.Add(this.uiNatrag);
+            this.Controls.Add(this.uiRegistrirajKorisnika);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -316,17 +316,17 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button natrag;
-        private System.Windows.Forms.Button registriraj;
-        private System.Windows.Forms.TextBox txtIme;
-        private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.TextBox txtOib;
-        private System.Windows.Forms.TextBox txtAdresa;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.TextBox txtKorIme;
-        private System.Windows.Forms.TextBox txtLozinka;
-        private System.Windows.Forms.TextBox txtPonovi;
+        private System.Windows.Forms.Button uiNatrag;
+        private System.Windows.Forms.Button uiRegistrirajKorisnika;
+        private System.Windows.Forms.TextBox uiUnosImena;
+        private System.Windows.Forms.TextBox uiUnosPrezimena;
+        private System.Windows.Forms.TextBox uiUnosOIB;
+        private System.Windows.Forms.TextBox uiUnosAdrese;
+        private System.Windows.Forms.TextBox uiUnosEmaila;
+        private System.Windows.Forms.TextBox uiUnosTelefona;
+        private System.Windows.Forms.TextBox uiUnosKorisnickogImena;
+        private System.Windows.Forms.TextBox uiUnosLozinke;
+        private System.Windows.Forms.TextBox uiUnosPonovljeneLozinke;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.HelpProvider helpRegistracija;
     }

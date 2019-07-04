@@ -47,12 +47,12 @@ namespace GeoApp
                             select n;
                 narudzba = query.ToList();
             }
-            dgvNarudzbe.DataSource = narudzba;
-            dgvNarudzbe.Columns[0].HeaderText = "ID narudžbe";
-            dgvNarudzbe.Columns[1].HeaderText = "ID korisnika";
-            dgvNarudzbe.Columns[4].Visible = false;
-            dgvNarudzbe.Columns[5].Visible = false;
-            dgvNarudzbe.Columns[6].Visible = false;
+            uiPrikazNarudzbi.DataSource = narudzba;
+            uiPrikazNarudzbi.Columns[0].HeaderText = "ID narudžbe";
+            uiPrikazNarudzbi.Columns[1].HeaderText = "ID korisnika";
+            uiPrikazNarudzbi.Columns[4].Visible = false;
+            uiPrikazNarudzbi.Columns[5].Visible = false;
+            uiPrikazNarudzbi.Columns[6].Visible = false;
          
         }
 
@@ -66,20 +66,20 @@ namespace GeoApp
                             select n;
                 narudzba = query.ToList();
             }
-            dgvOdobrene.DataSource = narudzba;
-            dgvOdobrene.Columns[0].HeaderText = "ID narudžbe";
-            dgvOdobrene.Columns[1].HeaderText = "ID korisnika";
-            dgvOdobrene.Columns[4].Visible = false;
-            dgvOdobrene.Columns[5].Visible = false;
-            dgvOdobrene.Columns[6].Visible = false;
+            uiPrikazOdobrenihNarudzba.DataSource = narudzba;
+            uiPrikazOdobrenihNarudzba.Columns[0].HeaderText = "ID narudžbe";
+            uiPrikazOdobrenihNarudzba.Columns[1].HeaderText = "ID korisnika";
+            uiPrikazOdobrenihNarudzba.Columns[4].Visible = false;
+            uiPrikazOdobrenihNarudzba.Columns[5].Visible = false;
+            uiPrikazOdobrenihNarudzba.Columns[6].Visible = false;
        
         }
 
         private void btnOdobri_Click(object sender, EventArgs e)
         {
-            if (dgvNarudzbe.Rows.Count != 0)
+            if (uiPrikazNarudzbi.Rows.Count != 0)
             {
-                Narudzba selektiranaNarudzba = dgvNarudzbe.CurrentRow.DataBoundItem as Narudzba;
+                Narudzba selektiranaNarudzba = uiPrikazNarudzbi.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
                     using (var db = new Entities1())
@@ -100,9 +100,9 @@ namespace GeoApp
 
         private void btnOdbaci_Click(object sender, EventArgs e)
         {
-            if (dgvNarudzbe.CurrentRow != null)
+            if (uiPrikazNarudzbi.CurrentRow != null)
             {
-                Narudzba selektiranaNarudzba = dgvNarudzbe.CurrentRow.DataBoundItem as Narudzba;
+                Narudzba selektiranaNarudzba = uiPrikazNarudzbi.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
                     if (MessageBox.Show("Da li ste sigurni da želite odbaciti narudžbu?", "Upozorenje!",
@@ -130,9 +130,9 @@ namespace GeoApp
 
         private void btnDetalji_Click(object sender, EventArgs e)
         {
-            if(dgvNarudzbe.Rows.Count != 0)
+            if(uiPrikazNarudzbi.Rows.Count != 0)
             {
-                Narudzba selektiranaNarudzba = dgvNarudzbe.CurrentRow.DataBoundItem as Narudzba;
+                Narudzba selektiranaNarudzba = uiPrikazNarudzbi.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
                     DetaljiNarudzbe detaljiNarudzbe = new DetaljiNarudzbe(selektiranaNarudzba.ID_narudzbe);
@@ -164,9 +164,9 @@ namespace GeoApp
 
         private void btnPonisti_Click(object sender, EventArgs e)
         {
-            if (dgvOdobrene.Rows.Count != 0)
+            if (uiPrikazOdobrenihNarudzba.Rows.Count != 0)
             {
-                Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
+                Narudzba selektiranaNarudzba = uiPrikazOdobrenihNarudzba.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
                     using (var db = new Entities1())
@@ -187,9 +187,9 @@ namespace GeoApp
 
         private void btnDetalji2_Click(object sender, EventArgs e)
         {
-            if (dgvOdobrene.Rows.Count != 0)
+            if (uiPrikazOdobrenihNarudzba.Rows.Count != 0)
             {
-                Narudzba selektiranaNarudzba = dgvOdobrene.CurrentRow.DataBoundItem as Narudzba;
+                Narudzba selektiranaNarudzba = uiPrikazOdobrenihNarudzba.CurrentRow.DataBoundItem as Narudzba;
                 if (selektiranaNarudzba != null)
                 {
                     DetaljiNarudzbe detaljiNarudzbe = new DetaljiNarudzbe(selektiranaNarudzba.ID_narudzbe);

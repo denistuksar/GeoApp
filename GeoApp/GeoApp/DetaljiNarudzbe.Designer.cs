@@ -31,21 +31,21 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgvDetalji = new System.Windows.Forms.DataGridView();
+            this.uiPrikazDetalja = new System.Windows.Forms.DataGridView();
             this.lblCijena = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.helpDetaljiNarudzbe = new System.Windows.Forms.HelpProvider();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalji)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPrikazDetalja)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvDetalji
+            // uiPrikazDetalja
             // 
-            this.dgvDetalji.AllowUserToAddRows = false;
-            this.dgvDetalji.AllowUserToDeleteRows = false;
-            this.dgvDetalji.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.dgvDetalji.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvDetalji.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvDetalji.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.uiPrikazDetalja.AllowUserToAddRows = false;
+            this.uiPrikazDetalja.AllowUserToDeleteRows = false;
+            this.uiPrikazDetalja.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.uiPrikazDetalja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uiPrikazDetalja.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.uiPrikazDetalja.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -53,8 +53,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalji.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDetalji.ColumnHeadersHeight = 25;
+            this.uiPrikazDetalja.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.uiPrikazDetalja.ColumnHeadersHeight = 25;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -62,13 +62,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDetalji.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvDetalji.EnableHeadersVisualStyles = false;
-            this.dgvDetalji.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvDetalji.Location = new System.Drawing.Point(12, 43);
-            this.dgvDetalji.Name = "dgvDetalji";
-            this.dgvDetalji.ReadOnly = true;
-            this.dgvDetalji.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.uiPrikazDetalja.DefaultCellStyle = dataGridViewCellStyle2;
+            this.uiPrikazDetalja.EnableHeadersVisualStyles = false;
+            this.uiPrikazDetalja.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiPrikazDetalja.Location = new System.Drawing.Point(12, 43);
+            this.uiPrikazDetalja.Name = "uiPrikazDetalja";
+            this.uiPrikazDetalja.ReadOnly = true;
+            this.uiPrikazDetalja.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,11 +76,11 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDetalji.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvDetalji.RowHeadersVisible = false;
-            this.dgvDetalji.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetalji.Size = new System.Drawing.Size(703, 301);
-            this.dgvDetalji.TabIndex = 20;
+            this.uiPrikazDetalja.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.uiPrikazDetalja.RowHeadersVisible = false;
+            this.uiPrikazDetalja.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiPrikazDetalja.Size = new System.Drawing.Size(703, 301);
+            this.uiPrikazDetalja.TabIndex = 20;
             // 
             // lblCijena
             // 
@@ -111,14 +111,14 @@
             this.ClientSize = new System.Drawing.Size(727, 358);
             this.Controls.Add(this.lblCijena);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dgvDetalji);
+            this.Controls.Add(this.uiPrikazDetalja);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "DetaljiNarudzbe";
             this.helpDetaljiNarudzbe.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Detalji narudžbe";
             this.Load += new System.EventHandler(this.DetaljiNarudzbe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalji)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPrikazDetalja)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,7 +126,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvDetalji;
+        private System.Windows.Forms.DataGridView uiPrikazDetalja;
         private System.Windows.Forms.Label lblCijena;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.HelpProvider helpDetaljiNarudzbe;

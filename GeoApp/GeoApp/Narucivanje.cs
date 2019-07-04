@@ -42,12 +42,12 @@ namespace GeoApp
             {
                 artikli = db.Artikl.ToList();
             }
-            dgvArtikli.DataSource = artikli;
-            dgvArtikli.Columns[0].HeaderText = "ID artikla";
-            dgvArtikli.Columns[2].Width = 200;
-            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
-            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
-            dgvArtikli.Columns[6].Visible = false;
+            uiPrikazArtikala.DataSource = artikli;
+            uiPrikazArtikala.Columns[0].HeaderText = "ID artikla";
+            uiPrikazArtikala.Columns[2].Width = 200;
+            uiPrikazArtikala.Columns[3].HeaderText = "Proizvođač";
+            uiPrikazArtikala.Columns[5].HeaderText = "Serijski broj";
+            uiPrikazArtikala.Columns[6].Visible = false;
         }
 
         private void PrikaziKosaricu()
@@ -68,11 +68,11 @@ namespace GeoApp
                                  a.Cijena,
                                  n.Kolicina
                              }).ToList();
-                dgvKosarica.DataSource = query;
-                dgvKosarica.Columns[0].HeaderText = "ID artikla";
-                dgvKosarica.Columns[3].HeaderText = "Proizvođač";
-                dgvKosarica.Columns[4].HeaderText = "Serijski broj";
-                dgvKosarica.Columns[6].HeaderText = "Količina";
+                uiPrikazKosarice.DataSource = query;
+                uiPrikazKosarice.Columns[0].HeaderText = "ID artikla";
+                uiPrikazKosarice.Columns[3].HeaderText = "Proizvođač";
+                uiPrikazKosarice.Columns[4].HeaderText = "Serijski broj";
+                uiPrikazKosarice.Columns[6].HeaderText = "Količina";
             }
         }
 
@@ -81,7 +81,7 @@ namespace GeoApp
             helpNarucivanje.HelpNamespace = Environment.CurrentDirectory + "/help/narucivanje.html";
             PrikaziArtikle();
             this.MaximizeBox = false;
-            txtKolicina.Text = "1";       
+            uiUnosKolicine.Text = "1";       
         }
 
         private void Narucivanje_FormClosed(object sender, FormClosedEventArgs e)
@@ -113,10 +113,10 @@ namespace GeoApp
         {
             try
             {
-                Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
+                Artikl selektiraniArtikl = uiPrikazArtikala.CurrentRow.DataBoundItem as Artikl;
                 using (var db = new Entities1())
                 {
-                    int kolicina = int.Parse(txtKolicina.Text);
+                    int kolicina = int.Parse(uiUnosKolicine.Text);
                     var s = new Stavke_narudzbe
                     {
                         NarudzbaID_narudzbe = NarudzbaInfo.IDNarudzbe,
@@ -128,8 +128,8 @@ namespace GeoApp
                     suma = Convert.ToDecimal((from a in db.Stavke_narudzbe
                                  where a.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
                                  select a).Sum(b => b.Kolicina * b.Artikl.Cijena));
-                    lblCijena.Text = suma.ToString();
-                    lblCijena.Text += " HRK";
+                    uiPrikazCijene.Text = suma.ToString();
+                    uiPrikazCijene.Text += " HRK";
                 }
                 PrikaziKosaricu();
             }
@@ -145,8 +145,8 @@ namespace GeoApp
         {
             try
             {
-                var selektiraniArtikl = (int)dgvKosarica.CurrentRow.Cells[0].Value;
-                if (dgvKosarica.Rows.Count != 0)
+                var selektiraniArtikl = (int)uiPrikazKosarice.CurrentRow.Cells[0].Value;
+                if (uiPrikazKosarice.Rows.Count != 0)
                 {
                     using (var db = new Entities1())
                     {
@@ -156,15 +156,15 @@ namespace GeoApp
                         suma = Convert.ToDecimal((from a in db.Stavke_narudzbe
                                                   where a.NarudzbaID_narudzbe == NarudzbaInfo.IDNarudzbe
                                                   select a).Sum(b => b.Kolicina * b.Artikl.Cijena));
-                        lblCijena.Text = suma.ToString();
-                        lblCijena.Text += " HRK";
+                        uiPrikazCijene.Text = suma.ToString();
+                        uiPrikazCijene.Text += " HRK";
                     }
                     PrikaziKosaricu();
                 }
                 else
                 {
-                    lblCijena.Text = "0";
-                    lblCijena.Text += " HRK";
+                    uiPrikazCijene.Text = "0";
+                    uiPrikazCijene.Text += " HRK";
                     PrikaziKosaricu();
                 }
             }
@@ -178,7 +178,7 @@ namespace GeoApp
 
         private void btnNaruci_Click(object sender, EventArgs e)
         {
-            if (dgvKosarica.Rows.Count != 0)
+            if (uiPrikazKosarice.Rows.Count != 0)
             {
                 if (MessageBox.Show("Da li ste sigurni da želite naručiti artikle?", "Upozorenje!",
                       MessageBoxButtons.YesNo) ==
@@ -202,29 +202,29 @@ namespace GeoApp
             using (var db = new Entities1())
             {
                 var query = from a in db.Artikl
-                            where a.Naziv.Contains(txtSearch.Text)
+                            where a.Naziv.Contains(uiSearch.Text)
                             select a;
-                dgvArtikli.DataSource = query.ToList();
+                uiPrikazArtikala.DataSource = query.ToList();
             }
-            dgvArtikli.Columns[0].HeaderText = "ID artikla";
-            dgvArtikli.Columns[2].Width = 200;
-            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
-            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
-            dgvArtikli.Columns[6].Visible = false;
+            uiPrikazArtikala.Columns[0].HeaderText = "ID artikla";
+            uiPrikazArtikala.Columns[2].Width = 200;
+            uiPrikazArtikala.Columns[3].HeaderText = "Proizvođač";
+            uiPrikazArtikala.Columns[5].HeaderText = "Serijski broj";
+            uiPrikazArtikala.Columns[6].Visible = false;
         }
 
         private void dgvArtikli_SelectionChanged(object sender, EventArgs e)
         {
-            nazivArtikla.Text = dgvArtikli.CurrentRow.Cells[1].Value.ToString();
-            opisArtikla.Text = dgvArtikli.CurrentRow.Cells[2].Value.ToString();
-            proizvodacArtikla.Text = dgvArtikli.CurrentRow.Cells[3].Value.ToString();
-            cijenaArtikla.Text = dgvArtikli.CurrentRow.Cells[4].Value.ToString();
-            serijskiBrojArtikla.Text = dgvArtikli.CurrentRow.Cells[5].Value.ToString();
+            uiNazivArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[1].Value.ToString();
+            uiOpisArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[2].Value.ToString();
+            uiProizvodacArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[3].Value.ToString();
+            uiCijenaArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[4].Value.ToString();
+            uiSerijskiBrojArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[5].Value.ToString();
         }
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-            FrmReport frmReport = new FrmReport();
+            Report frmReport = new Report();
             frmReport.ShowDialog();
         }
     }

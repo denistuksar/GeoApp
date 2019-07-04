@@ -15,8 +15,8 @@ namespace GeoApp
         public Pocetna()
         {
             InitializeComponent();
-            txtKorime.Text = LoginInfo.Korime;
-            txtUloga.Text = LoginInfo.Uloga;
+            uiPrikazKorisnickogImena.Text = LoginInfo.Korime;
+            uiPrikazUloge.Text = LoginInfo.Uloga;
         }
 
         private void unosUredaja_Click(object sender, EventArgs e)
@@ -45,9 +45,9 @@ namespace GeoApp
             if (LoginInfo.Uloga == "Kupac")
             {
              
-                unosUredaja.Visible = false;
-                azuriranjeUredaja.Visible = false;
-                btnOvlasti.Visible = false;
+                uiUnesiArtikl.Visible = false;
+                uiAzurirajUredaj.Visible = false;
+                uiUrediUloge.Visible = false;
                 btnServis.Location = new Point(73, 146);
                 this.Size = new Size(384, 220);
             }
@@ -55,7 +55,7 @@ namespace GeoApp
             {
 
                 btnServis.Location = new Point(73, 324);
-                btnOvlasti.Visible = false;
+                uiUrediUloge.Visible = false;
               
                 this.Size = new Size(384, 430);
             }

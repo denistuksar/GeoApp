@@ -35,32 +35,32 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.dgvArtikli = new System.Windows.Forms.DataGridView();
-            this.btnDodaj = new System.Windows.Forms.Button();
+            this.uiPrikazArtikala = new System.Windows.Forms.DataGridView();
+            this.uiDodajKosarici = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvKosarica = new System.Windows.Forms.DataGridView();
-            this.btnNaruci = new System.Windows.Forms.Button();
-            this.btnIzbrisi = new System.Windows.Forms.Button();
+            this.uiPrikazKosarice = new System.Windows.Forms.DataGridView();
+            this.uiNaruciArtikl = new System.Windows.Forms.Button();
+            this.uiObrisiIzkosarice = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtKolicina = new System.Windows.Forms.TextBox();
+            this.uiUnosKolicine = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lblCijena = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.uiPrikazCijene = new System.Windows.Forms.Label();
+            this.uiSearch = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.serijskiBrojArtikla = new System.Windows.Forms.TextBox();
-            this.cijenaArtikla = new System.Windows.Forms.TextBox();
-            this.proizvodacArtikla = new System.Windows.Forms.TextBox();
-            this.opisArtikla = new System.Windows.Forms.TextBox();
-            this.nazivArtikla = new System.Windows.Forms.TextBox();
+            this.uiSerijskiBrojArtikla = new System.Windows.Forms.TextBox();
+            this.uiCijenaArtikla = new System.Windows.Forms.TextBox();
+            this.uiProizvodacArtikla = new System.Windows.Forms.TextBox();
+            this.uiOpisArtikla = new System.Windows.Forms.TextBox();
+            this.uiNazivArtikla = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.helpNarucivanje = new System.Windows.Forms.HelpProvider();
-            this.btnReport = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).BeginInit();
+            this.uiPrikaziSveArtikle = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPrikazArtikala)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPrikazKosarice)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -74,15 +74,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Artikli:";
             // 
-            // dgvArtikli
+            // uiPrikazArtikala
             // 
-            this.dgvArtikli.AllowUserToAddRows = false;
-            this.dgvArtikli.AllowUserToDeleteRows = false;
-            this.dgvArtikli.AllowUserToOrderColumns = true;
-            this.dgvArtikli.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.dgvArtikli.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvArtikli.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvArtikli.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.uiPrikazArtikala.AllowUserToAddRows = false;
+            this.uiPrikazArtikala.AllowUserToDeleteRows = false;
+            this.uiPrikazArtikala.AllowUserToOrderColumns = true;
+            this.uiPrikazArtikala.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.uiPrikazArtikala.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uiPrikazArtikala.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.uiPrikazArtikala.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,8 +90,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArtikli.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvArtikli.ColumnHeadersHeight = 25;
+            this.uiPrikazArtikala.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.uiPrikazArtikala.ColumnHeadersHeight = 25;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -99,13 +99,13 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvArtikli.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvArtikli.EnableHeadersVisualStyles = false;
-            this.dgvArtikli.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvArtikli.Location = new System.Drawing.Point(13, 37);
-            this.dgvArtikli.Name = "dgvArtikli";
-            this.dgvArtikli.ReadOnly = true;
-            this.dgvArtikli.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.uiPrikazArtikala.DefaultCellStyle = dataGridViewCellStyle2;
+            this.uiPrikazArtikala.EnableHeadersVisualStyles = false;
+            this.uiPrikazArtikala.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiPrikazArtikala.Location = new System.Drawing.Point(13, 37);
+            this.uiPrikazArtikala.Name = "uiPrikazArtikala";
+            this.uiPrikazArtikala.ReadOnly = true;
+            this.uiPrikazArtikala.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -113,27 +113,27 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArtikli.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvArtikli.RowHeadersVisible = false;
-            this.dgvArtikli.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArtikli.Size = new System.Drawing.Size(717, 216);
-            this.dgvArtikli.TabIndex = 18;
-            this.dgvArtikli.SelectionChanged += new System.EventHandler(this.dgvArtikli_SelectionChanged);
+            this.uiPrikazArtikala.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.uiPrikazArtikala.RowHeadersVisible = false;
+            this.uiPrikazArtikala.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiPrikazArtikala.Size = new System.Drawing.Size(717, 216);
+            this.uiPrikazArtikala.TabIndex = 18;
+            this.uiPrikazArtikala.SelectionChanged += new System.EventHandler(this.dgvArtikli_SelectionChanged);
             // 
-            // btnDodaj
+            // uiDodajKosarici
             // 
-            this.btnDodaj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnDodaj.FlatAppearance.BorderSize = 0;
-            this.btnDodaj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDodaj.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDodaj.ForeColor = System.Drawing.Color.White;
-            this.btnDodaj.Location = new System.Drawing.Point(603, 271);
-            this.btnDodaj.Name = "btnDodaj";
-            this.btnDodaj.Size = new System.Drawing.Size(127, 28);
-            this.btnDodaj.TabIndex = 19;
-            this.btnDodaj.Text = "Dodaj u košaricu";
-            this.btnDodaj.UseVisualStyleBackColor = false;
-            this.btnDodaj.Click += new System.EventHandler(this.btnDodaj_Click);
+            this.uiDodajKosarici.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiDodajKosarici.FlatAppearance.BorderSize = 0;
+            this.uiDodajKosarici.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiDodajKosarici.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiDodajKosarici.ForeColor = System.Drawing.Color.White;
+            this.uiDodajKosarici.Location = new System.Drawing.Point(603, 271);
+            this.uiDodajKosarici.Name = "uiDodajKosarici";
+            this.uiDodajKosarici.Size = new System.Drawing.Size(127, 28);
+            this.uiDodajKosarici.TabIndex = 19;
+            this.uiDodajKosarici.Text = "Dodaj u košaricu";
+            this.uiDodajKosarici.UseVisualStyleBackColor = false;
+            this.uiDodajKosarici.Click += new System.EventHandler(this.btnDodaj_Click);
             // 
             // label2
             // 
@@ -146,14 +146,14 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Košarica:";
             // 
-            // dgvKosarica
+            // uiPrikazKosarice
             // 
-            this.dgvKosarica.AllowUserToAddRows = false;
-            this.dgvKosarica.AllowUserToDeleteRows = false;
-            this.dgvKosarica.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.dgvKosarica.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvKosarica.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvKosarica.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.uiPrikazKosarice.AllowUserToAddRows = false;
+            this.uiPrikazKosarice.AllowUserToDeleteRows = false;
+            this.uiPrikazKosarice.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.uiPrikazKosarice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.uiPrikazKosarice.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.uiPrikazKosarice.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -161,8 +161,8 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKosarica.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvKosarica.ColumnHeadersHeight = 25;
+            this.uiPrikazKosarice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.uiPrikazKosarice.ColumnHeadersHeight = 25;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -170,13 +170,13 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlLight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvKosarica.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvKosarica.EnableHeadersVisualStyles = false;
-            this.dgvKosarica.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dgvKosarica.Location = new System.Drawing.Point(13, 344);
-            this.dgvKosarica.Name = "dgvKosarica";
-            this.dgvKosarica.ReadOnly = true;
-            this.dgvKosarica.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.uiPrikazKosarice.DefaultCellStyle = dataGridViewCellStyle5;
+            this.uiPrikazKosarice.EnableHeadersVisualStyles = false;
+            this.uiPrikazKosarice.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.uiPrikazKosarice.Location = new System.Drawing.Point(13, 344);
+            this.uiPrikazKosarice.Name = "uiPrikazKosarice";
+            this.uiPrikazKosarice.ReadOnly = true;
+            this.uiPrikazKosarice.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,41 +184,41 @@
             dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvKosarica.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvKosarica.RowHeadersVisible = false;
-            this.dgvKosarica.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvKosarica.Size = new System.Drawing.Size(705, 216);
-            this.dgvKosarica.TabIndex = 21;
+            this.uiPrikazKosarice.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.uiPrikazKosarice.RowHeadersVisible = false;
+            this.uiPrikazKosarice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.uiPrikazKosarice.Size = new System.Drawing.Size(705, 216);
+            this.uiPrikazKosarice.TabIndex = 21;
             // 
-            // btnNaruci
+            // uiNaruciArtikl
             // 
-            this.btnNaruci.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnNaruci.FlatAppearance.BorderSize = 0;
-            this.btnNaruci.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNaruci.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNaruci.ForeColor = System.Drawing.Color.White;
-            this.btnNaruci.Location = new System.Drawing.Point(156, 572);
-            this.btnNaruci.Name = "btnNaruci";
-            this.btnNaruci.Size = new System.Drawing.Size(127, 28);
-            this.btnNaruci.TabIndex = 22;
-            this.btnNaruci.Text = "Naruči";
-            this.btnNaruci.UseVisualStyleBackColor = false;
-            this.btnNaruci.Click += new System.EventHandler(this.btnNaruci_Click);
+            this.uiNaruciArtikl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiNaruciArtikl.FlatAppearance.BorderSize = 0;
+            this.uiNaruciArtikl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiNaruciArtikl.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiNaruciArtikl.ForeColor = System.Drawing.Color.White;
+            this.uiNaruciArtikl.Location = new System.Drawing.Point(156, 572);
+            this.uiNaruciArtikl.Name = "uiNaruciArtikl";
+            this.uiNaruciArtikl.Size = new System.Drawing.Size(127, 28);
+            this.uiNaruciArtikl.TabIndex = 22;
+            this.uiNaruciArtikl.Text = "Naruči";
+            this.uiNaruciArtikl.UseVisualStyleBackColor = false;
+            this.uiNaruciArtikl.Click += new System.EventHandler(this.btnNaruci_Click);
             // 
-            // btnIzbrisi
+            // uiObrisiIzkosarice
             // 
-            this.btnIzbrisi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnIzbrisi.FlatAppearance.BorderSize = 0;
-            this.btnIzbrisi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIzbrisi.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIzbrisi.ForeColor = System.Drawing.Color.White;
-            this.btnIzbrisi.Location = new System.Drawing.Point(12, 572);
-            this.btnIzbrisi.Name = "btnIzbrisi";
-            this.btnIzbrisi.Size = new System.Drawing.Size(127, 28);
-            this.btnIzbrisi.TabIndex = 23;
-            this.btnIzbrisi.Text = "Izbriši iz košarice";
-            this.btnIzbrisi.UseVisualStyleBackColor = false;
-            this.btnIzbrisi.Click += new System.EventHandler(this.btnIzbrisi_Click);
+            this.uiObrisiIzkosarice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiObrisiIzkosarice.FlatAppearance.BorderSize = 0;
+            this.uiObrisiIzkosarice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiObrisiIzkosarice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiObrisiIzkosarice.ForeColor = System.Drawing.Color.White;
+            this.uiObrisiIzkosarice.Location = new System.Drawing.Point(12, 572);
+            this.uiObrisiIzkosarice.Name = "uiObrisiIzkosarice";
+            this.uiObrisiIzkosarice.Size = new System.Drawing.Size(127, 28);
+            this.uiObrisiIzkosarice.TabIndex = 23;
+            this.uiObrisiIzkosarice.Text = "Izbriši iz košarice";
+            this.uiObrisiIzkosarice.UseVisualStyleBackColor = false;
+            this.uiObrisiIzkosarice.Click += new System.EventHandler(this.btnIzbrisi_Click);
             // 
             // label3
             // 
@@ -231,15 +231,15 @@
             this.label3.TabIndex = 24;
             this.label3.Text = "Količina:";
             // 
-            // txtKolicina
+            // uiUnosKolicine
             // 
-            this.txtKolicina.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtKolicina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtKolicina.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKolicina.Location = new System.Drawing.Point(461, 270);
-            this.txtKolicina.Name = "txtKolicina";
-            this.txtKolicina.Size = new System.Drawing.Size(136, 29);
-            this.txtKolicina.TabIndex = 25;
+            this.uiUnosKolicine.BackColor = System.Drawing.Color.Gainsboro;
+            this.uiUnosKolicine.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uiUnosKolicine.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosKolicine.Location = new System.Drawing.Point(461, 270);
+            this.uiUnosKolicine.Name = "uiUnosKolicine";
+            this.uiUnosKolicine.Size = new System.Drawing.Size(136, 29);
+            this.uiUnosKolicine.TabIndex = 25;
             // 
             // label4
             // 
@@ -252,26 +252,26 @@
             this.label4.TabIndex = 26;
             this.label4.Text = "Cijena:";
             // 
-            // lblCijena
+            // uiPrikazCijene
             // 
-            this.lblCijena.AutoSize = true;
-            this.lblCijena.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCijena.ForeColor = System.Drawing.Color.White;
-            this.lblCijena.Location = new System.Drawing.Point(512, 575);
-            this.lblCijena.Name = "lblCijena";
-            this.lblCijena.Size = new System.Drawing.Size(0, 21);
-            this.lblCijena.TabIndex = 27;
+            this.uiPrikazCijene.AutoSize = true;
+            this.uiPrikazCijene.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiPrikazCijene.ForeColor = System.Drawing.Color.White;
+            this.uiPrikazCijene.Location = new System.Drawing.Point(512, 575);
+            this.uiPrikazCijene.Name = "uiPrikazCijene";
+            this.uiPrikazCijene.Size = new System.Drawing.Size(0, 21);
+            this.uiPrikazCijene.TabIndex = 27;
             // 
-            // txtSearch
+            // uiSearch
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.Gainsboro;
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(118, 270);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(252, 29);
-            this.txtSearch.TabIndex = 29;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            this.uiSearch.BackColor = System.Drawing.Color.Gainsboro;
+            this.uiSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uiSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiSearch.Location = new System.Drawing.Point(118, 270);
+            this.uiSearch.Name = "uiSearch";
+            this.uiSearch.Size = new System.Drawing.Size(252, 29);
+            this.uiSearch.TabIndex = 29;
+            this.uiSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // label5
             // 
@@ -284,60 +284,60 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Pretraživanje:";
             // 
-            // serijskiBrojArtikla
+            // uiSerijskiBrojArtikla
             // 
-            this.serijskiBrojArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.serijskiBrojArtikla.BackColor = System.Drawing.SystemColors.Menu;
-            this.serijskiBrojArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serijskiBrojArtikla.Location = new System.Drawing.Point(751, 547);
-            this.serijskiBrojArtikla.Multiline = true;
-            this.serijskiBrojArtikla.Name = "serijskiBrojArtikla";
-            this.serijskiBrojArtikla.Size = new System.Drawing.Size(225, 31);
-            this.serijskiBrojArtikla.TabIndex = 39;
+            this.uiSerijskiBrojArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiSerijskiBrojArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.uiSerijskiBrojArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiSerijskiBrojArtikla.Location = new System.Drawing.Point(751, 547);
+            this.uiSerijskiBrojArtikla.Multiline = true;
+            this.uiSerijskiBrojArtikla.Name = "uiSerijskiBrojArtikla";
+            this.uiSerijskiBrojArtikla.Size = new System.Drawing.Size(225, 31);
+            this.uiSerijskiBrojArtikla.TabIndex = 39;
             // 
-            // cijenaArtikla
+            // uiCijenaArtikla
             // 
-            this.cijenaArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cijenaArtikla.BackColor = System.Drawing.SystemColors.Menu;
-            this.cijenaArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cijenaArtikla.Location = new System.Drawing.Point(751, 481);
-            this.cijenaArtikla.Multiline = true;
-            this.cijenaArtikla.Name = "cijenaArtikla";
-            this.cijenaArtikla.Size = new System.Drawing.Size(225, 31);
-            this.cijenaArtikla.TabIndex = 38;
+            this.uiCijenaArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiCijenaArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.uiCijenaArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCijenaArtikla.Location = new System.Drawing.Point(751, 481);
+            this.uiCijenaArtikla.Multiline = true;
+            this.uiCijenaArtikla.Name = "uiCijenaArtikla";
+            this.uiCijenaArtikla.Size = new System.Drawing.Size(225, 31);
+            this.uiCijenaArtikla.TabIndex = 38;
             // 
-            // proizvodacArtikla
+            // uiProizvodacArtikla
             // 
-            this.proizvodacArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.proizvodacArtikla.BackColor = System.Drawing.SystemColors.Menu;
-            this.proizvodacArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proizvodacArtikla.Location = new System.Drawing.Point(751, 414);
-            this.proizvodacArtikla.Multiline = true;
-            this.proizvodacArtikla.Name = "proizvodacArtikla";
-            this.proizvodacArtikla.Size = new System.Drawing.Size(225, 31);
-            this.proizvodacArtikla.TabIndex = 37;
+            this.uiProizvodacArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiProizvodacArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.uiProizvodacArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiProizvodacArtikla.Location = new System.Drawing.Point(751, 414);
+            this.uiProizvodacArtikla.Multiline = true;
+            this.uiProizvodacArtikla.Name = "uiProizvodacArtikla";
+            this.uiProizvodacArtikla.Size = new System.Drawing.Size(225, 31);
+            this.uiProizvodacArtikla.TabIndex = 37;
             // 
-            // opisArtikla
+            // uiOpisArtikla
             // 
-            this.opisArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.opisArtikla.BackColor = System.Drawing.SystemColors.Menu;
-            this.opisArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opisArtikla.Location = new System.Drawing.Point(751, 104);
-            this.opisArtikla.Multiline = true;
-            this.opisArtikla.Name = "opisArtikla";
-            this.opisArtikla.Size = new System.Drawing.Size(225, 272);
-            this.opisArtikla.TabIndex = 36;
+            this.uiOpisArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiOpisArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.uiOpisArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiOpisArtikla.Location = new System.Drawing.Point(751, 104);
+            this.uiOpisArtikla.Multiline = true;
+            this.uiOpisArtikla.Name = "uiOpisArtikla";
+            this.uiOpisArtikla.Size = new System.Drawing.Size(225, 272);
+            this.uiOpisArtikla.TabIndex = 36;
             // 
-            // nazivArtikla
+            // uiNazivArtikla
             // 
-            this.nazivArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nazivArtikla.BackColor = System.Drawing.SystemColors.Menu;
-            this.nazivArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazivArtikla.Location = new System.Drawing.Point(751, 37);
-            this.nazivArtikla.Multiline = true;
-            this.nazivArtikla.Name = "nazivArtikla";
-            this.nazivArtikla.Size = new System.Drawing.Size(225, 31);
-            this.nazivArtikla.TabIndex = 35;
+            this.uiNazivArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiNazivArtikla.BackColor = System.Drawing.SystemColors.Menu;
+            this.uiNazivArtikla.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiNazivArtikla.Location = new System.Drawing.Point(751, 37);
+            this.uiNazivArtikla.Multiline = true;
+            this.uiNazivArtikla.Name = "uiNazivArtikla";
+            this.uiNazivArtikla.Size = new System.Drawing.Size(225, 31);
+            this.uiNazivArtikla.TabIndex = 35;
             // 
             // label6
             // 
@@ -399,20 +399,20 @@
             this.label10.TabIndex = 30;
             this.label10.Text = "Opis:";
             // 
-            // btnReport
+            // uiPrikaziSveArtikle
             // 
-            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnReport.FlatAppearance.BorderSize = 0;
-            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReport.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(301, 572);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(127, 28);
-            this.btnReport.TabIndex = 40;
-            this.btnReport.Text = "Prikaz svih artikla";
-            this.btnReport.UseVisualStyleBackColor = false;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            this.uiPrikaziSveArtikle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiPrikaziSveArtikle.FlatAppearance.BorderSize = 0;
+            this.uiPrikaziSveArtikle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiPrikaziSveArtikle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiPrikaziSveArtikle.ForeColor = System.Drawing.Color.White;
+            this.uiPrikaziSveArtikle.Location = new System.Drawing.Point(301, 572);
+            this.uiPrikaziSveArtikle.Name = "uiPrikaziSveArtikle";
+            this.uiPrikaziSveArtikle.Size = new System.Drawing.Size(127, 28);
+            this.uiPrikaziSveArtikle.TabIndex = 40;
+            this.uiPrikaziSveArtikle.Text = "Prikaz svih artikla";
+            this.uiPrikaziSveArtikle.UseVisualStyleBackColor = false;
+            this.uiPrikaziSveArtikle.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // Narucivanje
             // 
@@ -420,29 +420,29 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(987, 621);
-            this.Controls.Add(this.btnReport);
-            this.Controls.Add(this.serijskiBrojArtikla);
-            this.Controls.Add(this.cijenaArtikla);
-            this.Controls.Add(this.proizvodacArtikla);
-            this.Controls.Add(this.opisArtikla);
-            this.Controls.Add(this.nazivArtikla);
+            this.Controls.Add(this.uiPrikaziSveArtikle);
+            this.Controls.Add(this.uiSerijskiBrojArtikla);
+            this.Controls.Add(this.uiCijenaArtikla);
+            this.Controls.Add(this.uiProizvodacArtikla);
+            this.Controls.Add(this.uiOpisArtikla);
+            this.Controls.Add(this.uiNazivArtikla);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.uiSearch);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblCijena);
+            this.Controls.Add(this.uiPrikazCijene);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtKolicina);
+            this.Controls.Add(this.uiUnosKolicine);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnIzbrisi);
-            this.Controls.Add(this.btnNaruci);
-            this.Controls.Add(this.dgvKosarica);
+            this.Controls.Add(this.uiObrisiIzkosarice);
+            this.Controls.Add(this.uiNaruciArtikl);
+            this.Controls.Add(this.uiPrikazKosarice);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnDodaj);
-            this.Controls.Add(this.dgvArtikli);
+            this.Controls.Add(this.uiDodajKosarici);
+            this.Controls.Add(this.uiPrikazArtikala);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Narucivanje";
@@ -451,8 +451,8 @@
             this.Text = "Naručivanje geodetskih uređaja i dodatnog pribora";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Narucivanje_FormClosed);
             this.Load += new System.EventHandler(this.Narucivanje_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArtikli)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKosarica)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPrikazArtikala)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uiPrikazKosarice)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,29 +461,29 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dgvArtikli;
-        private System.Windows.Forms.Button btnDodaj;
+        private System.Windows.Forms.DataGridView uiPrikazArtikala;
+        private System.Windows.Forms.Button uiDodajKosarici;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvKosarica;
-        private System.Windows.Forms.Button btnNaruci;
-        private System.Windows.Forms.Button btnIzbrisi;
+        private System.Windows.Forms.DataGridView uiPrikazKosarice;
+        private System.Windows.Forms.Button uiNaruciArtikl;
+        private System.Windows.Forms.Button uiObrisiIzkosarice;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtKolicina;
+        private System.Windows.Forms.TextBox uiUnosKolicine;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lblCijena;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label uiPrikazCijene;
+        private System.Windows.Forms.TextBox uiSearch;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox serijskiBrojArtikla;
-        private System.Windows.Forms.TextBox cijenaArtikla;
-        private System.Windows.Forms.TextBox proizvodacArtikla;
-        private System.Windows.Forms.TextBox opisArtikla;
-        private System.Windows.Forms.TextBox nazivArtikla;
+        private System.Windows.Forms.TextBox uiSerijskiBrojArtikla;
+        private System.Windows.Forms.TextBox uiCijenaArtikla;
+        private System.Windows.Forms.TextBox uiProizvodacArtikla;
+        private System.Windows.Forms.TextBox uiOpisArtikla;
+        private System.Windows.Forms.TextBox uiNazivArtikla;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.HelpProvider helpNarucivanje;
-        private System.Windows.Forms.Button btnReport;
+        private System.Windows.Forms.Button uiPrikaziSveArtikle;
     }
 }

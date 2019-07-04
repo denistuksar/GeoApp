@@ -26,19 +26,19 @@ namespace GeoApp
                 var zaposleni = from z in db.Korisnik
                                 select z;
 
-                dgvZaposlenici.DataSource = zaposleni.ToList();
-                dgvZaposlenici.Columns[9].Visible = false;
-                dgvZaposlenici.Columns[11].Visible = false;
-                dgvZaposlenici.Columns[12].Visible = false;
-                dgvZaposlenici.Columns[13].Visible = false;
+                uiPrikaziKorisnike.DataSource = zaposleni.ToList();
+                uiPrikaziKorisnike.Columns[9].Visible = false;
+                uiPrikaziKorisnike.Columns[11].Visible = false;
+                uiPrikaziKorisnike.Columns[12].Visible = false;
+                uiPrikaziKorisnike.Columns[13].Visible = false;
             
             }
 
-            dgvZaposlenici.Columns[0].HeaderText = "ID korisnika";
+            uiPrikaziKorisnike.Columns[0].HeaderText = "ID korisnika";
            
-            dgvZaposlenici.Columns[2].HeaderText = "Ime";
-            dgvZaposlenici.Columns[7].HeaderText = "Broj telefona";
-            dgvZaposlenici.Columns[8].HeaderText = "Korisničko ime";
+            uiPrikaziKorisnike.Columns[2].HeaderText = "Ime";
+            uiPrikaziKorisnike.Columns[7].HeaderText = "Broj telefona";
+            uiPrikaziKorisnike.Columns[8].HeaderText = "Korisničko ime";
 
         }
 
@@ -51,11 +51,11 @@ namespace GeoApp
                                 where z.UlogaID_uloge == 3
                                 select z;
 
-                dgvZaposlenici.DataSource = zaposleni.ToList();
-                dgvZaposlenici.Columns[9].Visible = false;
-                dgvZaposlenici.Columns[11].Visible = false;
-                dgvZaposlenici.Columns[12].Visible = false;
-                dgvZaposlenici.Columns[13].Visible = false;
+                uiPrikaziKorisnike.DataSource = zaposleni.ToList();
+                uiPrikaziKorisnike.Columns[9].Visible = false;
+                uiPrikaziKorisnike.Columns[11].Visible = false;
+                uiPrikaziKorisnike.Columns[12].Visible = false;
+                uiPrikaziKorisnike.Columns[13].Visible = false;
             }
 
         }
@@ -90,7 +90,7 @@ namespace GeoApp
 
         private void btnAzurirajZaposlenika_Click(object sender, EventArgs e)
         {
-            Korisnik korisnik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
+            Korisnik korisnik = uiPrikaziKorisnike.CurrentRow.DataBoundItem as Korisnik;
             AzurirajKorisnika azurirajKorisnika = new AzurirajKorisnika(korisnik);
             azurirajKorisnika.ShowDialog();
             PrikaziKorisnike();
@@ -98,33 +98,33 @@ namespace GeoApp
 
         private void dgvZaposlenici_SelectionChanged(object sender, EventArgs e)
         {
-            Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
+            Korisnik zaposlenik = uiPrikaziKorisnike.CurrentRow.DataBoundItem as Korisnik;
 
             switch (zaposlenik.UlogaID_uloge)
             {
                 case 1:
-                    cbAdmin.Checked = true;
-                    cbZaposlenik.Checked = false;
-                    cbKupac.Checked = false;
+                    uiOdabraniAdministrator.Checked = true;
+                    uiOdabraniZaposlenik.Checked = false;
+                    uiOdabraniKupac.Checked = false;
                
                     break;
                 case 2:
-                    cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = false;
-                    cbKupac.Checked = true;
+                    uiOdabraniAdministrator.Checked = false;
+                    uiOdabraniZaposlenik.Checked = false;
+                    uiOdabraniKupac.Checked = true;
                  
                     break;
                 case 3:
-                    cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = true;
-                    cbKupac.Checked = false;                
+                    uiOdabraniAdministrator.Checked = false;
+                    uiOdabraniZaposlenik.Checked = true;
+                    uiOdabraniKupac.Checked = false;                
                     break;
                
 
                 default:
-                    cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = false;
-                    cbKupac.Checked = false;                   
+                    uiOdabraniAdministrator.Checked = false;
+                    uiOdabraniZaposlenik.Checked = false;
+                    uiOdabraniKupac.Checked = false;                   
                     break;
             }
 
@@ -141,31 +141,31 @@ namespace GeoApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Korisnik zaposlenik = dgvZaposlenici.CurrentRow.DataBoundItem as Korisnik;
+            Korisnik zaposlenik = uiPrikaziKorisnike.CurrentRow.DataBoundItem as Korisnik;
 
             using (var db = new Entities1())
             {
                 db.Korisnik.Attach(zaposlenik);
 
-                if (cbAdmin.Checked)
+                if (uiOdabraniAdministrator.Checked)
                 {
-                    cbAdmin.Checked = true;
-                    cbZaposlenik.Checked = false;
-                    cbKupac.Checked = false;
+                    uiOdabraniAdministrator.Checked = true;
+                    uiOdabraniZaposlenik.Checked = false;
+                    uiOdabraniKupac.Checked = false;
                     zaposlenik.UlogaID_uloge = 1;
                 }
-                else if (cbZaposlenik.Checked)
+                else if (uiOdabraniZaposlenik.Checked)
                 {
-                    cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = true;
-                    cbKupac.Checked = false;
+                    uiOdabraniAdministrator.Checked = false;
+                    uiOdabraniZaposlenik.Checked = true;
+                    uiOdabraniKupac.Checked = false;
                     zaposlenik.UlogaID_uloge = 3;
                 }
-                else if (cbKupac.Checked)
+                else if (uiOdabraniKupac.Checked)
                 {
-                    cbAdmin.Checked = false;
-                    cbZaposlenik.Checked = false;
-                    cbKupac.Checked = true;
+                    uiOdabraniAdministrator.Checked = false;
+                    uiOdabraniZaposlenik.Checked = false;
+                    uiOdabraniKupac.Checked = true;
                     zaposlenik.UlogaID_uloge = 2;
                 }
 

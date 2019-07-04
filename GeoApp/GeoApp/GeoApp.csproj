@@ -140,11 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entity.edmx</DependentUpon>
     </Compile>
-    <Compile Include="FrmReport.cs">
+    <Compile Include="Report.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmReport.Designer.cs">
-      <DependentUpon>FrmReport.cs</DependentUpon>
+    <Compile Include="Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="Korisnik.cs">
       <DependentUpon>Entity.tt</DependentUpon>
@@ -228,8 +228,8 @@
       <DependentUpon>DetaljiNarudzbe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DetaljiReport.rdlc" />
-    <EmbeddedResource Include="FrmReport.resx">
-      <DependentUpon>FrmReport.cs</DependentUpon>
+    <EmbeddedResource Include="Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Narucivanje.resx">
       <DependentUpon>Narucivanje.cs</DependentUpon>

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GeoApp
 {
-    public partial class FrmReport : Form
+    public partial class Report : Form
     {
-        public FrmReport()
+        public Report()
         {
             InitializeComponent();
         }

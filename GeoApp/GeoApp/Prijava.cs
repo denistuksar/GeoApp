@@ -22,29 +22,29 @@ namespace GeoApp
         {
             using (var db = new Entities1())
             {
-                byte[] lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text);
+                byte[] lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text);
 
                 var query = from k in db.Korisnik
-                            where k.Korisnicko_ime == txtKorisnickoIme.Text && k.Kriptirana_Lozinka == lozinka
+                            where k.Korisnicko_ime == uiUnosKorisnickogImena.Text && k.Kriptirana_Lozinka == lozinka
                             select k;
 
                 if (query.SingleOrDefault() != null)
                 {
                     var query2 = from k in db.Korisnik
-                                 where k.Korisnicko_ime == txtKorisnickoIme.Text
+                                 where k.Korisnicko_ime == uiUnosKorisnickogImena.Text
                                  select k.Uloga.Naziv;
 
                     var uloga = query2.FirstOrDefault<string>();
 
                     var query3 = from k in db.Korisnik
-                                 where k.Korisnicko_ime == txtKorisnickoIme.Text
+                                 where k.Korisnicko_ime == uiUnosKorisnickogImena.Text
                                  select k.ID_korisnika;
 
                     var id = query3.FirstOrDefault<int>();
 
                     LoginInfo.IDKorisnika = id;
                     LoginInfo.Uloga = uloga.ToString();
-                    LoginInfo.Korime = txtKorisnickoIme.Text;
+                    LoginInfo.Korime = uiUnosKorisnickogImena.Text;
                   
 
                     this.Hide();

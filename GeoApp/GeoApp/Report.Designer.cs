@@ -1,6 +1,6 @@
 ﻿namespace GeoApp
 {
-    partial class FrmReport
+    partial class Report
     {
         /// <summary>
         /// Required designer variable.

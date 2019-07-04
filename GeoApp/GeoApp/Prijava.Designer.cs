@@ -28,70 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.prijava2 = new System.Windows.Forms.Button();
-            this.registriraj = new System.Windows.Forms.Button();
-            this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.txtKorisnickoIme = new System.Windows.Forms.TextBox();
+            this.uiPrijaviKorisnika = new System.Windows.Forms.Button();
+            this.uiRegistrirajKorisnika = new System.Windows.Forms.Button();
+            this.uiUnosLozinke = new System.Windows.Forms.TextBox();
+            this.uiUnosKorisnickogImena = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.helpPrijava = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
-            // prijava2
+            // uiPrijaviKorisnika
             // 
-            this.prijava2.AutoSize = true;
-            this.prijava2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.prijava2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.prijava2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.prijava2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.prijava2.FlatAppearance.BorderSize = 0;
-            this.prijava2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.prijava2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prijava2.Location = new System.Drawing.Point(233, 179);
-            this.prijava2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.prijava2.Name = "prijava2";
-            this.prijava2.Size = new System.Drawing.Size(175, 43);
-            this.prijava2.TabIndex = 11;
-            this.prijava2.Text = "Prijavi se";
-            this.prijava2.UseVisualStyleBackColor = false;
-            this.prijava2.Click += new System.EventHandler(this.prijava2_Click);
+            this.uiPrijaviKorisnika.AutoSize = true;
+            this.uiPrijaviKorisnika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiPrijaviKorisnika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.uiPrijaviKorisnika.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiPrijaviKorisnika.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.uiPrijaviKorisnika.FlatAppearance.BorderSize = 0;
+            this.uiPrijaviKorisnika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiPrijaviKorisnika.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiPrijaviKorisnika.Location = new System.Drawing.Point(233, 179);
+            this.uiPrijaviKorisnika.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.uiPrijaviKorisnika.Name = "uiPrijaviKorisnika";
+            this.uiPrijaviKorisnika.Size = new System.Drawing.Size(175, 43);
+            this.uiPrijaviKorisnika.TabIndex = 11;
+            this.uiPrijaviKorisnika.Text = "Prijavi se";
+            this.uiPrijaviKorisnika.UseVisualStyleBackColor = false;
+            this.uiPrijaviKorisnika.Click += new System.EventHandler(this.prijava2_Click);
             // 
-            // registriraj
+            // uiRegistrirajKorisnika
             // 
-            this.registriraj.AutoSize = true;
-            this.registriraj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.registriraj.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.registriraj.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.registriraj.FlatAppearance.BorderSize = 0;
-            this.registriraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registriraj.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registriraj.Location = new System.Drawing.Point(34, 179);
-            this.registriraj.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.registriraj.Name = "registriraj";
-            this.registriraj.Size = new System.Drawing.Size(175, 43);
-            this.registriraj.TabIndex = 10;
-            this.registriraj.Text = "Registriraj se";
-            this.registriraj.UseVisualStyleBackColor = false;
-            this.registriraj.Click += new System.EventHandler(this.registriraj_Click);
+            this.uiRegistrirajKorisnika.AutoSize = true;
+            this.uiRegistrirajKorisnika.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiRegistrirajKorisnika.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.uiRegistrirajKorisnika.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiRegistrirajKorisnika.FlatAppearance.BorderSize = 0;
+            this.uiRegistrirajKorisnika.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiRegistrirajKorisnika.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiRegistrirajKorisnika.Location = new System.Drawing.Point(34, 179);
+            this.uiRegistrirajKorisnika.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.uiRegistrirajKorisnika.Name = "uiRegistrirajKorisnika";
+            this.uiRegistrirajKorisnika.Size = new System.Drawing.Size(175, 43);
+            this.uiRegistrirajKorisnika.TabIndex = 10;
+            this.uiRegistrirajKorisnika.Text = "Registriraj se";
+            this.uiRegistrirajKorisnika.UseVisualStyleBackColor = false;
+            this.uiRegistrirajKorisnika.Click += new System.EventHandler(this.registriraj_Click);
             // 
-            // txtLozinka
+            // uiUnosLozinke
             // 
-            this.txtLozinka.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLozinka.Location = new System.Drawing.Point(180, 112);
-            this.txtLozinka.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(228, 33);
-            this.txtLozinka.TabIndex = 9;
-            this.txtLozinka.UseSystemPasswordChar = true;
+            this.uiUnosLozinke.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosLozinke.Location = new System.Drawing.Point(180, 112);
+            this.uiUnosLozinke.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.uiUnosLozinke.Name = "uiUnosLozinke";
+            this.uiUnosLozinke.Size = new System.Drawing.Size(228, 33);
+            this.uiUnosLozinke.TabIndex = 9;
+            this.uiUnosLozinke.UseSystemPasswordChar = true;
             // 
-            // txtKorisnickoIme
+            // uiUnosKorisnickogImena
             // 
-            this.txtKorisnickoIme.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(180, 50);
-            this.txtKorisnickoIme.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
-            this.txtKorisnickoIme.Name = "txtKorisnickoIme";
-            this.txtKorisnickoIme.Size = new System.Drawing.Size(228, 33);
-            this.txtKorisnickoIme.TabIndex = 8;
+            this.uiUnosKorisnickogImena.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosKorisnickogImena.Location = new System.Drawing.Point(180, 50);
+            this.uiUnosKorisnickogImena.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.uiUnosKorisnickogImena.Name = "uiUnosKorisnickogImena";
+            this.uiUnosKorisnickogImena.Size = new System.Drawing.Size(228, 33);
+            this.uiUnosKorisnickogImena.TabIndex = 8;
             // 
             // label2
             // 
@@ -117,15 +117,15 @@
             // 
             // Prijava
             // 
-            this.AcceptButton = this.prijava2;
+            this.AcceptButton = this.uiPrijaviKorisnika;
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(443, 265);
-            this.Controls.Add(this.prijava2);
-            this.Controls.Add(this.registriraj);
-            this.Controls.Add(this.txtLozinka);
-            this.Controls.Add(this.txtKorisnickoIme);
+            this.Controls.Add(this.uiPrijaviKorisnika);
+            this.Controls.Add(this.uiRegistrirajKorisnika);
+            this.Controls.Add(this.uiUnosLozinke);
+            this.Controls.Add(this.uiUnosKorisnickogImena);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -148,10 +148,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button prijava2;
-        private System.Windows.Forms.Button registriraj;
-        private System.Windows.Forms.TextBox txtLozinka;
-        private System.Windows.Forms.TextBox txtKorisnickoIme;
+        private System.Windows.Forms.Button uiPrijaviKorisnika;
+        private System.Windows.Forms.Button uiRegistrirajKorisnika;
+        private System.Windows.Forms.TextBox uiUnosLozinke;
+        private System.Windows.Forms.TextBox uiUnosKorisnickogImena;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.HelpProvider helpPrijava;

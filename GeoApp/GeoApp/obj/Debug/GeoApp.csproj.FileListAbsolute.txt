@@ -173,7 +173,6 @@ C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.application
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.csprojAssemblyReference.cache
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.exe.config
-C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.FrmReport.resources
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\RdlCompile.cache
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\RdlCompile.compiled
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\bin\Debug\GeoApp.exe.manifest
@@ -279,3 +278,4 @@ C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\bin\Debug\zh-CHS\Microsoft.ReportV
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.exe.manifest
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.application
+C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Report.resources

@@ -19,11 +19,11 @@ namespace GeoApp
         /// </summary>
         private void dgvArtikli_SelectionChanged(object sender, EventArgs e)
         {
-            nazivArtikla.Text = dgvArtikli.CurrentRow.Cells[1].Value.ToString();
-            opisArtikla.Text = dgvArtikli.CurrentRow.Cells[2].Value.ToString();
-            proizvodacArtikla.Text = dgvArtikli.CurrentRow.Cells[3].Value.ToString();
-            cijenaArtikla.Text = dgvArtikli.CurrentRow.Cells[4].Value.ToString();
-            serijskiBrojArtikla.Text = dgvArtikli.CurrentRow.Cells[5].Value.ToString();
+            uiNazivArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[1].Value.ToString();
+            uiOpisArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[2].Value.ToString();
+            uiProizvodacArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[3].Value.ToString();
+            uiCijenaArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[4].Value.ToString();
+            uiSerijskiBrojArtikla.Text = uiPrikazArtikala.CurrentRow.Cells[5].Value.ToString();
         }
 
         /// <summary>
@@ -31,21 +31,21 @@ namespace GeoApp
         /// </summary>
         private void gumbAzuriraj_Click(object sender, EventArgs e)
         {
-            Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
+            Artikl selektiraniArtikl = uiPrikazArtikala.CurrentRow.DataBoundItem as Artikl;
             if (selektiraniArtikl != null)
             {
                 try
                 {
-                    if (nazivArtikla.Text != "" && opisArtikla.Text != "" && proizvodacArtikla.Text != "" && cijenaArtikla.Text != "" && serijskiBrojArtikla.Text != "")
+                    if (uiNazivArtikla.Text != "" && uiOpisArtikla.Text != "" && uiProizvodacArtikla.Text != "" && uiCijenaArtikla.Text != "" && uiSerijskiBrojArtikla.Text != "")
                     {
                         using (var db = new Entities1())
                         {
                         db.Artikl.Attach(selektiraniArtikl); //registriramo prosljeđeni tim. 
-                        selektiraniArtikl.Naziv = nazivArtikla.Text;
-                        selektiraniArtikl.Opis = opisArtikla.Text;
-                        selektiraniArtikl.Proizvodac = proizvodacArtikla.Text;
-                        selektiraniArtikl.Cijena = decimal.Parse(cijenaArtikla.Text);
-                        selektiraniArtikl.Serijski_broj = serijskiBrojArtikla.Text;
+                        selektiraniArtikl.Naziv = uiNazivArtikla.Text;
+                        selektiraniArtikl.Opis = uiOpisArtikla.Text;
+                        selektiraniArtikl.Proizvodac = uiProizvodacArtikla.Text;
+                        selektiraniArtikl.Cijena = decimal.Parse(uiCijenaArtikla.Text);
+                        selektiraniArtikl.Serijski_broj = uiSerijskiBrojArtikla.Text;
                         db.SaveChanges();   //Spremamo promjene u bazu.
                         }
                         MessageBox.Show("Artikl ažuriran.");
@@ -78,11 +78,11 @@ namespace GeoApp
             {
                 artikli = db.Artikl.ToList();
             }
-            dgvArtikli.DataSource = artikli;
-            dgvArtikli.Columns[0].HeaderText = "ID artikla";
-            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
-            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
-            dgvArtikli.Columns[6].Visible = false;
+            uiPrikazArtikala.DataSource = artikli;
+            uiPrikazArtikala.Columns[0].HeaderText = "ID artikla";
+            uiPrikazArtikala.Columns[3].HeaderText = "Proizvođač";
+            uiPrikazArtikala.Columns[5].HeaderText = "Serijski broj";
+            uiPrikazArtikala.Columns[6].Visible = false;
         }
   
         private void AzuriranjeArtikla_Load(object sender, EventArgs e)
@@ -98,9 +98,9 @@ namespace GeoApp
         /// </summary>
         private void gumbIzbrisi_Click(object sender, EventArgs e)
         {
-            if (dgvArtikli.CurrentRow != null)
+            if (uiPrikazArtikala.CurrentRow != null)
             {
-                Artikl selektiraniArtikl = dgvArtikli.CurrentRow.DataBoundItem as Artikl;
+                Artikl selektiraniArtikl = uiPrikazArtikala.CurrentRow.DataBoundItem as Artikl;
                 if (selektiraniArtikl != null)
                 {
                     if (MessageBox.Show("Da li ste sigurni da želite izbrisati artikl?", "Upozorenje!",
@@ -166,14 +166,14 @@ namespace GeoApp
             using (var db = new Entities1())
             {
                 var query = from a in db.Artikl
-                            where a.Naziv.Contains(txtSearch.Text)
+                            where a.Naziv.Contains(uiSearch.Text)
                             select a;
-                dgvArtikli.DataSource = query.ToList();
+                uiPrikazArtikala.DataSource = query.ToList();
             }
-            dgvArtikli.Columns[0].HeaderText = "ID artikla";
-            dgvArtikli.Columns[3].HeaderText = "Proizvođač";
-            dgvArtikli.Columns[5].HeaderText = "Serijski broj";
-            dgvArtikli.Columns[6].Visible = false;
+            uiPrikazArtikala.Columns[0].HeaderText = "ID artikla";
+            uiPrikazArtikala.Columns[3].HeaderText = "Proizvođač";
+            uiPrikazArtikala.Columns[5].HeaderText = "Serijski broj";
+            uiPrikazArtikala.Columns[6].Visible = false;
         }
     }
 }

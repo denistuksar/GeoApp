@@ -31,11 +31,11 @@ namespace GeoApp
                                  a.Cijena,
                                  n.Kolicina
                              }).ToList();
-                dgvDetalji.DataSource = query;
-                dgvDetalji.Columns[0].HeaderText = "ID artikla";
-                dgvDetalji.Columns[3].HeaderText = "Proizvođač";
-                dgvDetalji.Columns[4].HeaderText = "Serijski broj";
-                dgvDetalji.Columns[6].HeaderText = "Količina";
+                uiPrikazDetalja.DataSource = query;
+                uiPrikazDetalja.Columns[0].HeaderText = "ID artikla";
+                uiPrikazDetalja.Columns[3].HeaderText = "Proizvođač";
+                uiPrikazDetalja.Columns[4].HeaderText = "Serijski broj";
+                uiPrikazDetalja.Columns[6].HeaderText = "Količina";
 
                 suma = Convert.ToDecimal((from a in db.Stavke_narudzbe
                                           where a.NarudzbaID_narudzbe == idNarudzbe

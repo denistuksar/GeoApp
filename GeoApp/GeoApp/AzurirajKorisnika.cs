@@ -24,14 +24,14 @@ namespace GeoApp
             using (var db = new Entities1())
             {
                 db.Korisnik.Attach(odabraniKorisnik);
-                txtIme.Text = odabraniKorisnik.Ime;
-                txtPrezime.Text = odabraniKorisnik.Prezime;
-                txtOib.Text = odabraniKorisnik.OIB;
-                txtAdresa.Text = odabraniKorisnik.Adresa;
-                txtEmail.Text = odabraniKorisnik.Email;
-                txtTelefon.Text = odabraniKorisnik.Broj_telefona;
-                txtKorIme.Text = odabraniKorisnik.Korisnicko_ime;
-                txtLozinka.Text = Encoding.UTF8.GetString(odabraniKorisnik.Kriptirana_Lozinka);
+                uiUnosImena.Text = odabraniKorisnik.Ime;
+                uiUnosPrezimena.Text = odabraniKorisnik.Prezime;
+                uiUnosOIB.Text = odabraniKorisnik.OIB;
+                uiUnosAdrese.Text = odabraniKorisnik.Adresa;
+                uiUnosEmaila.Text = odabraniKorisnik.Email;
+                uiUnosTelefona.Text = odabraniKorisnik.Broj_telefona;
+                uiUnosKorisnickogImena.Text = odabraniKorisnik.Korisnicko_ime;
+                uiUnosLozinke.Text = Encoding.UTF8.GetString(odabraniKorisnik.Kriptirana_Lozinka);
                 db.SaveChanges();
             }
         }
@@ -48,15 +48,15 @@ namespace GeoApp
             using (var db = new Entities1())
             {
                 db.Korisnik.Attach(odabraniKorisnik);
-                odabraniKorisnik.Ime = txtIme.Text;
-                odabraniKorisnik.Prezime = txtPrezime.Text;
-                odabraniKorisnik.OIB = txtOib.Text;
-                odabraniKorisnik.Adresa = txtAdresa.Text;
-                odabraniKorisnik.Email = txtEmail.Text;
-                odabraniKorisnik.Broj_telefona = txtTelefon.Text;
-                odabraniKorisnik.Korisnicko_ime = txtKorIme.Text;
-                odabraniKorisnik.Kriptirana_Lozinka = Encoding.UTF8.GetBytes(txtLozinka.Text);
-                odabraniKorisnik.Lozinka = txtLozinka.Text;
+                odabraniKorisnik.Ime = uiUnosImena.Text;
+                odabraniKorisnik.Prezime = uiUnosPrezimena.Text;
+                odabraniKorisnik.OIB = uiUnosOIB.Text;
+                odabraniKorisnik.Adresa = uiUnosAdrese.Text;
+                odabraniKorisnik.Email = uiUnosEmaila.Text;
+                odabraniKorisnik.Broj_telefona = uiUnosTelefona.Text;
+                odabraniKorisnik.Korisnicko_ime = uiUnosKorisnickogImena.Text;
+                odabraniKorisnik.Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text);
+                odabraniKorisnik.Lozinka = uiUnosLozinke.Text;
                 db.SaveChanges();
             }
             this.Close();

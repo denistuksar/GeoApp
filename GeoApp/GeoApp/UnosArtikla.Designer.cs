@@ -28,69 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.serijskiBrojArtikla = new System.Windows.Forms.TextBox();
-            this.cijenaArtikla = new System.Windows.Forms.TextBox();
-            this.proizvodacArtikla = new System.Windows.Forms.TextBox();
-            this.opisArtikla = new System.Windows.Forms.TextBox();
-            this.nazivArtikla = new System.Windows.Forms.TextBox();
+            this.uiSerijskiBrojArtikla = new System.Windows.Forms.TextBox();
+            this.uiCijenaArtikla = new System.Windows.Forms.TextBox();
+            this.uiProizvodacArtikla = new System.Windows.Forms.TextBox();
+            this.uiOpisArtikla = new System.Windows.Forms.TextBox();
+            this.uiNazivArtikla = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnUnesi = new System.Windows.Forms.Button();
+            this.uiUnosArtikla = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.helpUnosArtikla = new System.Windows.Forms.HelpProvider();
             this.SuspendLayout();
             // 
-            // serijskiBrojArtikla
+            // uiSerijskiBrojArtikla
             // 
-            this.serijskiBrojArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.serijskiBrojArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.serijskiBrojArtikla.Location = new System.Drawing.Point(48, 427);
-            this.serijskiBrojArtikla.Multiline = true;
-            this.serijskiBrojArtikla.Name = "serijskiBrojArtikla";
-            this.serijskiBrojArtikla.Size = new System.Drawing.Size(282, 35);
-            this.serijskiBrojArtikla.TabIndex = 26;
+            this.uiSerijskiBrojArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiSerijskiBrojArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiSerijskiBrojArtikla.Location = new System.Drawing.Point(48, 427);
+            this.uiSerijskiBrojArtikla.Multiline = true;
+            this.uiSerijskiBrojArtikla.Name = "uiSerijskiBrojArtikla";
+            this.uiSerijskiBrojArtikla.Size = new System.Drawing.Size(282, 35);
+            this.uiSerijskiBrojArtikla.TabIndex = 26;
             // 
-            // cijenaArtikla
+            // uiCijenaArtikla
             // 
-            this.cijenaArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.cijenaArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cijenaArtikla.Location = new System.Drawing.Point(48, 360);
-            this.cijenaArtikla.Multiline = true;
-            this.cijenaArtikla.Name = "cijenaArtikla";
-            this.cijenaArtikla.Size = new System.Drawing.Size(282, 35);
-            this.cijenaArtikla.TabIndex = 25;
+            this.uiCijenaArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiCijenaArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiCijenaArtikla.Location = new System.Drawing.Point(48, 360);
+            this.uiCijenaArtikla.Multiline = true;
+            this.uiCijenaArtikla.Name = "uiCijenaArtikla";
+            this.uiCijenaArtikla.Size = new System.Drawing.Size(282, 35);
+            this.uiCijenaArtikla.TabIndex = 25;
             // 
-            // proizvodacArtikla
+            // uiProizvodacArtikla
             // 
-            this.proizvodacArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.proizvodacArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proizvodacArtikla.Location = new System.Drawing.Point(48, 287);
-            this.proizvodacArtikla.Multiline = true;
-            this.proizvodacArtikla.Name = "proizvodacArtikla";
-            this.proizvodacArtikla.Size = new System.Drawing.Size(282, 35);
-            this.proizvodacArtikla.TabIndex = 24;
+            this.uiProizvodacArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiProizvodacArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiProizvodacArtikla.Location = new System.Drawing.Point(48, 287);
+            this.uiProizvodacArtikla.Multiline = true;
+            this.uiProizvodacArtikla.Name = "uiProizvodacArtikla";
+            this.uiProizvodacArtikla.Size = new System.Drawing.Size(282, 35);
+            this.uiProizvodacArtikla.TabIndex = 24;
             // 
-            // opisArtikla
+            // uiOpisArtikla
             // 
-            this.opisArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.opisArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.opisArtikla.Location = new System.Drawing.Point(48, 111);
-            this.opisArtikla.Multiline = true;
-            this.opisArtikla.Name = "opisArtikla";
-            this.opisArtikla.Size = new System.Drawing.Size(282, 141);
-            this.opisArtikla.TabIndex = 23;
+            this.uiOpisArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiOpisArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiOpisArtikla.Location = new System.Drawing.Point(48, 111);
+            this.uiOpisArtikla.Multiline = true;
+            this.uiOpisArtikla.Name = "uiOpisArtikla";
+            this.uiOpisArtikla.Size = new System.Drawing.Size(282, 141);
+            this.uiOpisArtikla.TabIndex = 23;
             // 
-            // nazivArtikla
+            // uiNazivArtikla
             // 
-            this.nazivArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.nazivArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nazivArtikla.Location = new System.Drawing.Point(48, 42);
-            this.nazivArtikla.Multiline = true;
-            this.nazivArtikla.Name = "nazivArtikla";
-            this.nazivArtikla.Size = new System.Drawing.Size(282, 35);
-            this.nazivArtikla.TabIndex = 22;
+            this.uiNazivArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiNazivArtikla.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiNazivArtikla.Location = new System.Drawing.Point(48, 42);
+            this.uiNazivArtikla.Multiline = true;
+            this.uiNazivArtikla.Name = "uiNazivArtikla";
+            this.uiNazivArtikla.Size = new System.Drawing.Size(282, 35);
+            this.uiNazivArtikla.TabIndex = 22;
             // 
             // label6
             // 
@@ -140,21 +140,21 @@
             this.label5.TabIndex = 18;
             this.label5.Text = "Naziv:";
             // 
-            // btnUnesi
+            // uiUnosArtikla
             // 
-            this.btnUnesi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.btnUnesi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
-            this.btnUnesi.FlatAppearance.BorderSize = 0;
-            this.btnUnesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUnesi.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUnesi.ForeColor = System.Drawing.Color.White;
-            this.btnUnesi.Location = new System.Drawing.Point(48, 489);
-            this.btnUnesi.Name = "btnUnesi";
-            this.btnUnesi.Size = new System.Drawing.Size(282, 35);
-            this.btnUnesi.TabIndex = 17;
-            this.btnUnesi.Text = "Unesi";
-            this.btnUnesi.UseVisualStyleBackColor = false;
-            this.btnUnesi.Click += new System.EventHandler(this.btnUnesi_Click);
+            this.uiUnosArtikla.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.uiUnosArtikla.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(175)))), ((int)(((byte)(134)))));
+            this.uiUnosArtikla.FlatAppearance.BorderSize = 0;
+            this.uiUnosArtikla.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.uiUnosArtikla.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uiUnosArtikla.ForeColor = System.Drawing.Color.White;
+            this.uiUnosArtikla.Location = new System.Drawing.Point(48, 489);
+            this.uiUnosArtikla.Name = "uiUnosArtikla";
+            this.uiUnosArtikla.Size = new System.Drawing.Size(282, 35);
+            this.uiUnosArtikla.TabIndex = 17;
+            this.uiUnosArtikla.Text = "Unesi";
+            this.uiUnosArtikla.UseVisualStyleBackColor = false;
+            this.uiUnosArtikla.Click += new System.EventHandler(this.btnUnesi_Click);
             // 
             // label1
             // 
@@ -174,16 +174,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(375, 541);
-            this.Controls.Add(this.serijskiBrojArtikla);
-            this.Controls.Add(this.cijenaArtikla);
-            this.Controls.Add(this.proizvodacArtikla);
-            this.Controls.Add(this.opisArtikla);
-            this.Controls.Add(this.nazivArtikla);
+            this.Controls.Add(this.uiSerijskiBrojArtikla);
+            this.Controls.Add(this.uiCijenaArtikla);
+            this.Controls.Add(this.uiProizvodacArtikla);
+            this.Controls.Add(this.uiOpisArtikla);
+            this.Controls.Add(this.uiNazivArtikla);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnUnesi);
+            this.Controls.Add(this.uiUnosArtikla);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximumSize = new System.Drawing.Size(391, 580);
@@ -201,16 +201,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox serijskiBrojArtikla;
-        private System.Windows.Forms.TextBox cijenaArtikla;
-        private System.Windows.Forms.TextBox proizvodacArtikla;
-        private System.Windows.Forms.TextBox opisArtikla;
-        private System.Windows.Forms.TextBox nazivArtikla;
+        private System.Windows.Forms.TextBox uiSerijskiBrojArtikla;
+        private System.Windows.Forms.TextBox uiCijenaArtikla;
+        private System.Windows.Forms.TextBox uiProizvodacArtikla;
+        private System.Windows.Forms.TextBox uiOpisArtikla;
+        private System.Windows.Forms.TextBox uiNazivArtikla;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnUnesi;
+        private System.Windows.Forms.Button uiUnosArtikla;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.HelpProvider helpUnosArtikla;
     }
