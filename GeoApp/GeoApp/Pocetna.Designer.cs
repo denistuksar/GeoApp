@@ -71,9 +71,9 @@
             this.unosUredaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.unosUredaja.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.unosUredaja.ForeColor = System.Drawing.Color.White;
-            this.unosUredaja.Location = new System.Drawing.Point(73, 146);
+            this.unosUredaja.Location = new System.Drawing.Point(13, 146);
             this.unosUredaja.Name = "unosUredaja";
-            this.unosUredaja.Size = new System.Drawing.Size(225, 41);
+            this.unosUredaja.Size = new System.Drawing.Size(343, 41);
             this.unosUredaja.TabIndex = 3;
             this.unosUredaja.Text = "Unos uređaja i opreme";
             this.unosUredaja.UseVisualStyleBackColor = false;
@@ -86,9 +86,9 @@
             this.azuriranjeUredaja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.azuriranjeUredaja.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.azuriranjeUredaja.ForeColor = System.Drawing.Color.White;
-            this.azuriranjeUredaja.Location = new System.Drawing.Point(73, 204);
+            this.azuriranjeUredaja.Location = new System.Drawing.Point(13, 204);
             this.azuriranjeUredaja.Name = "azuriranjeUredaja";
-            this.azuriranjeUredaja.Size = new System.Drawing.Size(225, 41);
+            this.azuriranjeUredaja.Size = new System.Drawing.Size(343, 41);
             this.azuriranjeUredaja.TabIndex = 4;
             this.azuriranjeUredaja.Text = "Ažuriranje uređaja i opreme";
             this.azuriranjeUredaja.UseVisualStyleBackColor = false;
@@ -138,9 +138,9 @@
             this.btnNarucivanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNarucivanje.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNarucivanje.ForeColor = System.Drawing.Color.White;
-            this.btnNarucivanje.Location = new System.Drawing.Point(73, 86);
+            this.btnNarucivanje.Location = new System.Drawing.Point(13, 86);
             this.btnNarucivanje.Name = "btnNarucivanje";
-            this.btnNarucivanje.Size = new System.Drawing.Size(225, 41);
+            this.btnNarucivanje.Size = new System.Drawing.Size(343, 41);
             this.btnNarucivanje.TabIndex = 9;
             this.btnNarucivanje.Text = "Naručivanje uređaja i opreme";
             this.btnNarucivanje.UseVisualStyleBackColor = false;
@@ -153,9 +153,9 @@
             this.btnOdobravanje.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOdobravanje.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOdobravanje.ForeColor = System.Drawing.Color.White;
-            this.btnOdobravanje.Location = new System.Drawing.Point(73, 263);
+            this.btnOdobravanje.Location = new System.Drawing.Point(13, 263);
             this.btnOdobravanje.Name = "btnOdobravanje";
-            this.btnOdobravanje.Size = new System.Drawing.Size(225, 41);
+            this.btnOdobravanje.Size = new System.Drawing.Size(343, 41);
             this.btnOdobravanje.TabIndex = 10;
             this.btnOdobravanje.Text = "Odobravanje narudžba";
             this.btnOdobravanje.UseVisualStyleBackColor = false;
@@ -168,11 +168,11 @@
             this.btnOvlasti.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOvlasti.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOvlasti.ForeColor = System.Drawing.Color.White;
-            this.btnOvlasti.Location = new System.Drawing.Point(73, 324);
+            this.btnOvlasti.Location = new System.Drawing.Point(13, 324);
             this.btnOvlasti.Name = "btnOvlasti";
-            this.btnOvlasti.Size = new System.Drawing.Size(225, 41);
+            this.btnOvlasti.Size = new System.Drawing.Size(343, 41);
             this.btnOvlasti.TabIndex = 11;
-            this.btnOvlasti.Text = "Uređivanje ovlasti i uloga";
+            this.btnOvlasti.Text = "Uređivanje uloga";
             this.btnOvlasti.UseVisualStyleBackColor = false;
             this.btnOvlasti.Click += new System.EventHandler(this.btnOvlasti_Click);
             // 
@@ -183,9 +183,9 @@
             this.btnServis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnServis.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServis.ForeColor = System.Drawing.Color.White;
-            this.btnServis.Location = new System.Drawing.Point(73, 383);
+            this.btnServis.Location = new System.Drawing.Point(13, 383);
             this.btnServis.Name = "btnServis";
-            this.btnServis.Size = new System.Drawing.Size(225, 41);
+            this.btnServis.Size = new System.Drawing.Size(343, 41);
             this.btnServis.TabIndex = 5;
             this.btnServis.Text = "Servis";
             this.btnServis.UseVisualStyleBackColor = false;
@@ -195,7 +195,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(368, 436);
+            this.ClientSize = new System.Drawing.Size(368, 446);
             this.Controls.Add(this.btnOvlasti);
             this.Controls.Add(this.btnOdobravanje);
             this.Controls.Add(this.btnNarucivanje);
@@ -208,8 +208,8 @@
             this.Controls.Add(this.txtUloga);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximumSize = new System.Drawing.Size(384, 475);
-            this.MinimumSize = new System.Drawing.Size(384, 260);
+            this.MaximumSize = new System.Drawing.Size(384, 485);
+            this.MinimumSize = new System.Drawing.Size(384, 485);
             this.Name = "Pocetna";
             this.helpPocetna.SetShowHelp(this, true);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

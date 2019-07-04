@@ -47,7 +47,7 @@
             this.prijava2.FlatAppearance.BorderSize = 0;
             this.prijava2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.prijava2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.prijava2.Location = new System.Drawing.Point(226, 179);
+            this.prijava2.Location = new System.Drawing.Point(233, 179);
             this.prijava2.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.prijava2.Name = "prijava2";
             this.prijava2.Size = new System.Drawing.Size(175, 43);
@@ -65,7 +65,7 @@
             this.registriraj.FlatAppearance.BorderSize = 0;
             this.registriraj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.registriraj.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registriraj.Location = new System.Drawing.Point(27, 179);
+            this.registriraj.Location = new System.Drawing.Point(34, 179);
             this.registriraj.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.registriraj.Name = "registriraj";
             this.registriraj.Size = new System.Drawing.Size(175, 43);
@@ -77,7 +77,7 @@
             // txtLozinka
             // 
             this.txtLozinka.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLozinka.Location = new System.Drawing.Point(173, 112);
+            this.txtLozinka.Location = new System.Drawing.Point(180, 112);
             this.txtLozinka.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(228, 33);
@@ -87,7 +87,7 @@
             // txtKorisnickoIme
             // 
             this.txtKorisnickoIme.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKorisnickoIme.Location = new System.Drawing.Point(173, 50);
+            this.txtKorisnickoIme.Location = new System.Drawing.Point(180, 50);
             this.txtKorisnickoIme.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.txtKorisnickoIme.Name = "txtKorisnickoIme";
             this.txtKorisnickoIme.Size = new System.Drawing.Size(228, 33);
@@ -97,7 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(81, 115);
+            this.label2.Location = new System.Drawing.Point(88, 115);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 25);
@@ -108,7 +108,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(22, 52);
+            this.label1.Location = new System.Drawing.Point(29, 52);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(139, 25);

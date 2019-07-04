@@ -586,6 +586,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
     }
@@ -1574,15 +1582,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup"
-        "ProductCode" = "8:{99DDD199-7AB2-4EEF-AE58-517017CEEED5}"
-        "PackageCode" = "8:{DC95A591-DA2C-4ABB-B9DF-D1879634CFC4}"
+        "ProductCode" = "8:{081A9BB1-446A-4C7E-A532-E662393E6FAD}"
+        "PackageCode" = "8:{4796095E-5847-4361-A8ED-A39C13458129}"
         "UpgradeCode" = "8:{D25E6A1C-8C40-4E73-93C7-5B8E690D5F59}"
         "AspNetVersion" = "8:"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:GeoApp"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
