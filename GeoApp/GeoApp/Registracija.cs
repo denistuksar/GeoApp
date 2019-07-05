@@ -48,6 +48,7 @@ namespace GeoApp
                             {
                                 if (LoginInfo.Uloga == "Administrator")
                                 {
+                                    
                                     var korisnik = new Korisnik
                                     {
                                         Ime = uiUnosImena.Text,
@@ -62,8 +63,8 @@ namespace GeoApp
                                         UlogaID_uloge = 3,
                                      
                                     };
-                                   
 
+                                  
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
                                     MessageBox.Show("Uspješno dodan zaposlenik");
@@ -331,13 +332,19 @@ namespace GeoApp
             }
         }
 
-        private void Registracija_Load(object sender, EventArgs e)
+     
+
+        private void Registracija_Load_1(object sender, EventArgs e)
         {
+            if (LoginInfo.Uloga == "Administrator")
+            {
+                uiRegistrirajKorisnika.Text = "Dodaj zaposlenika";
+                this.Text = "Unos zaposlenika";
+
+            }
+
             helpRegistracija.HelpNamespace = Environment.CurrentDirectory + "/help/registracija.html";
-
         }
-
-       
     }
 
 }

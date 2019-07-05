@@ -66,6 +66,7 @@
             this.uiUnosKorisnickogImena.Name = "uiUnosKorisnickogImena";
             this.uiUnosKorisnickogImena.Size = new System.Drawing.Size(246, 33);
             this.uiUnosKorisnickogImena.TabIndex = 63;
+            this.uiUnosKorisnickogImena.TextChanged += new System.EventHandler(this.uiUnosKorisnickogImena_TextChanged);
             // 
             // uiUnosTelefona
             // 
@@ -84,6 +85,7 @@
             this.uiUnosEmaila.Name = "uiUnosEmaila";
             this.uiUnosEmaila.Size = new System.Drawing.Size(246, 33);
             this.uiUnosEmaila.TabIndex = 61;
+            this.uiUnosEmaila.TextChanged += new System.EventHandler(this.uiUnosEmaila_TextChanged);
             // 
             // uiUnosAdrese
             // 
@@ -102,6 +104,7 @@
             this.uiUnosOIB.Name = "uiUnosOIB";
             this.uiUnosOIB.Size = new System.Drawing.Size(246, 33);
             this.uiUnosOIB.TabIndex = 59;
+            this.uiUnosOIB.TextChanged += new System.EventHandler(this.uiUnosOIB_TextChanged);
             // 
             // uiUnosPrezimena
             // 

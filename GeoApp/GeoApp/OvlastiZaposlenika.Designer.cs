@@ -128,7 +128,7 @@
             this.uiUDZaposlenika.Name = "uiUDZaposlenika";
             this.uiUDZaposlenika.Size = new System.Drawing.Size(208, 32);
             this.uiUDZaposlenika.TabIndex = 36;
-            this.uiUDZaposlenika.Text = "Ažuriraj/Izbriši zaposlenika";
+            this.uiUDZaposlenika.Text = "Ažuriraj/Izbriši korisnika";
             this.uiUDZaposlenika.UseVisualStyleBackColor = false;
             this.uiUDZaposlenika.Click += new System.EventHandler(this.btnAzurirajZaposlenika_Click);
             // 

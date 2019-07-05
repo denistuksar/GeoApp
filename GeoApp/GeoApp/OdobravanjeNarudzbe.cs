@@ -156,9 +156,10 @@ namespace GeoApp
             }
             else
             {
-                this.Hide();
-                OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
                 this.Close();
+                OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
+                ovlastiZaposlenika.ShowDialog();
+                
             }
         }
 
