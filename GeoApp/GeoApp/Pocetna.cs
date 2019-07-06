@@ -72,6 +72,11 @@ namespace GeoApp
         private void btnOdjava_Click(object sender, EventArgs e)
         {
             this.Hide();
+            LoginInfo.IDKorisnika = 0;
+            LoginInfo.Uloga = "";
+            LoginInfo.Korime = "";
+
+
             Prijava prijava = new Prijava();
             prijava.ShowDialog();
             this.Close();

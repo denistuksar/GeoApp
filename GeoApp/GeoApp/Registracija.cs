@@ -67,11 +67,7 @@ namespace GeoApp
                                   
                                     db.Korisnik.Add(korisnik);
                                     db.SaveChanges();
-                                    MessageBox.Show("Uspješno dodan zaposlenik");
-
-                                    this.Hide();
-                                    OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
-                                    ovlastiZaposlenika.ShowDialog();
+                                    MessageBox.Show("Uspješno dodan zaposlenik");                                 
                                     this.Close();
 
                                 }

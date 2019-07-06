@@ -27,11 +27,41 @@ namespace GeoApp
         private void OdobravanjeNarudzbe_Load(object sender, EventArgs e)
         {
             helpOdobravanjeNarudzbe.HelpNamespace = Environment.CurrentDirectory + "/help/odobravanjeNarudzbe.html";
+            if (odabraniKorisnik == null)
+            {
+                PrikaziNarudzbe();
+                PrikaziOdobrene();
 
-            PrikaziNarudzbe();
-            PrikaziOdobrene();
+            }
+            else
+            {
+                PrikaziOdabraneNarudzbe();
+            }
+           
             this.MaximizeBox = false;
         }
+
+        private void PrikaziOdabraneNarudzbe()
+        {
+            using (var db = new Entities1())
+            {
+                var odabraneNarudzbe = from o in db.Narudzba
+                                       where o.KorisnikID_korisnika == odabraniKorisnik.ID_korisnika
+                                       select o;
+
+                uiPrikazNarudzbi.DataSource = odabraneNarudzbe.ToList();
+            }
+            uiPrikazNarudzbi.Columns[0].HeaderText = "ID narudžbe";
+            uiPrikazNarudzbi.Columns[1].HeaderText = "ID korisnika";
+            uiPrikazNarudzbi.Columns[4].Visible = false;
+            uiPrikazNarudzbi.Columns[5].Visible = false;
+            uiPrikazNarudzbi.Columns[6].Visible = false;
+        }
+
+
+
+
+
 
         /// <summary>
         /// Dohvaća listu svih artikla iz kolekcije artikla u kontekstu, te ih prikazuje
@@ -43,7 +73,7 @@ namespace GeoApp
             using (var db = new Entities1())
             {
                 var query = from n in db.Narudzba
-                            where n.Status == null || n.Status==false
+                            where n.Status == null || n.Status==false 
                             select n;
                 narudzba = query.ToList();
             }
@@ -124,7 +154,11 @@ namespace GeoApp
                 {
                     MessageBox.Show("Odaberite narudžbu koji želite izbrisati");
                 }
-                PrikaziNarudzbe();
+                if (odabraniKorisnik == null)
+                {
+                    PrikaziNarudzbe();
+                }
+                PrikaziOdabraneNarudzbe();
             }
         }
 
@@ -156,10 +190,7 @@ namespace GeoApp
             }
             else
             {
-                this.Close();
-                OvlastiZaposlenika ovlastiZaposlenika = new OvlastiZaposlenika();
-                ovlastiZaposlenika.ShowDialog();
-                
+                this.Close();                              
             }
         }
 
