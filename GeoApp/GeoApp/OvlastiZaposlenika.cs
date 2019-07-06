@@ -172,6 +172,7 @@ namespace GeoApp
                 db.SaveChanges();
 
             }
+            MessageBox.Show("Uspješno promjenjena uloga korisnika");
             PrikaziKorisnike();
         }
     }

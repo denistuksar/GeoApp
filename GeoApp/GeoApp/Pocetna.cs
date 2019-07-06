@@ -48,17 +48,18 @@ namespace GeoApp
                 uiUnesiArtikl.Visible = false;
                 uiAzurirajUredaj.Visible = false;
                 uiUrediUloge.Visible = false;
-                btnServis.Location = new Point(73, 146);
-                this.Size = new Size(384, 220);
+                btnServis.Location = new Point(13, 146);
+                this.Size = new Size(384, 250);
             }
             else if (LoginInfo.Uloga == "Zaposlenik" )
             {
 
-                btnServis.Location = new Point(73, 324);
+                btnServis.Location = new Point(13, 324);
                 uiUrediUloge.Visible = false;
               
-                this.Size = new Size(384, 430);
+                this.Size = new Size(384,420);
             }
+            
           
        
         }

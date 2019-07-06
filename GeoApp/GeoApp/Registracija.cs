@@ -342,6 +342,11 @@ namespace GeoApp
                 this.Text = "Unos zaposlenika";
 
             }
+            else
+            {
+                uiRegistrirajKorisnika.Text = "Registriraj se";
+                this.Text = "Registracija";
+            }
 
             helpRegistracija.HelpNamespace = Environment.CurrentDirectory + "/help/registracija.html";
         }
