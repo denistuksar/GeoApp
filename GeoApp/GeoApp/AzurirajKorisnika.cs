@@ -49,8 +49,21 @@ namespace GeoApp
         private void AzurirajKorisnika_Load(object sender, EventArgs e)
         {
             helpAzuriranjeKorisnika.HelpNamespace = Environment.CurrentDirectory + "/help/azuriranjeKorisnika.html";
-
             PopuniBoxeve();
+
+            uiUnosKorisnickogImena.BackColor = Color.White;
+            uiUnosKorisnickogImena.ForeColor = Color.Black;
+
+            uiUnosEmaila.BackColor = Color.White;
+            uiUnosEmaila.ForeColor = Color.Black;
+
+            uiUnosOIB.BackColor = Color.White;
+            uiUnosOIB.ForeColor = Color.Black;
+
+
+            korIme = false;
+            oib = false;
+            email = false;
         }
 
         private void btnSpremi_Click(object sender, EventArgs e)
@@ -59,7 +72,7 @@ namespace GeoApp
             {
 
                 var oibi = from k in db.Korisnik
-                          select k.OIB;
+                           select k.OIB;
                 popisOIB = oibi.ToList();
 
                 var korisnickoIme = from k in db.Korisnik
@@ -68,75 +81,81 @@ namespace GeoApp
                 popisKorisnika = korisnickoIme.ToList();
 
                 var emaili = from k in db.Korisnik
-                            select k.Email;
+                             select k.Email;
 
                 popisEmaila = emaili.ToList();
 
                 db.Korisnik.Attach(odabraniKorisnik);
 
-                foreach (var username in popisKorisnika)
+                if (uiUnosKorisnickogImena.Text != "" && uiUnosAdrese.Text != "" && uiUnosImena.Text != "" && uiUnosLozinke.Text != "" && uiUnosPrezimena.Text != "" && uiUnosTelefona.Text != "" && uiUnosOIB.Text != "" && uiUnosKorisnickogImena.Text != "" && uiUnosEmaila.Text != "")
                 {
-                    if (username != uiUnosKorisnickogImena.Text)
+
+                    if (popisKorisnika.Contains(uiUnosKorisnickogImena.Text) && korIme == false)
                     {
-                        if (korIme != false)
-                        {
-                            odabraniKorisnik.Korisnicko_ime = uiUnosKorisnickogImena.Text;
-                        }
 
-                        else
-                        {
-                            MessageBox.Show("Korisničko ime postoji! ");
-                           
-                        }
-                       
-                    }
-                    
-                }
 
-                foreach (var oibs in popisOIB)
-                {
-                    if (oibs != uiUnosOIB.Text)
-                    {
-                        if (oib != false)
+                        if (popisOIB.Contains(uiUnosOIB.Text) && oib == false && IsValidOIB(uiUnosOIB.Text))
                         {
-                            odabraniKorisnik.OIB = uiUnosOIB.Text;
 
-                        }
-                        else
-                        {
-                            MessageBox.Show("OIB postoji! ");
-                        }
-                    }
-                }
 
-                    foreach (var emails in popisEmaila)
-                    {
-                          
-                        if (emails != uiUnosEmaila.Text)
-                        {
-                            if (email != false)
+                            if (popisEmaila.Contains(uiUnosEmaila.Text) && email == false && IsValidEmail(uiUnosEmaila.Text))
+                            {
+
+                                odabraniKorisnik.Ime = uiUnosImena.Text;
+                                odabraniKorisnik.Prezime = uiUnosPrezimena.Text;
+                                odabraniKorisnik.Adresa = uiUnosAdrese.Text;
+                                odabraniKorisnik.Broj_telefona = uiUnosTelefona.Text;
+                                odabraniKorisnik.Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text);
+                                odabraniKorisnik.Lozinka = uiUnosLozinke.Text;
+
+                            }
+
+                            else if (!popisEmaila.Contains(uiUnosEmaila.Text) && email == true && IsValidEmail(uiUnosEmaila.Text))
                             {
                                 odabraniKorisnik.Email = uiUnosEmaila.Text;
                             }
+
                             else
                             {
-                             MessageBox.Show("E-mail postoji! ");
+                                MessageBox.Show("E-mail postoji ili nije važeći!");
                             }
+
+                        }
+                        else if (!popisOIB.Contains(uiUnosOIB.Text) && oib == true && IsValidOIB(uiUnosOIB.Text))
+                        {
+                            odabraniKorisnik.OIB = uiUnosOIB.Text;
+                        }
+
+
+                        else
+                        {
+                            MessageBox.Show("OIB postoji ili nije važeći!");
                         }
                     }
-                     
-              
-                odabraniKorisnik.Ime = uiUnosImena.Text;
-                odabraniKorisnik.Prezime = uiUnosPrezimena.Text;
-                odabraniKorisnik.Adresa = uiUnosAdrese.Text;
-                odabraniKorisnik.Broj_telefona = uiUnosTelefona.Text;
-                odabraniKorisnik.Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text);
-                odabraniKorisnik.Lozinka = uiUnosLozinke.Text;
+
+                    else if (!popisKorisnika.Contains(uiUnosKorisnickogImena.Text) && korIme == true)
+                    {
+                        odabraniKorisnik.Korisnicko_ime = uiUnosKorisnickogImena.Text;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Korisničko ime postoji");
+                    }
+
+
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Popuni sva polja");
+                }
                 db.SaveChanges();
             }
 
             this.Close();
-          
+
         }
 
 
@@ -197,7 +216,8 @@ namespace GeoApp
 
         private void uiUnosKorisnickogImena_TextChanged(object sender, EventArgs e)
         {
-            korIme = false;
+
+
             using (var db = new Entities1())
             {
                 var korisnickoIme = from k in db.Korisnik
@@ -207,8 +227,10 @@ namespace GeoApp
             }
             foreach (var item in popisKorisnika)
             {
+
                 if (item == uiUnosKorisnickogImena.Text)
                 {
+
                     uiUnosKorisnickogImena.BackColor = Color.FromArgb(243, 92, 99);
                     uiUnosKorisnickogImena.ForeColor = Color.White;
                     break;
@@ -222,15 +244,16 @@ namespace GeoApp
                 {
                     uiUnosKorisnickogImena.BackColor = Color.FromArgb(82, 193, 119);
                     uiUnosKorisnickogImena.ForeColor = Color.White;
-               
+
                 }
+
             }
+
             korIme = true;
         }
 
         private void uiUnosEmaila_TextChanged(object sender, EventArgs e)
         {
-            email = false;
 
             using (var db = new Entities1())
             {
@@ -248,6 +271,7 @@ namespace GeoApp
                 {
                     if (item == uiUnosEmaila.Text)
                     {
+                        uiUnosEmaila.BackColor = Color.White;
                         uiUnosEmaila.BackColor = Color.FromArgb(243, 92, 99);
                         uiUnosEmaila.ForeColor = Color.White;
                         break;
@@ -280,7 +304,8 @@ namespace GeoApp
 
         private void uiUnosOIB_TextChanged(object sender, EventArgs e)
         {
-            oib = false;
+
+
             using (var db = new Entities1())
             {
                 var oib = from k in db.Korisnik
@@ -296,6 +321,7 @@ namespace GeoApp
                 {
                     if (item == uiUnosOIB.Text)
                     {
+                        uiUnosOIB.BackColor = Color.White;
                         uiUnosOIB.BackColor = Color.FromArgb(243, 92, 99);
                         uiUnosOIB.ForeColor = Color.White;
                         break;

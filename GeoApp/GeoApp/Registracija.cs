@@ -29,77 +29,91 @@ namespace GeoApp
         {
             using (var db = new Entities1())
             {
-                var korIme = from k in db.Korisnik
-                             select k.Korisnicko_ime;
+                var korisnickoIme = from k in db.Korisnik
+                                    select k.Korisnicko_ime;
+
+                popisKorisnika = korisnickoIme.ToList();
 
                 var oib = from k in db.Korisnik
                           select k.OIB;
+                popisOIB = oib.ToList();
 
                 var email = from k in db.Korisnik
                             select k.Email;
 
-                if (uiUnosKorisnickogImena.Text != "")
+                popisEmaila = email.ToList();
+
+                if (uiUnosKorisnickogImena.Text != "" && uiUnosAdrese.Text != "" && uiUnosImena.Text != "" && uiUnosLozinke.Text != "" && uiUnosPrezimena.Text != "" && uiUnosTelefona.Text != "" && uiUnosPonovljeneLozinke.Text!="" && uiUnosOIB.Text!="" && uiUnosEmaila.Text != "")
                 {
-                    if (korIme.ToString() != uiUnosKorisnickogImena.Text)
+                    if (!popisKorisnika.Contains(uiUnosKorisnickogImena.Text))
                     {
-                        if (oib.ToString() != uiUnosOIB.Text && IsValidOIB(uiUnosOIB.Text))
+                        if (!popisOIB.Contains(uiUnosOIB.Text)  && IsValidOIB(uiUnosOIB.Text))
                         {
-                            if (email.ToString() != uiUnosEmaila.Text && IsValidEmail(uiUnosEmaila.Text))
+                            if (!popisEmaila.Contains(uiUnosEmaila.Text) && IsValidEmail(uiUnosEmaila.Text))
                             {
-                                if (LoginInfo.Uloga == "Administrator")
+                                if (uiUnosLozinke.Text == uiUnosPonovljeneLozinke.Text)
                                 {
-                                    
-                                    var korisnik = new Korisnik
+
+                                    if (LoginInfo.Uloga == "Administrator")
                                     {
-                                        Ime = uiUnosImena.Text,
-                                        Prezime = uiUnosPrezimena.Text,
-                                        OIB = uiUnosOIB.Text,
-                                        Adresa = uiUnosAdrese.Text,
-                                        Email = uiUnosEmaila.Text,
-                                        Broj_telefona = uiUnosTelefona.Text,
-                                        Korisnicko_ime = uiUnosKorisnickogImena.Text,
-                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text),
-                                        Lozinka = uiUnosLozinke.Text,
-                                        UlogaID_uloge = 3,
-                                     
-                                    };
 
-                                  
-                                    db.Korisnik.Add(korisnik);
-                                    db.SaveChanges();
-                                    MessageBox.Show("Uspješno dodan zaposlenik");                                 
-                                    this.Close();
+                                        var korisnik = new Korisnik
+                                        {
+                                            Ime = uiUnosImena.Text,
+                                            Prezime = uiUnosPrezimena.Text,
+                                            OIB = uiUnosOIB.Text,
+                                            Adresa = uiUnosAdrese.Text,
+                                            Email = uiUnosEmaila.Text,
+                                            Broj_telefona = uiUnosTelefona.Text,
+                                            Korisnicko_ime = uiUnosKorisnickogImena.Text,
+                                            Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text),
+                                            Lozinka = uiUnosLozinke.Text,
+                                            UlogaID_uloge = 3,
 
+                                        };
+
+
+                                        db.Korisnik.Add(korisnik);
+                                        db.SaveChanges();
+                                        MessageBox.Show("Uspješno dodan zaposlenik");
+                                        this.Close();
+
+                                    }
+                                    else
+                                    {
+                                        var korisnik = new Korisnik
+                                        {
+                                            Ime = uiUnosImena.Text,
+                                            Prezime = uiUnosPrezimena.Text,
+                                            OIB = uiUnosOIB.Text,
+                                            Adresa = uiUnosAdrese.Text,
+                                            Email = uiUnosEmaila.Text,
+                                            Broj_telefona = uiUnosTelefona.Text,
+                                            Korisnicko_ime = uiUnosKorisnickogImena.Text,
+                                            Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text),
+                                            Lozinka = uiUnosLozinke.Text,
+                                            UlogaID_uloge = 2,
+
+                                        };
+                                        db.Korisnik.Add(korisnik);
+                                        db.SaveChanges();
+                                        MessageBox.Show("Uspješna registracija");
+                                        this.Close();
+                                    }
                                 }
                                 else
                                 {
-                                    var korisnik = new Korisnik
-                                    {
-                                        Ime = uiUnosImena.Text,
-                                        Prezime = uiUnosPrezimena.Text,
-                                        OIB = uiUnosOIB.Text,
-                                        Adresa = uiUnosAdrese.Text,
-                                        Email = uiUnosEmaila.Text,
-                                        Broj_telefona = uiUnosTelefona.Text,
-                                        Korisnicko_ime = uiUnosKorisnickogImena.Text,
-                                        Kriptirana_Lozinka = Encoding.UTF8.GetBytes(uiUnosLozinke.Text),
-                                        Lozinka = uiUnosLozinke.Text,
-                                        UlogaID_uloge = 2,
-                                      
-                                    };
-                                    db.Korisnik.Add(korisnik);
-                                    db.SaveChanges();
-                                    MessageBox.Show("Uspješna registracija");
+                                    MessageBox.Show("Lozinke se ne podudaraju!");
                                 }
                             }
                             else
                             {
-                                MessageBox.Show("E-mail postoji! ");
+                                MessageBox.Show("E-mail postoji ili nije važeći! ");
                             }
                         }
                         else
                         {
-                            MessageBox.Show("OIB postoji! ");
+                            MessageBox.Show("OIB postoji ili nije važeći!");
                         }
 
                     }
@@ -107,7 +121,7 @@ namespace GeoApp
                     {
                         MessageBox.Show("Korisničko ime postoji! ");
                     }
-                    this.Close();
+                    
 
                 }
 
@@ -328,7 +342,7 @@ namespace GeoApp
             }
         }
 
-     
+
 
         private void Registracija_Load_1(object sender, EventArgs e)
         {

@@ -71,6 +71,7 @@ namespace GeoApp
         {
             Registracija registracija = new Registracija();
             registracija.ShowDialog();
+            PrikaziKorisnike();
         }
 
         private void btnPrikaziZaposlene_Click(object sender, EventArgs e)
