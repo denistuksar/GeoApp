@@ -158,7 +158,10 @@ namespace GeoApp
                 {
                     PrikaziNarudzbe();
                 }
-                PrikaziOdabraneNarudzbe();
+                else
+                {
+                    PrikaziOdabraneNarudzbe();
+                }    
             }
         }
 

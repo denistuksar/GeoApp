@@ -87,7 +87,6 @@ C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a
 C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a\r19038-6143e773a8523462788d43ef1c29559764b1573a\GeoApp\GeoApp\bin\Debug\GeoApp.exe
 C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a\r19038-6143e773a8523462788d43ef1c29559764b1573a\GeoApp\GeoApp\bin\Debug\GeoApp.pdb
 C:\Users\NiksY\Documents\Desktop\r19038-6143e773a8523462788d43ef1c29559764b1573a\r19038-6143e773a8523462788d43ef1c29559764b1573a\GeoApp\GeoApp\obj\Debug\GeoApp.csproj.CopyComplete
-\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.FrmReport.resources
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\RdlCompile.cache
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\RdlCompile.compiled
 \\Mac\Home\Documents\r19038\Geoapp\GeoApp\bin\Debug\Microsoft.ReportViewer.Common.dll
@@ -279,3 +278,4 @@ C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\bin\Debug\zh-CHT\Microsoft.ReportV
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.exe.manifest
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.application
 C:\Users\NiksY\Documents\r19038\GeoApp\GeoApp\obj\Debug\GeoApp.Report.resources
+\\Mac\Home\Documents\r19038\Geoapp\GeoApp\obj\Debug\GeoApp.Report.resources

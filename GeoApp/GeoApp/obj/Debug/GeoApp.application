@@ -7,14 +7,14 @@
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="GeoApp.exe.manifest" size="76662">
+    <dependentAssembly dependencyType="install" codebase="GeoApp.exe.manifest" size="61726">
       <assemblyIdentity name="GeoApp.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>LSb0lCOV8eaDQnSH9RLFKAmKtQkaB8jem9QDqMc/fKM=</dsig:DigestValue>
+        <dsig:DigestValue>Bm9VeCLjCfF5D5Y3F+NDpu7VGgk0+1BDN61lNXPBmvw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
