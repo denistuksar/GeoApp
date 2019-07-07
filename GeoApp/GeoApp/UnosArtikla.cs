@@ -53,8 +53,7 @@ namespace GeoApp
 
         private void UnosArtikla_Load(object sender, EventArgs e)
         {
-            helpUnosArtikla.HelpNamespace = Environment.CurrentDirectory + "/help/unosArtikla.html";
-      
+            helpUnosArtikla.HelpNamespace = Environment.CurrentDirectory + "/help/unosArtikla.html";   
             this.MaximizeBox = false;
         }
 
